@@ -2758,9 +2758,9 @@
             // ────────────────────────────────────────────────
 
             // ═══════════════════════════════════════════════
-            // INLINE EDITOR
+            // INLINE EDITOR — disabled in production
             // ═══════════════════════════════════════════════
-            (function() {
+            if (window.location.hostname === 'localhost') (function() {
                 const STORAGE_KEY = 'kdive_edits_v1';
                 const EDITABLE_SEL = [
                     'h1','h2','h3','h4',
