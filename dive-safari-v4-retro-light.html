@@ -983,118 +983,160 @@
             border-radius: var(--border-radius-card);
         }
 
-        /* Prices Section */
-        #prices .h2-playfair {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        .price-grid {
+        /* Prices / Cabins Section */
+        .cabin-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            justify-content: center;
-            margin-bottom: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
         }
-        .price-card {
-            background-color: var(--color-white);
-            border: 1px solid rgba(27,191,176,0.2);
-            border-radius: var(--border-radius-card);
-            padding: 30px;
-            text-align: center;
-            transition: box-shadow var(--transition-speed), transform var(--transition-speed);
+        .cabin-card {
+            border: 1px solid rgba(59,158,163,0.18);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: box-shadow 0.25s;
         }
-        .price-card:hover {
-            box-shadow: 0 6px 20px rgba(27,191,176,0.15);
-            transform: translateY(-5px);
+        .cabin-card:hover { box-shadow: 0 8px 32px rgba(59,158,163,0.12); }
+        .cabin-photo {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            cursor: pointer;
         }
-        .price-card .cabin-type {
-            font-family: var(--font-inter);
-            font-weight: 600;
-            font-size: 1.4rem;
-            color: var(--color-main-text);
-            margin-bottom: 1.5rem;
+        .cabin-photo img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
         }
-        .price-card .price-value {
-            font-family: var(--font-playfair);
-            font-style: italic;
-            font-weight: 700;
-            font-size: 2.5rem;
-            color: var(--color-primary-teal);
-            margin-bottom: 1rem;
+        .cabin-card:hover .cabin-photo img { transform: scale(1.04); }
+        .cabin-photo-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 50%);
+            display: flex; align-items: flex-end; padding: 12px;
+            opacity: 0; transition: opacity 0.25s;
         }
-        .price-card .currency {
-            font-size: 1.2rem;
-            font-weight: 500;
-            color: var(--color-primary-teal);
+        .cabin-card:hover .cabin-photo-overlay { opacity: 1; }
+        .cabin-photo-hint {
+            color: white; font-size: 0.72rem; font-weight: 600;
+            letter-spacing: 1px; text-transform: uppercase;
         }
-        .price-card .price-old .currency {
-            color: inherit;
-            font-size: inherit;
-            font-weight: inherit;
+        .cabin-photo-count {
+            position: absolute; top: 10px; right: 10px;
+            background: rgba(0,0,0,0.55); color: white;
+            font-size: 0.65rem; font-weight: 700;
+            padding: 3px 9px; border-radius: 20px;
+            backdrop-filter: blur(4px);
         }
-        .price-card .btn {
-            margin-top: 2rem;
-            width: 100%;
+        .cabin-body {
+            padding: 1.4rem 1.4rem 1.6rem;
+            display: flex; flex-direction: column; gap: 0.6rem; flex: 1;
         }
-        .price-note {
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--color-secondary-text);
-            font-weight: 300;
+        .cabin-badge {
+            display: inline-block; background: #c0392b; color: white;
+            font-size: 0.62rem; font-weight: 700; padding: 2px 9px;
+            border-radius: 20px; letter-spacing: 0.8px; text-transform: uppercase;
+            align-self: flex-start;
         }
-        .price-badge {
-            display: inline-block;
-            background: #c0392b;
-            color: white;
-            font-size: 0.72rem;
-            font-weight: 700;
-            padding: 3px 10px;
-            border-radius: 20px;
-            letter-spacing: 0.6px;
-            margin-bottom: 0.6rem;
-            text-transform: uppercase;
+        .cabin-name {
+            font-family: var(--font-playfair); font-size: 1.15rem; font-weight: 700;
         }
-        .price-old {
-            font-size: 1.1rem;
-            color: #aaa;
+        .cabin-price-row {
+            display: flex; align-items: baseline; gap: 0.5rem; margin-top: 0.2rem;
+        }
+        .cabin-old {
+            font-size: 0.85rem; color: var(--color-secondary-text);
             text-decoration: line-through;
-            margin-bottom: 0.1rem;
         }
+        .cabin-price {
+            font-size: 1.6rem; font-weight: 700; color: var(--color-primary-teal);
+        }
+        .cabin-cur { font-size: 0.9rem; font-weight: 600; color: var(--color-primary-teal); }
+        .cabin-desc {
+            font-size: 0.85rem; color: var(--color-secondary-text);
+            line-height: 1.6; flex: 1;
+        }
+        .cabin-card .btn { margin-top: 1rem; text-align: center; }
+        .price-note {
+            text-align: center; font-size: 0.85rem;
+            color: var(--color-secondary-text); font-weight: 300; margin-top: 1.2rem;
+        }
+        /* Included block */
         .price-included {
-            margin-top: 3rem;
-            padding: 2rem 2.5rem;
+            margin-top: 2rem;
+            padding: 1.6rem 2rem;
             background: var(--color-mint);
+            border-left: 3px solid var(--color-primary-teal);
         }
         .price-included h4 {
-            font-family: var(--font-dela-gothic);
-            font-size: 1.05rem;
-            color: var(--color-primary-teal);
-            margin-bottom: 1.2rem;
-            text-align: center;
-            letter-spacing: 1px;
+            font-size: 0.72rem; font-weight: 700; letter-spacing: 2px;
+            text-transform: uppercase; color: var(--color-primary-teal); margin-bottom: 1rem;
         }
         .price-included ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-            gap: 0.4rem 2.5rem;
+            list-style: none; padding: 0; margin: 0;
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.4rem 2rem;
         }
         .price-included ul li {
-            font-size: 0.92rem;
-            color: var(--color-main-text);
-            padding: 0.45rem 0;
-            border-bottom: 1px solid rgba(59,158,163,0.18);
-            display: flex;
-            align-items: flex-start;
-            gap: 0.5rem;
+            font-size: 0.84rem; color: var(--color-main-text);
+            display: flex; align-items: flex-start; gap: 0.5rem;
         }
         .price-included ul li::before {
-            content: "✓";
-            color: var(--color-primary-teal);
-            font-weight: 700;
-            flex-shrink: 0;
+            content: "✓"; color: var(--color-primary-teal);
+            font-weight: 700; flex-shrink: 0; margin-top: 1px;
+        }
+        /* Extras accordion */
+        .extras-wrap { margin-top: 1.5rem; border-top: 1px solid rgba(59,158,163,0.18); }
+        .extras-toggle {
+            width: 100%; display: flex; align-items: center; justify-content: space-between;
+            padding: 1.1rem 0; background: none; border: none; cursor: pointer;
+            font-family: var(--font-inter); font-size: 0.78rem; font-weight: 700;
+            letter-spacing: 1.5px; text-transform: uppercase; color: var(--color-main-text);
+        }
+        .extras-toggle:hover { color: var(--color-primary-teal); }
+        .extras-chevron { color: var(--color-primary-teal); transition: transform 0.3s; }
+        .extras-wrap.open .extras-chevron { transform: rotate(90deg); }
+        .extras-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+        .extras-wrap.open .extras-body { max-height: 400px; }
+        .extras-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr);
+            gap: 0.6rem; padding: 0.4rem 0 1.4rem;
+        }
+        .extra-item {
+            display: flex; align-items: center; gap: 0.7rem;
+            padding: 0.8rem 1rem; border: 1px solid rgba(59,158,163,0.18); font-size: 0.83rem;
+        }
+        .extra-name { flex: 1; }
+        .extra-price { font-weight: 600; color: var(--color-primary-teal); white-space: nowrap; }
+        /* Cabin lightbox */
+        .cabin-lb {
+            position: fixed; inset: 0; background: rgba(0,0,0,0.88);
+            z-index: 9999; display: none; align-items: center; justify-content: center;
+        }
+        .cabin-lb.open { display: flex; }
+        .cabin-lb-box { position: relative; max-width: 860px; width: 90vw; }
+        .cabin-lb-img { width: 100%; max-height: 72vh; object-fit: contain; border-radius: 4px; display: block; }
+        .cabin-lb-caption { color: rgba(255,255,255,0.7); font-size: 0.82rem; text-align: center; margin-top: 10px; }
+        .cabin-lb-counter { color: rgba(255,255,255,0.4); font-size: 0.72rem; text-align: center; margin-top: 4px; }
+        .cabin-lb-close {
+            position: absolute; top: -40px; right: 0; background: none; border: none;
+            color: white; font-size: 1.8rem; cursor: pointer; opacity: 0.7;
+        }
+        .cabin-lb-close:hover { opacity: 1; }
+        .cabin-lb-prev, .cabin-lb-next {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            background: rgba(255,255,255,0.1); border: none; color: white;
+            font-size: 1.4rem; width: 44px; height: 44px; cursor: pointer;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            transition: background 0.2s;
+        }
+        .cabin-lb-prev:hover, .cabin-lb-next:hover { background: rgba(255,255,255,0.25); }
+        .cabin-lb-prev { left: -56px; }
+        .cabin-lb-next { right: -56px; }
+        @media (max-width: 768px) {
+            .cabin-grid { grid-template-columns: 1fr; }
+            .price-included ul { grid-template-columns: 1fr; }
+            .extras-grid { grid-template-columns: 1fr; }
+            .cabin-lb-prev { left: -36px; }
+            .cabin-lb-next { right: -36px; }
         }
 
         /* FAQ Section */
@@ -2309,54 +2351,140 @@
             </div>
         </section>
 
-        <!-- ЦЕНЫ Section -->
+        <!-- КАЮТЫ Section -->
         <section id="prices" class="section-padding section-white">
             <div class="container">
                 <span class="label text-center">ЦЕНЫ</span>
                 <h2 class="h2-playfair text-center">Выбери свою каюту</h2>
-                <div class="price-grid">
-                    <div class="price-card fade-in-up">
-                        <h3 class="cabin-type">Нижняя палуба</h3>
-                        <span class="price-badge">−10% до 1 июня</span>
-                        <p class="price-old">1 190 <span class="currency">€</span></p>
-                        <p class="price-value">1 071 <span class="currency">€</span></p>
-                        <p class="card-description">Комфортная каюта с иллюминатором и всеми удобствами на нижней палубе.</p>
-                        <a href="#final-cta" class="btn btn-secondary">Забронировать</a>
+
+                <div class="cabin-grid">
+                    <!-- Нижняя палуба -->
+                    <div class="cabin-card fade-in-up">
+                        <div class="cabin-photo" onclick="openCabinGallery('lower', 0)">
+                            <img src="dive-safari-content/cabins/lower/photo-1.jpg" alt="Нижняя палуба">
+                            <div class="cabin-photo-overlay"><span class="cabin-photo-hint">Смотреть фото</span></div>
+                            <span class="cabin-photo-count">1 / 3</span>
+                        </div>
+                        <div class="cabin-body">
+                            <span class="cabin-badge">−10% до 1 июня</span>
+                            <div class="cabin-name">Нижняя палуба</div>
+                            <div class="cabin-price-row">
+                                <span class="cabin-old">1 190 €</span>
+                                <span class="cabin-price">1 071</span>
+                                <span class="cabin-cur">€</span>
+                            </div>
+                            <p class="cabin-desc">Комфортная каюта с иллюминатором. Двухъярусная или раздельные кровати — идеально для путешественников соло.</p>
+                            <a href="#final-cta" class="btn btn-secondary">Забронировать</a>
+                        </div>
                     </div>
-                    <div class="price-card fade-in-up">
-                        <h3 class="cabin-type">Верхняя палуба</h3>
-                        <span class="price-badge">−10% до 1 июня</span>
-                        <p class="price-old">1 340 <span class="currency">€</span></p>
-                        <p class="price-value">1 206 <span class="currency">€</span></p>
-                        <p class="card-description">Просторная каюта с окном, расположенная на верхней палубе, с лучшим видом.</p>
-                        <a href="#final-cta" class="btn btn-secondary">Забронировать</a>
+
+                    <!-- Верхняя палуба -->
+                    <div class="cabin-card fade-in-up">
+                        <div class="cabin-photo" onclick="openCabinGallery('upper', 0)">
+                            <img src="dive-safari-content/cabins/upper/photo-1.jpg" alt="Верхняя палуба">
+                            <div class="cabin-photo-overlay"><span class="cabin-photo-hint">Смотреть фото</span></div>
+                            <span class="cabin-photo-count">1 / 3</span>
+                        </div>
+                        <div class="cabin-body">
+                            <span class="cabin-badge">−10% до 1 июня</span>
+                            <div class="cabin-name">Верхняя палуба</div>
+                            <div class="cabin-price-row">
+                                <span class="cabin-old">1 340 €</span>
+                                <span class="cabin-price">1 206</span>
+                                <span class="cabin-cur">€</span>
+                            </div>
+                            <p class="cabin-desc">Просторная каюта с большим окном на верхней палубе. Лучший вид на море, больше света и воздуха.</p>
+                            <a href="#final-cta" class="btn btn-secondary">Забронировать</a>
+                        </div>
                     </div>
-                    <div class="price-card fade-in-up">
-                        <h3 class="cabin-type">King bed каюта</h3>
-                        <span class="price-badge">−10% до 1 июня</span>
-                        <p class="price-old">1 490 <span class="currency">€</span></p>
-                        <p class="price-value">1 341 <span class="currency">€</span></p>
-                        <p class="card-description">Эксклюзивная каюта с большой двуспальной кроватью и панорамными окнами.</p>
-                        <a href="#final-cta" class="btn btn-secondary">Забронировать</a>
+
+                    <!-- King bed -->
+                    <div class="cabin-card fade-in-up">
+                        <div class="cabin-photo" onclick="openCabinGallery('king', 0)">
+                            <img src="dive-safari-content/cabins/king/photo-1.jpg" alt="King bed">
+                            <div class="cabin-photo-overlay"><span class="cabin-photo-hint">Смотреть фото</span></div>
+                            <span class="cabin-photo-count">1 / 3</span>
+                        </div>
+                        <div class="cabin-body">
+                            <span class="cabin-badge">−10% до 1 июня</span>
+                            <div class="cabin-name">King bed каюта</div>
+                            <div class="cabin-price-row">
+                                <span class="cabin-old">1 490 €</span>
+                                <span class="cabin-price">1 341</span>
+                                <span class="cabin-cur">€</span>
+                            </div>
+                            <p class="cabin-desc">Эксклюзивная каюта с большой двуспальной кроватью и панорамными окнами. Идеально для пар.</p>
+                            <a href="#final-cta" class="btn btn-secondary">Забронировать</a>
+                        </div>
                     </div>
                 </div>
+
                 <p class="price-note">+ нацпарк 180 € + сервис 100 € · Депозит 50% при бронировании</p>
 
                 <div class="price-included">
                     <h4>ЧТО ВХОДИТ В СТОИМОСТЬ</h4>
                     <ul>
                         <li>Трансфер на лодку и обратно</li>
-                        <li>Питание полный пансион 3 раза в день + напитки и снеки</li>
+                        <li>Питание полный пансион 3 раза в день</li>
+                        <li>Напитки, снеки и фрукты</li>
                         <li>3–4 дайва в день (для сертифицированных)</li>
                         <li>2–4 дайва в день (для обучающихся OWD)</li>
-                        <li>Оборудование (для обучающихся OWD)</li>
+                        <li>Оборудование для обучающихся OWD</li>
                         <li>День пробного дайвинга (для снорклеров)</li>
                         <li>Маска, трубка и ласты для снорклинга</li>
-                        <li>Русскоговорящие инструкторы по дайвингу</li>
+                        <li>Русскоговорящие инструкторы</li>
+                        <li>Wi-Fi на борту</li>
                     </ul>
+                </div>
+
+                <div class="extras-wrap" id="mainExtras">
+                    <button class="extras-toggle" onclick="document.getElementById('mainExtras').classList.toggle('open')">
+                        <span>Дополнительные услуги</span>
+                        <span class="extras-chevron">›</span>
+                    </button>
+                    <div class="extras-body">
+                        <div class="extras-grid">
+                            <div class="extra-item">
+                                <span class="extra-name">Аренда регулятора + ВБК</span>
+                                <span class="extra-price">от 80 €</span>
+                            </div>
+                            <div class="extra-item">
+                                <span class="extra-name">Аренда фонарика</span>
+                                <span class="extra-price">20 €</span>
+                            </div>
+                            <div class="extra-item">
+                                <span class="extra-name">Нитрокс (обогащённый воздух)</span>
+                                <span class="extra-price">60 €</span>
+                            </div>
+                            <div class="extra-item">
+                                <span class="extra-name">Страховка для дайверов</span>
+                                <span class="extra-price">35 €</span>
+                            </div>
+                            <div class="extra-item">
+                                <span class="extra-name">Трансфер из отеля</span>
+                                <span class="extra-price">25 €</span>
+                            </div>
+                            <div class="extra-item">
+                                <span class="extra-name">Подводная фотосъёмка</span>
+                                <span class="extra-price">по запросу</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- Cabin lightbox -->
+        <div class="cabin-lb" id="cabinLb" onclick="if(event.target===this)closeCabinLb()">
+            <div class="cabin-lb-box">
+                <button class="cabin-lb-close" onclick="closeCabinLb()">×</button>
+                <button class="cabin-lb-prev" onclick="cabinLbNav(-1)">‹</button>
+                <img class="cabin-lb-img" id="cabinLbImg" src="" alt="">
+                <button class="cabin-lb-next" onclick="cabinLbNav(1)">›</button>
+                <div class="cabin-lb-caption" id="cabinLbCap"></div>
+                <div class="cabin-lb-counter" id="cabinLbCount"></div>
+            </div>
+        </div>
 
         <!-- FAQ Section -->
         <section id="faq" class="section-padding section-mint">
@@ -2982,6 +3110,54 @@
                 // Load saved on startup
                 loadSaved();
             })();
+
+            // ── Cabin gallery lightbox ────────────────────
+            const CABIN_GALLERIES = {
+                lower: [
+                    { src: 'dive-safari-content/cabins/lower/photo-1.jpg', cap: 'Нижняя палуба' },
+                    { src: 'dive-safari-content/cabins/lower/photo-2.jpg', cap: 'Нижняя палуба' },
+                    { src: 'dive-safari-content/cabins/lower/photo-3.jpg', cap: 'Нижняя палуба' },
+                ],
+                upper: [
+                    { src: 'dive-safari-content/cabins/upper/photo-1.jpg', cap: 'Верхняя палуба' },
+                    { src: 'dive-safari-content/cabins/upper/photo-2.jpg', cap: 'Верхняя палуба' },
+                    { src: 'dive-safari-content/cabins/upper/photo-3.jpg', cap: 'Верхняя палуба' },
+                ],
+                king: [
+                    { src: 'dive-safari-content/cabins/king/photo-1.jpg', cap: 'King bed каюта' },
+                    { src: 'dive-safari-content/cabins/king/photo-2.jpg', cap: 'King bed каюта' },
+                    { src: 'dive-safari-content/cabins/king/photo-3.jpg', cap: 'King bed каюта' },
+                ],
+            };
+            let cabinLbGallery = [], cabinLbIdx = 0;
+            function openCabinGallery(key, idx) {
+                cabinLbGallery = CABIN_GALLERIES[key];
+                cabinLbIdx = idx;
+                renderCabinLb();
+                document.getElementById('cabinLb').classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+            function renderCabinLb() {
+                const item = cabinLbGallery[cabinLbIdx];
+                document.getElementById('cabinLbImg').src = item.src;
+                document.getElementById('cabinLbCap').textContent = item.cap;
+                document.getElementById('cabinLbCount').textContent = (cabinLbIdx + 1) + ' / ' + cabinLbGallery.length;
+            }
+            function cabinLbNav(dir) {
+                cabinLbIdx = (cabinLbIdx + dir + cabinLbGallery.length) % cabinLbGallery.length;
+                renderCabinLb();
+            }
+            function closeCabinLb() {
+                document.getElementById('cabinLb').classList.remove('open');
+                document.body.style.overflow = '';
+            }
+            document.addEventListener('keydown', e => {
+                if (!document.getElementById('cabinLb').classList.contains('open')) return;
+                if (e.key === 'ArrowLeft') cabinLbNav(-1);
+                if (e.key === 'ArrowRight') cabinLbNav(1);
+                if (e.key === 'Escape') closeCabinLb();
+            });
+            // ─────────────────────────────────────────────
 
             // ── Day accordion ─────────────────────────────
             function toggleDayCard(header) {
