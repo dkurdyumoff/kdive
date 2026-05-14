@@ -2663,13 +2663,13 @@
                     <input type="hidden" name="subject" value="Новая заявка — KDM Dive Safari">
                     <input type="hidden" name="from_name" value="KDM Dive Safari">
                     <input type="hidden" name="redirect" value="false">
-                    <input type="hidden" id="ctaContactType" name="contact_type" value="Телефон">
+                    <input type="hidden" id="ctaContactType" name="contact_type" value="Telegram">
                     <input type="text" name="name" placeholder="Ваше имя" required>
                     <div style="display:flex;gap:0.5rem">
-                        <button type="button" class="ct-btn active" data-form="cta" data-type="phone" style="flex:1;padding:12px 16px;border:1.5px solid rgba(255,255,255,0.5);background:rgba(255,255,255,0.15);color:#fff;border-radius:4px;cursor:pointer;font-family:var(--font-inter);font-size:0.85rem;transition:all 0.2s">📞 Телефон</button>
-                        <button type="button" class="ct-btn" data-form="cta" data-type="telegram" style="flex:1;padding:12px 16px;border:1.5px solid rgba(255,255,255,0.5);background:transparent;color:rgba(255,255,255,0.7);border-radius:4px;cursor:pointer;font-family:var(--font-inter);font-size:0.85rem;transition:all 0.2s">✈ Telegram</button>
+                        <button type="button" class="ct-btn active" data-form="cta" data-type="telegram" style="flex:1;padding:12px 16px;border:1.5px solid #fff;background:rgba(255,255,255,0.25);color:#fff;border-radius:4px;cursor:pointer;font-family:var(--font-inter);font-size:0.85rem;transition:all 0.2s">✈ Telegram</button>
+                        <button type="button" class="ct-btn" data-form="cta" data-type="phone" style="flex:1;padding:12px 16px;border:1.5px solid rgba(255,255,255,0.5);background:transparent;color:rgba(255,255,255,0.7);border-radius:4px;cursor:pointer;font-family:var(--font-inter);font-size:0.85rem;transition:all 0.2s">📞 Телефон</button>
                     </div>
-                    <input type="text" id="ctaContactInput" name="contact" placeholder="+7 999 000 00 00" required>
+                    <input type="text" id="ctaContactInput" name="contact" placeholder="@username или ссылка" required>
                     <button type="submit" class="btn" style="background:#fff;color:var(--color-primary-teal);font-size:1rem;padding:1rem 2rem;margin-top:0.5rem">Отправить заявку</button>
                     <p id="ctaFormNote" class="cta-contact-info" style="margin-top:0">Говорим по-русски · Ответим в течение нескольких часов</p>
                 </form>
@@ -2724,7 +2724,7 @@
                 <input type="hidden" name="subject" value="Новая заявка — KDM Dive Safari">
                 <input type="hidden" name="from_name" value="KDM Dive Safari">
                 <input type="hidden" name="redirect" value="false">
-                <input type="hidden" id="contactTypeField" name="contact_type" value="Телефон">
+                <input type="hidden" id="contactTypeField" name="contact_type" value="Telegram">
 
                 <div class="modal-field">
                     <label>Ваше имя</label>
@@ -2734,10 +2734,10 @@
                 <div class="modal-field">
                     <label>Как связаться</label>
                     <div class="contact-toggle">
-                        <button type="button" class="ct-btn active" data-type="phone">📞 Телефон</button>
-                        <button type="button" class="ct-btn" data-type="telegram">✈ Telegram ID</button>
+                        <button type="button" class="ct-btn active" data-type="telegram">✈ Telegram</button>
+                        <button type="button" class="ct-btn" data-type="phone">📞 Телефон</button>
                     </div>
-                    <input type="text" id="contactValueInput" name="contact" placeholder="+7 999 000 00 00" required>
+                    <input type="text" id="contactValueInput" name="contact" placeholder="@username или ссылка" required>
                 </div>
 
                 <button type="submit" class="btn btn-primary modal-submit">Отправить заявку</button>
