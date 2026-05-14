@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: #fff;
+  width: 1080px;
+}
+
+/* ── HEADER ── */
+.header {
+  background: linear-gradient(180deg, #001f4d 0%, #003580 60%, #0055AA 100%);
+  padding: 48px 60px 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 Q25 0 50 10 Q75 20 100 10' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3C/svg%3E") repeat;
+  background-size: 200px 40px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.logo-icon {
+  width: 56px; height: 56px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 28px;
+}
+
+.logo-text {
+  text-align: left;
+}
+
+.logo-text .top { font-size: 13px; font-weight: 700; letter-spacing: 3px; color: rgba(255,255,255,.6); text-transform: uppercase; }
+.logo-text .bot { font-size: 22px; font-weight: 800; color: #fff; letter-spacing: 1px; }
+
+.main-title {
+  position: relative;
+}
+
+.main-title .line1 {
+  font-size: 96px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -2px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.main-title .line2 {
+  font-size: 120px;
+  font-weight: 900;
+  color: #00CCFF;
+  letter-spacing: -3px;
+  line-height: .9;
+  text-transform: uppercase;
+  text-shadow: 0 4px 20px rgba(0,200,255,.4);
+}
+
+.subtitle-band {
+  background: #001a40;
+  border: 2px solid rgba(255,255,255,.2);
+  display: inline-block;
+  padding: 14px 48px;
+  margin: 20px 0 24px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.date-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  padding: 28px 0;
+  position: relative;
+}
+
+.date-box {
+  text-align: center;
+}
+
+.date-box .label { font-size: 18px; font-weight: 600; color: rgba(255,255,255,.5); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
+.date-box .value { font-size: 42px; font-weight: 900; color: #fff; letter-spacing: -1px; }
+
+.date-sep { width: 2px; height: 60px; background: rgba(255,255,255,.2); }
+
+.location-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.location-badge::before, .location-badge::after {
+  content: '—';
+  color: rgba(255,255,255,.4);
+}
+
+.not-diver-badge {
+  position: absolute;
+  right: 60px;
+  top: 20px;
+  width: 180px;
+  height: 180px;
+  background: #001a40;
+  border: 3px solid #00CCFF;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  transform: rotate(8deg);
+}
+
+.not-diver-badge .q { font-size: 17px; font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 6px; }
+.not-diver-badge .a { font-size: 20px; font-weight: 900; color: #00CCFF; line-height: 1; }
+.not-diver-badge .sub { font-size: 13px; font-weight: 600; color: rgba(255,255,255,.7); line-height: 1.3; margin-top: 6px; }
+
+/* ── PHOTO STRIP ── */
+.photo-strip {
+  display: flex;
+  height: 340px;
+}
+
+.photo-card {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.photo-card .img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.photo-card .photo-placeholder {
+  width: 100%;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 52px;
+}
+
+.photo-card:nth-child(1) .photo-placeholder { background: linear-gradient(135deg, #0044AA, #006699); }
+.photo-card:nth-child(2) .photo-placeholder { background: linear-gradient(135deg, #005580, #00AACC); }
+.photo-card:nth-child(3) .photo-placeholder { background: linear-gradient(135deg, #FF6B00, #FF9900); }
+.photo-card:nth-child(4) .photo-placeholder { background: linear-gradient(135deg, #007744, #00AAAA); }
+.photo-card:nth-child(5) .photo-placeholder { background: linear-gradient(135deg, #4400AA, #0066CC); }
+
+.photo-card .caption {
+  background: #fff;
+  padding: 12px 14px;
+  flex: 1;
+  height: 100px;
+}
+
+.photo-card .cap-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #001a40;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: 4px;
+}
+
+.photo-card .cap-body {
+  font-size: 14px;
+  font-weight: 400;
+  color: #555;
+  line-height: 1.4;
+}
+
+.photo-card .cap-body span {
+  color: #F5A623;
+  font-weight: 600;
+}
+
+/* ── FOR EVERYONE ── */
+.for-everyone {
+  background: #f4f8ff;
+  padding: 56px 60px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 900;
+  color: #001a40;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.section-title::before, .section-title::after {
+  content: '〜';
+  color: #00AACC;
+  font-size: 28px;
+}
+
+.segments {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.segment {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  border: 2px solid transparent;
+}
+
+.segment:nth-child(1) { border-color: #00AACC; }
+.segment:nth-child(2) { border-color: #003580; }
+.segment:nth-child(3) { border-color: #F5A623; }
+
+.seg-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.seg-icon { font-size: 32px; }
+
+.seg-title {
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+.segment:nth-child(1) .seg-title { color: #00AACC; }
+.segment:nth-child(2) .seg-title { color: #003580; }
+.segment:nth-child(3) .seg-title { color: #F5A623; }
+
+.seg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.seg-list li {
+  font-size: 17px;
+  color: #333;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.4;
+}
+
+.seg-list li::before {
+  content: '✓';
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.segment:nth-child(1) .seg-list li::before { color: #00AACC; }
+.segment:nth-child(2) .seg-list li::before { color: #003580; }
+.segment:nth-child(3) .seg-list li::before { color: #F5A623; }
+
+.seg-note {
+  margin-top: 16px;
+  font-size: 15px;
+  font-style: italic;
+  color: #888;
+  line-height: 1.4;
+}
+
+.seg-note strong { color: #F5A623; font-style: normal; }
+
+/* ── ROUTE ── */
+.route {
+  padding: 56px 60px;
+  background: #fff;
+}
+
+.route-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 900;
+  color: #001a40;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+  padding-bottom: 16px;
+  border-bottom: 3px solid #00AACC;
+  display: inline-block;
+  width: 100%;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 160px;
+  gap: 16px;
+  align-items: start;
+}
+
+.day-card {
+  background: #f4f8ff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.day-header {
+  background: #003580;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.day-header .dot { width: 8px; height: 8px; background: #00CCFF; border-radius: 50%; flex-shrink: 0; }
+
+.day-loc {
+  padding: 12px 16px 4px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #001a40;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.day-img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.day-photo {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+}
+
+.day-card:nth-child(1) .day-photo { background: linear-gradient(135deg, #004d99, #0077cc); }
+.day-card:nth-child(2) .day-photo { background: linear-gradient(135deg, #006688, #009966); }
+.day-card:nth-child(3) .day-photo { background: linear-gradient(135deg, #8800aa, #0044aa); }
+
+.day-items {
+  padding: 10px 16px 16px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.day-items li {
+  font-size: 15px;
+  color: #333;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.3;
+}
+
+.day-items li::before {
+  content: '✓';
+  color: #00AACC;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.checkout-card {
+  background: #001a40;
+  border-radius: 12px;
+  padding: 24px 18px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.checkout-card .day-num { font-size: 42px; font-weight: 900; color: #00CCFF; line-height: 1; }
+.checkout-card .checkout-label { font-size: 18px; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 1px; }
+.checkout-card .checkout-sub { font-size: 13px; color: rgba(255,255,255,.5); }
+
+/* ── BOTTOM ── */
+.bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.includes {
+  background: #f4f8ff;
+  padding: 44px 50px;
+  border-top: 4px solid #00AACC;
+}
+
+.includes-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #001a40;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #dde8f5;
+}
+
+.includes-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.includes-list li {
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.includes-list li .ico { font-size: 20px; width: 28px; text-align: center; }
+
+.boat-features {
+  background: #003580;
+  padding: 44px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feat-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.feat-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+.feat-icon { font-size: 32px; }
+.feat-text { font-size: 20px; font-weight: 700; color: #fff; }
+
+/* ── CTA BLOCK ── */
+.cta-block {
+  background: #001a40;
+  padding: 56px 60px;
+  text-align: center;
+}
+
+.cta-top { font-size: 22px; font-weight: 600; color: rgba(255,255,255,.6); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+
+.cta-main {
+  font-size: 72px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -2px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.cta-sub {
+  font-size: 28px;
+  font-weight: 700;
+  color: #00CCFF;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.cta-warning {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(255,255,255,.5);
+  margin-bottom: 36px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #00CCFF;
+  color: #001a40;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 24px 72px;
+  border-radius: 60px;
+}
+
+/* ── FOOTER ICONS ── */
+.footer-icons {
+  background: #003580;
+  padding: 28px 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-item .fi { font-size: 32px; }
+.footer-item .fl { font-size: 14px; font-weight: 700; color: rgba(255,255,255,.7); letter-spacing: 1px; text-transform: uppercase; }
+
+/* Arrow connector */
+.arrow-connector {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  color: #00AACC;
+  font-size: 28px;
+  font-weight: 900;
+  align-self: center;
+  margin-top: -40px;
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="logo-area">
+    <div class="logo-icon">🤿</div>
+    <div class="logo-text">
+      <div class="top">7 дней · Красное море</div>
+      <div class="bot">DIVE SAFARI</div>
+    </div>
+  </div>
+
+  <div class="main-title">
+    <div class="line1">ДАЙВ-САФАРИ</div>
+    <div class="line2">7 ДНЕЙ</div>
+  </div>
+
+  <div class="subtitle-band">7 дней моря, приключений и новых эмоций</div>
+
+  <div class="date-row">
+    <div class="date-box">
+      <div class="label">📅 Даты</div>
+      <div class="value">По запросу</div>
+    </div>
+    <div class="date-sep"></div>
+    <div class="location-badge">Шарм-эль-Шейх</div>
+    <div class="date-sep"></div>
+    <div class="date-box">
+      <div class="label">👥 Мест</div>
+      <div class="value">До 12 чел.</div>
+    </div>
+
+    <div class="not-diver-badge">
+      <div class="q">Не дайвер?</div>
+      <div class="a">Отлично!</div>
+      <div class="sub">Тур создан именно для тебя!</div>
+    </div>
+  </div>
+</div>
+
+<!-- PHOTO STRIP -->
+<div class="photo-strip">
+  <div class="photo-card">
+    <div class="photo-placeholder">🤿</div>
+    <div class="caption">
+      <div class="cap-title">Intro Дайвинг</div>
+      <div class="cap-body">Твой <span>первый вдох</span> под водой</div>
+    </div>
+  </div>
+  <div class="photo-card">
+    <div class="photo-placeholder">🐠</div>
+    <div class="caption">
+      <div class="cap-title">Снорклинг</div>
+      <div class="cap-body">Яркие рифы и <span>морская жизнь</span></div>
+    </div>
+  </div>
+  <div class="photo-card">
+    <div class="photo-placeholder">🌅</div>
+    <div class="caption">
+      <div class="cap-title">Чилл и веселье</div>
+      <div class="cap-body">Закаты, музыка и <span>новые друзья</span></div>
+    </div>
+  </div>
+  <div class="photo-card">
+    <div class="photo-placeholder">📸</div>
+    <div class="caption">
+      <div class="cap-title">Фото и видео</div>
+      <div class="cap-body">Незабываемые <span>воспоминания</span></div>
+    </div>
+  </div>
+  <div class="photo-card">
+    <div class="photo-placeholder">⚡</div>
+    <div class="caption">
+      <div class="cap-title">Приключение</div>
+      <div class="cap-body">Отключись и <span>наслаждайся</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOR EVERYONE -->
+<div class="for-everyone">
+  <div class="section-title">Для каждого — своё</div>
+  <div class="segments">
+    <div class="segment">
+      <div class="seg-header">
+        <div class="seg-icon">🤿</div>
+        <div class="seg-title">Новички</div>
+      </div>
+      <ul class="seg-list">
+        <li>Intro diving — без сертификата</li>
+        <li>Снорклинг и морские приключения</li>
+        <li>Фото и видео под водой</li>
+        <li>Активности и игры на борту</li>
+        <li>Сертификат первого погружения</li>
+      </ul>
+    </div>
+    <div class="segment">
+      <div class="seg-header">
+        <div class="seg-icon">🎓</div>
+        <div class="seg-title">Сертифицированные</div>
+      </div>
+      <ul class="seg-list">
+        <li>Фан-дайвы на лучших сайтах</li>
+        <li>Ночной дайв (при условиях)</li>
+        <li>Красивые рифы Красного моря</li>
+        <li>Профессиональный дайв-гид</li>
+        <li>Возьми друга-новичка с собой</li>
+      </ul>
+    </div>
+    <div class="segment">
+      <div class="seg-header">
+        <div class="seg-icon">⭐</div>
+        <div class="seg-title">Будущие дайверы</div>
+      </div>
+      <ul class="seg-list">
+        <li>Полюбишь дайвинг? Продолжай!</li>
+        <li>Курс Open Water</li>
+        <li>Advanced Open Water</li>
+        <li>Nitrox и специализации</li>
+      </ul>
+      <div class="seg-note">Стоимость сафари частично зачтётся в курс. <strong>Твоё приключение только начинается!</strong></div>
+    </div>
+  </div>
+</div>
+
+<!-- ROUTE -->
+<div class="route">
+  <div class="route-title">Маршрут · 7 дней приключений</div>
+  <div class="days">
+    <div class="day-card">
+      <div class="day-header"><div class="dot"></div>Дни 1–2</div>
+      <div class="day-photo">⚓</div>
+      <div class="day-loc">📍 Шарм · Старт</div>
+      <ul class="day-items">
+        <li>Заезд и знакомство на борту</li>
+        <li>Первый снорклинг</li>
+        <li>Intro dive брифинг</li>
+        <li>Вечер на лодке</li>
+      </ul>
+    </div>
+    <div class="day-card">
+      <div class="day-header"><div class="dot"></div>Дни 3–5</div>
+      <div class="day-photo">🐠</div>
+      <div class="day-loc">📍 Рифы и острова</div>
+      <ul class="day-items">
+        <li>Intro dive / фан-дайвы</li>
+        <li>Снорклинг на лагунах</li>
+        <li>Фото и видео под водой</li>
+        <li>Закаты и chill</li>
+      </ul>
+    </div>
+    <div class="day-card">
+      <div class="day-header"><div class="dot"></div>Дни 6–7</div>
+      <div class="day-photo">🌅</div>
+      <div class="day-loc">📍 Лучшие локации</div>
+      <ul class="day-items">
+        <li>Финальные погружения</li>
+        <li>Лучшие сайты маршрута</li>
+        <li>Вечер воспоминаний</li>
+        <li>Возвращение и check-out</li>
+      </ul>
+    </div>
+    <div class="checkout-card">
+      <div class="day-num">7</div>
+      <div class="checkout-label">Check Out</div>
+      <div class="checkout-sub">До следующего приключения!</div>
+    </div>
+  </div>
+</div>
+
+<!-- BOTTOM -->
+<div class="bottom">
+  <div class="includes">
+    <div class="includes-title">В пакет входит</div>
+    <ul class="includes-list">
+      <li><span class="ico">🚢</span> Проживание на лодке (7 ночей)</li>
+      <li><span class="ico">🍽️</span> Питание и напитки на борту</li>
+      <li><span class="ico">🤿</span> Всё оборудование для дайвинга</li>
+      <li><span class="ico">🎓</span> Инструктор и дайв-гид</li>
+      <li><span class="ico">📸</span> Фото и видео под водой</li>
+      <li><span class="ico">🚐</span> Трансфер аэропорт – лодка</li>
+      <li><span class="ico">🌊</span> Снорклинг и активности</li>
+      <li><span class="ico">💧</span> Вода и безалкогольные напитки</li>
+    </ul>
+  </div>
+  <div class="boat-features">
+    <div class="feat-item">
+      <div class="feat-icon">🚢</div>
+      <div class="feat-text">Комфортная лодка</div>
+    </div>
+    <div class="feat-item">
+      <div class="feat-icon">👨‍✈️</div>
+      <div class="feat-text">Опытная команда</div>
+    </div>
+    <div class="feat-item">
+      <div class="feat-icon">🍳</div>
+      <div class="feat-text">Вкусная еда</div>
+    </div>
+    <div class="feat-item">
+      <div class="feat-icon">🌟</div>
+      <div class="feat-text">Незабываемый опыт</div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-block">
+  <div class="cta-top">Не упусти своё место</div>
+  <div class="cta-main">БРОНИРУЙ</div>
+  <div class="cta-main">СЕЙЧАС!</div>
+  <div class="cta-sub">Ограниченное количество мест</div>
+  <div class="cta-warning">Не упусти своё идеальное морское приключение!</div>
+  <div class="cta-btn">Написать МОРЕ</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer-icons">
+  <div class="footer-item"><div class="fi">⚡</div><div class="fl">Приключение</div></div>
+  <div class="footer-item"><div class="fi">👥</div><div class="fl">Новые друзья</div></div>
+  <div class="footer-item"><div class="fi">🌊</div><div class="fl">Жизнь в море</div></div>
+  <div class="footer-item"><div class="fi">📸</div><div class="fl">Воспоминания</div></div>
+</div>
+
+</body>
+</html>

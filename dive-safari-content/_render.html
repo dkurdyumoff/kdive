@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #000; display: flex; flex-direction: column; gap: 0; }
+
+.slide {
+  width: 1080px;
+  height: 1920px;
+  background: #06080B;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, "Helvetica Neue", sans-serif;
+}
+
+/* ── SLIDE 1 ── */
+#s1 .diag-block {
+  position: absolute;
+  width: 140%;
+  height: 680px;
+  background: linear-gradient(135deg, #0044CC 0%, #0088FF 60%, #00AAFF 100%);
+  top: -60px;
+  left: -20%;
+  transform: rotate(-8deg);
+  transform-origin: left center;
+  opacity: .12;
+}
+
+#s1 .diag-line {
+  position: absolute;
+  width: 140%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0,170,255,.6), transparent);
+  top: 580px;
+  left: -20%;
+  transform: rotate(-8deg);
+}
+
+#s1 .geo-circle {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  border: 1.5px solid rgba(0,170,255,.15);
+  border-radius: 50%;
+  top: -180px;
+  right: -200px;
+}
+
+#s1 .geo-circle-2 {
+  position: absolute;
+  width: 460px;
+  height: 460px;
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 50%;
+  top: -60px;
+  right: -80px;
+}
+
+#s1 .num {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: rgba(0,170,255,.7);
+}
+
+#s1 .slide-dots {
+  position: absolute;
+  top: 86px;
+  right: 80px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#s1 .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 80px 120px;
+}
+
+#s1 .eyebrow {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: #00AAFF;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+}
+
+#s1 h1 {
+  font-size: 128px;
+  font-weight: 900;
+  line-height: .95;
+  color: #fff;
+  letter-spacing: -4px;
+  margin-bottom: 12px;
+}
+
+#s1 h1 span {
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+}
+
+#s1 .h-accent {
+  font-size: 128px;
+  font-weight: 900;
+  line-height: .95;
+  color: #00AAFF;
+  letter-spacing: -4px;
+  margin-bottom: 44px;
+}
+
+#s1 .divider {
+  width: 56px;
+  height: 3px;
+  background: #00AAFF;
+  margin-bottom: 40px;
+}
+
+#s1 p {
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgba(255,255,255,.72);
+  max-width: 760px;
+  margin-bottom: 64px;
+}
+
+#s1 .cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,.3);
+  padding: 24px 48px;
+  border-radius: 0;
+}
+
+#s1 .cta::after {
+  content: '→';
+  font-size: 28px;
+}
+
+/* ── SLIDE 2 ── */
+#s2 .diag-block {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(160deg, #001830 0%, #002850 100%);
+  right: 0;
+  clip-path: polygon(18% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+#s2 .accent-bar {
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, #00AAFF 30%, #0055FF 70%, transparent);
+  left: 0;
+  top: 0;
+}
+
+#s2 .num {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: rgba(0,170,255,.7);
+}
+
+#s2 .big-num {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 320px;
+  font-weight: 900;
+  color: rgba(255,255,255,.04);
+  letter-spacing: -10px;
+  line-height: 1;
+  user-select: none;
+}
+
+#s2 .content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 80px;
+  right: 80px;
+}
+
+#s2 .eyebrow {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: #00AAFF;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+#s2 h1 {
+  font-size: 100px;
+  font-weight: 900;
+  line-height: .95;
+  color: #fff;
+  letter-spacing: -3px;
+  margin-bottom: 56px;
+}
+
+#s2 .divider {
+  width: 56px;
+  height: 3px;
+  background: #00AAFF;
+  margin-bottom: 56px;
+}
+
+#s2 .list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+#s2 .list li {
+  font-size: 40px;
+  font-weight: 500;
+  color: rgba(255,255,255,.85);
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  letter-spacing: -.5px;
+}
+
+#s2 .list li .icon {
+  width: 48px;
+  height: 2px;
+  background: #00AAFF;
+  flex-shrink: 0;
+}
+
+#s2 .list li:last-child { border-bottom: none; }
+
+/* ── SLIDE 3 ── */
+#s3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#s3 .diag-top {
+  position: absolute;
+  width: 140%;
+  height: 500px;
+  background: linear-gradient(135deg, #001830, #003366);
+  top: -100px;
+  left: -20%;
+  transform: rotate(8deg);
+  transform-origin: right center;
+  opacity: .5;
+}
+
+#s3 .diag-bottom {
+  position: absolute;
+  width: 140%;
+  height: 500px;
+  background: linear-gradient(315deg, #001830, #003366);
+  bottom: -100px;
+  left: -20%;
+  transform: rotate(-8deg);
+  transform-origin: left center;
+  opacity: .5;
+}
+
+#s3 .geo-lines {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 80px,
+      rgba(0,170,255,.025) 80px,
+      rgba(0,170,255,.025) 81px
+    );
+}
+
+#s3 .num {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: rgba(0,170,255,.7);
+}
+
+#s3 .content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 80px;
+}
+
+#s3 .eyebrow {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  color: #00AAFF;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+}
+
+#s3 h1 {
+  font-size: 110px;
+  font-weight: 900;
+  line-height: .95;
+  letter-spacing: -3px;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+#s3 h1 em {
+  font-style: normal;
+  color: transparent;
+  -webkit-text-stroke: 2.5px #00AAFF;
+}
+
+#s3 .divider {
+  width: 56px;
+  height: 3px;
+  background: #00AAFF;
+  margin: 44px auto 44px;
+}
+
+#s3 p {
+  font-size: 40px;
+  font-weight: 400;
+  color: rgba(255,255,255,.7);
+  line-height: 1.55;
+  margin-bottom: 72px;
+}
+
+#s3 .cta-big {
+  display: inline-block;
+  background: #00AAFF;
+  color: #000;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 32px 72px;
+  border-radius: 0;
+}
+
+/* shared dots indicator */
+.dots-row {
+  position: absolute;
+  top: 80px;
+  right: 80px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.dot { width: 32px; height: 3px; background: rgba(255,255,255,.2); }
+.dot.on { background: #00AAFF; width: 48px; }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 -->
+<div class="slide" id="s1">
+  <div class="diag-block"></div>
+  <div class="diag-line"></div>
+  <div class="geo-circle"></div>
+  <div class="geo-circle-2"></div>
+
+  <div class="num">01 / 03</div>
+  <div class="dots-row">
+    <div class="dot on"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+
+  <div class="content">
+    <div class="eyebrow">Дайв-сафари · Красное море</div>
+    <h1>Никогда<br>не <span>нырял?</span></h1>
+    <div class="h-accent">Идеально.</div>
+    <div class="divider"></div>
+    <p>Мы сделали этот тур<br>именно для первого раза.</p>
+    <div class="cta">7 дней · Без сертификата</div>
+  </div>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide" id="s2">
+  <div class="diag-block"></div>
+  <div class="accent-bar"></div>
+  <div class="big-num">7</div>
+
+  <div class="num">02 / 03</div>
+  <div class="dots-row">
+    <div class="dot"></div>
+    <div class="dot on"></div>
+    <div class="dot"></div>
+  </div>
+
+  <div class="content">
+    <div class="eyebrow">Что входит</div>
+    <h1>Всё<br>включено</h1>
+    <div class="divider"></div>
+    <ul class="list">
+      <li><div class="icon"></div>Лодка и питание на борту</li>
+      <li><div class="icon"></div>Инструктор и intro diving</li>
+      <li><div class="icon"></div>Снорклинг и острова</li>
+      <li><div class="icon"></div>Фото и видео под водой</li>
+      <li><div class="icon"></div>Закаты и новые люди</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide" id="s3">
+  <div class="diag-top"></div>
+  <div class="diag-bottom"></div>
+  <div class="geo-lines"></div>
+
+  <div class="num">03 / 03</div>
+  <div class="dots-row">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot on"></div>
+  </div>
+
+  <div class="content">
+    <div class="eyebrow">Шарм-эль-Шейх</div>
+    <h1>Вернись с <em>видео,</em><br>где ты дышишь<br>под водой</h1>
+    <div class="divider"></div>
+    <p>Не нужно быть дайвером.<br>Нужно просто решиться.</p>
+    <div class="cta-big">Напиши МОРЕ</div>
+  </div>
+</div>
+
+</body>
+</html>

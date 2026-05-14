@@ -1,0 +1,26 @@
+# Secrets
+.env
+api-proxy/.env
+
+# System
+.DS_Store
+node_modules/
+
+# Work files (not for production)
+*-variants.html
+gen-*.mjs
+export-*.mjs
+generate-*.mjs
+generate_pptx.py
+server.mjs
+server-dive.mjs
+watch-deploy.sh
+package.json
+package-lock.json
+banners-export/
+logos/
+Karusel/
+dive-safari-package/
+dive-safari-package.zip
+*.pptx
+*.pdf
