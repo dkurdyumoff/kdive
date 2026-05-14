@@ -108,6 +108,15 @@
             text-align: center;
         }
 
+        .section-subtitle {
+            font-family: var(--font-inter);
+            font-weight: 300;
+            font-size: 1.05rem;
+            color: var(--color-secondary-text);
+            line-height: 1.8;
+            max-width: 680px;
+        }
+
         .label {
             font-family: var(--font-inter);
             font-weight: 500;
@@ -579,6 +588,8 @@
         #itinerary .h2-playfair {
             text-align: center;
         }
+        #itinerary { padding-bottom: 3rem; }
+        #memories { padding-top: 3rem; }
         .itinerary-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -819,12 +830,67 @@
             color: var(--color-secondary-text);
             font-style: italic;
         }
+
+        /* ── Tabs Program (Variant 1) ─── */
+        .chip { display: inline-block; font-size: 0.63rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; background: rgba(59,158,163,0.10); color: var(--color-primary-teal); }
+        .chip.dark { background: rgba(42,42,42,0.09); color: #555; }
+        .chip.wreck { background: rgba(100,60,10,0.09); color: #7a4800; }
+        .chip.night { background: rgba(20,20,60,0.09); color: #333; }
+
+        .v1-tabs {
+            display: flex; gap: 0;
+            border-bottom: 2px solid rgba(59,158,163,0.15);
+            overflow-x: auto; scrollbar-width: none;
+            margin-bottom: 2rem;
+        }
+        .v1-tabs::-webkit-scrollbar { display: none; }
+        .v1-tab {
+            display: flex; flex-direction: column; align-items: center; gap: 0.2rem;
+            padding: 0.8rem 1.2rem; cursor: pointer;
+            border-bottom: 2px solid transparent; margin-bottom: -2px;
+            flex-shrink: 0; transition: all 0.2s; min-width: 80px;
+        }
+        .v1-tab:hover { background: rgba(59,158,163,0.04); }
+        .v1-tab.active { border-bottom-color: var(--color-primary-teal); }
+        .v1-tab-num {
+            width: 28px; height: 28px; border-radius: 50%;
+            border: 2px solid rgba(59,158,163,0.3);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.68rem; font-weight: 700; color: var(--color-secondary-text);
+            transition: all 0.2s;
+        }
+        .v1-tab.active .v1-tab-num { background: var(--color-primary-teal); color: #fff; border-color: var(--color-primary-teal); }
+        .v1-tab-date { font-size: 0.65rem; color: var(--color-secondary-text); font-weight: 400; }
+        .v1-tab-label { font-size: 0.72rem; font-weight: 500; color: var(--color-main-text); text-align: center; line-height: 1.2; }
+        .v1-tab.active .v1-tab-label { color: var(--color-primary-teal); }
+
+        .v1-panels { position: relative; }
+        .v1-panel { display: none; }
+        .v1-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; animation: v1fadeIn 0.25s ease; }
+        @keyframes v1fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+        .v1-day-title { font-family: var(--font-playfair); font-style: italic; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.3rem; }
+        .v1-day-date { font-size: 0.78rem; color: var(--color-secondary-text); font-weight: 400; margin-bottom: 1rem; }
+        .v1-chips { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 1.4rem; }
+        .v1-activities { display: flex; flex-direction: column; gap: 0.7rem; }
+        .v1-act { display: flex; gap: 0.8rem; font-size: 0.88rem; line-height: 1.5; }
+        .v1-act-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--color-primary-teal); flex-shrink: 0; margin-top: 0.5em; }
+        .v1-act b { font-weight: 600; }
+        .v1-act .loc { color: var(--color-primary-teal); font-weight: 500; }
+
+        .v1-panel-right { position: relative; }
+        .v1-photo { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 4px; display: block; }
+        .v1-photo-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(42,42,42,0.5) 0%, transparent 50%); border-radius: 4px; pointer-events: none; }
+
         @media (max-width: 860px) {
             .stats-row { grid-template-columns: 1fr; }
             .stat-col { padding: 2rem 0; border-right: none; border-bottom: 1px solid rgba(59,158,163,0.15); }
             .stat-col:last-child { border-bottom: none; padding-left: 0; }
             .stat-col:nth-child(2) { padding-left: 0; }
             .day-row-date, .day-row-badges { display: none; }
+            .v1-panel.active { grid-template-columns: 1fr; gap: 1.2rem; }
+            .v1-panel-left { order: 1; }
+            .v1-panel-right { order: 2; }
         }
 
         /* Statistics Section */
@@ -870,11 +936,7 @@
         }
         #who-is-it-for .section-subtitle {
             text-align: center;
-            font-family: var(--font-inter);
-            font-weight: 400;
-            font-size: 1.2rem;
-            color: var(--color-secondary-text);
-            margin-bottom: 4rem;
+            margin: 0 auto 4rem;
         }
         .audience-grid {
             display: grid;
@@ -1239,7 +1301,7 @@
             transform: rotate(180deg);
         }
         .faq-item.open .faq-answer {
-            max-height: 1000px;
+            max-height: 400px;
             padding-top: 1rem;
         }
 
@@ -1378,12 +1440,6 @@
             max-width: 640px;
             margin: 0 auto 3rem;
             text-align: center;
-        }
-        .memories-heading p {
-            font-size: 1.05rem;
-            font-weight: 300;
-            color: var(--color-secondary-text);
-            line-height: 1.8;
         }
         .featured-video-wrap {
             display: flex;
@@ -1599,6 +1655,95 @@
             transform: translateY(0);
         }
 
+        /* ── Burger button ──────────────────────────── */
+        .burger-btn {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            width: 36px;
+            height: 36px;
+            padding: 4px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            z-index: 3001;
+            position: relative;
+            flex-shrink: 0;
+        }
+        .burger-line {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--color-main-text);
+            border-radius: 2px;
+            transition: transform 0.3s ease, opacity 0.2s ease;
+        }
+        .burger-btn.open .burger-line:nth-child(1) { transform: translateY(7px) rotate(45deg); background: #fff; }
+        .burger-btn.open .burger-line:nth-child(2) { opacity: 0; }
+        .burger-btn.open .burger-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); background: #fff; }
+
+        /* ── Mobile nav overlay ─────────────────────── */
+        .mobile-nav-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(26, 26, 26, 0.97);
+            z-index: 3000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .mobile-nav-overlay.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.8rem;
+            margin-bottom: 2.5rem;
+        }
+        .mobile-nav-link {
+            font-family: var(--font-playfair);
+            font-style: italic;
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.35s ease, transform 0.35s ease, color 0.2s;
+        }
+        .mobile-nav-overlay.open .mobile-nav-link { opacity: 1; transform: none; }
+        .mobile-nav-overlay.open .mobile-nav-link:nth-child(1) { transition-delay: 0.04s; }
+        .mobile-nav-overlay.open .mobile-nav-link:nth-child(2) { transition-delay: 0.08s; }
+        .mobile-nav-overlay.open .mobile-nav-link:nth-child(3) { transition-delay: 0.12s; }
+        .mobile-nav-overlay.open .mobile-nav-link:nth-child(4) { transition-delay: 0.16s; }
+        .mobile-nav-overlay.open .mobile-nav-link:nth-child(5) { transition-delay: 0.20s; }
+        .mobile-nav-overlay.open .mobile-nav-link:nth-child(6) { transition-delay: 0.24s; }
+        .mobile-nav-link:hover { color: var(--color-primary-teal); }
+        .mobile-nav-divider {
+            width: 40px;
+            height: 1px;
+            background: rgba(59,158,163,0.4);
+            margin: 0.5rem 0 2rem;
+            opacity: 0;
+            transition: opacity 0.35s ease 0.26s;
+        }
+        .mobile-nav-overlay.open .mobile-nav-divider { opacity: 1; }
+        .mobile-nav-cta {
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity 0.35s ease 0.30s, transform 0.35s ease 0.30s;
+        }
+        .mobile-nav-overlay.open .mobile-nav-cta { opacity: 1; transform: none; }
+
         /* Media Queries */
         @media (max-width: 1024px) {
             .section-grid {
@@ -1647,15 +1792,13 @@
             }
 
             .main-nav {
-                display: none; /* Hide nav on smaller screens, could add hamburger */
+                display: none;
             }
             .header-cta {
-                margin-left: auto;
+                display: none;
             }
-            .header-cta .btn {
-                font-size: 0.72rem;
-                padding: 7px 13px;
-                white-space: nowrap;
+            .burger-btn {
+                display: flex;
             }
             .header-logo {
                 font-size: 1rem;
@@ -1934,8 +2077,29 @@
             <div class="header-cta">
                 <a href="#final-cta" class="btn btn-primary">Забронировать</a>
             </div>
+            <button class="burger-btn" id="burgerBtn" aria-label="Меню" aria-expanded="false">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
         </div>
     </header>
+
+    <!-- Mobile nav overlay -->
+    <div class="mobile-nav-overlay" id="mobileNav" aria-hidden="true">
+        <nav class="mobile-nav-links">
+            <a href="#about-us"    class="mobile-nav-link">О нас</a>
+            <a href="#what-awaits" class="mobile-nav-link">Что ждёт</a>
+            <a href="#itinerary"   class="mobile-nav-link">Маршрут</a>
+            <a href="#boat"        class="mobile-nav-link">Лодка</a>
+            <a href="#prices"      class="mobile-nav-link">Цены</a>
+            <a href="#faq"         class="mobile-nav-link">FAQ</a>
+        </nav>
+        <div class="mobile-nav-divider"></div>
+        <div class="mobile-nav-cta">
+            <a href="#final-cta" class="btn btn-primary">Забронировать</a>
+        </div>
+    </div>
 
     <main>
         <!-- Hero Section -->
@@ -1946,11 +2110,15 @@
             </video>
             <script>
                 (function() {
-                    var src = window.innerWidth <= 1024
+                    var mobile = window.innerWidth <= 768;
+                    var vid = document.getElementById('heroVideo');
+                    vid.poster = mobile
+                        ? 'dive-safari-content/hero/mobile-poster.jpg'
+                        : 'dive-safari-content/hero/poster.jpg';
+                    document.getElementById('heroVideoSrc').src = mobile
                         ? 'dive-safari-content/hero/mobile.mp4'
                         : 'dive-safari-content/hero/desktop.mp4';
-                    document.getElementById('heroVideoSrc').src = src;
-                    document.getElementById('heroVideo').load();
+                    vid.load();
                 })();
             </script>
             <div class="hero-overlay"></div>
@@ -2117,162 +2285,203 @@
                     </div>
                 </div>
 
-                <!-- Divider -->
+                <!-- Program divider -->
                 <div class="program-divider">
                     <div class="program-divider-line"></div>
                     <div class="program-divider-label">Программа по дням</div>
                     <div class="program-divider-line"></div>
                 </div>
 
-                <!-- Days accordion -->
-                <div class="days-list">
+                <!-- Days tabs -->
+                <div class="v1-tabs" id="v1tabs">
+                    <div class="v1-tab active" onclick="v1select(0)">
+                        <div class="v1-tab-num">01</div>
+                        <div class="v1-tab-date">15/08</div>
+                        <div class="v1-tab-label">Прибытие</div>
+                    </div>
+                    <div class="v1-tab" onclick="v1select(1)">
+                        <div class="v1-tab-num">02</div>
+                        <div class="v1-tab-date">16/08</div>
+                        <div class="v1-tab-label">Первые<br>погружения</div>
+                    </div>
+                    <div class="v1-tab" onclick="v1select(2)">
+                        <div class="v1-tab-num">03</div>
+                        <div class="v1-tab-date">17/08</div>
+                        <div class="v1-tab-label">Коралловые<br>рифы</div>
+                    </div>
+                    <div class="v1-tab" onclick="v1select(3)">
+                        <div class="v1-tab-num">04</div>
+                        <div class="v1-tab-date">18/08</div>
+                        <div class="v1-tab-label">Открытая<br>вода</div>
+                    </div>
+                    <div class="v1-tab" onclick="v1select(4)">
+                        <div class="v1-tab-num">05</div>
+                        <div class="v1-tab-date">19/08</div>
+                        <div class="v1-tab-label">Затонувшие<br>корабли</div>
+                    </div>
+                    <div class="v1-tab" onclick="v1select(5)">
+                        <div class="v1-tab-num">06</div>
+                        <div class="v1-tab-date">20/08</div>
+                        <div class="v1-tab-label">Острова<br>Тиран</div>
+                    </div>
+                    <div class="v1-tab" onclick="v1select(6)">
+                        <div class="v1-tab-num">07</div>
+                        <div class="v1-tab-date">21/08</div>
+                        <div class="v1-tab-label">Последняя<br>ночь</div>
+                    </div>
+                    <div class="v1-tab" onclick="v1select(7)">
+                        <div class="v1-tab-num">08</div>
+                        <div class="v1-tab-date">22/08</div>
+                        <div class="v1-tab-label">Домой</div>
+                    </div>
+                </div>
 
-                    <div class="day-card">
-                        <div class="day-header" onclick="toggleDayCard(this)">
-                            <div class="day-row-num">01</div>
-                            <div class="day-row-date">15/08 · Суббота</div>
-                            <div class="day-row-title">Прибытие — заселение на борт</div>
-                            <div class="day-row-badges"><span class="day-row-badge dark">Орг. день</span></div>
-                            <div class="day-row-chevron">›</div>
-                        </div>
-                        <div class="day-body">
-                            <div class="day-activities-inner">
-                                <div class="day-activity"><div class="day-act-num">1</div><span>Прибытие на яхту, <b>заселение до 12:00</b></span></div>
-                                <div class="day-activity"><div class="day-act-num">2</div><span>Размещение в каютах, знакомство с командой</span></div>
-                                <div class="day-activity"><div class="day-act-num">3</div><span>Общий инструктаж по безопасности на борту</span></div>
-                                <div class="day-activity"><div class="day-act-num">4</div><span>Ночёвка в порту Шарм-эль-Шейха</span></div>
+                <div class="v1-panels" id="v1panels">
+                    <!-- Day 1 -->
+                    <div class="v1-panel active">
+                        <div class="v1-panel-left">
+                            <div class="v1-day-title">Прибытие</div>
+                            <div class="v1-day-date">15 августа · Суббота · Шарм-эль-Шейх</div>
+                            <div class="v1-chips"><span class="chip dark">Организационный</span></div>
+                            <div class="v1-activities">
+                                <div class="v1-act"><div class="v1-act-dot"></div><span>Прибытие на яхту, <b>заселение до 12:00</b></span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span>Размещение в каютах, знакомство с командой</span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span>Общий инструктаж по безопасности на борту</span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span>Ночёвка в порту Шарм-эль-Шейха</span></div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="day-card">
-                        <div class="day-header" onclick="toggleDayCard(this)">
-                            <div class="day-row-num">02</div>
-                            <div class="day-row-date">16/08 · Воскресенье</div>
-                            <div class="day-row-title">Первые погружения</div>
-                            <div class="day-row-badges"><span class="day-row-badge">Try Diving</span><span class="day-row-badge">Discover Scuba</span></div>
-                            <div class="day-row-chevron">›</div>
+                        <div class="v1-panel-right">
+                            <img class="v1-photo" src="dive-safari-content/program/1д.jpg" alt="День 1">
+                            <div class="v1-photo-overlay"></div>
                         </div>
-                        <div class="day-body">
-                            <div class="day-activities-inner">
-                                <div class="day-activity"><div class="day-act-num">1</div><span>Отплытие к <span class="act-loc">Marsa Bricka</span></span></div>
-                                <div class="day-activity"><div class="day-act-num">2</div><span><b>1-е погружение</b> — <span class="act-loc">Marsa Bricka</span> · confined water · Try Diving</span></div>
-                                <div class="day-activity"><div class="day-act-num">3</div><span><b>2-е погружение</b> — <span class="act-loc">Marsa Bricka</span> · confined water · Discover Scuba</span></div>
-                                <div class="day-activity"><div class="day-act-num">4</div><span><b>3-е погружение</b> — <span class="act-loc">White Island</span> · снорклинг и водные развлечения</span></div>
-                                <div class="day-activity"><div class="day-act-num">5</div><span>Закат на White Island · ночёвка у острова</span></div>
+                    </div>
+                    <!-- Day 2 -->
+                    <div class="v1-panel">
+                        <div class="v1-panel-left">
+                            <div class="v1-day-title">Первые погружения</div>
+                            <div class="v1-day-date">16 августа · Воскресенье · Marsa Bricka · White Island</div>
+                            <div class="v1-chips"><span class="chip">Try Diving</span><span class="chip">Discover Scuba</span><span class="chip dark">Закат</span></div>
+                            <div class="v1-activities">
+                                <div class="v1-act"><div class="v1-act-dot"></div><span>Отплытие к <span class="loc">Marsa Bricka</span></span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span><b>1-е погружение</b> — Marsa Bricka · confined water · <b>Try Diving</b></span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span><b>2-е погружение</b> — Marsa Bricka · confined water · <b>Discover Scuba</b></span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span><b>3-е погружение</b> — <span class="loc">White Island</span> · снорклинг и водные развлечения</span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span>Закат на White Island · ночёвка у острова</span></div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="day-card">
-                        <div class="day-header" onclick="toggleDayCard(this)">
-                            <div class="day-row-num">03</div>
-                            <div class="day-row-date">17/08 · Понедельник</div>
-                            <div class="day-row-title">Коралловые рифы</div>
-                            <div class="day-row-badges"><span class="day-row-badge">Открытая вода</span><span class="day-row-badge dark">Костёр на острове</span></div>
-                            <div class="day-row-chevron">›</div>
+                        <div class="v1-panel-right">
+                            <img class="v1-photo" src="dive-safari-content/program/2д.JPG" alt="День 2">
+                            <div class="v1-photo-overlay"></div>
                         </div>
-                        <div class="day-body">
-                            <div class="day-activities-inner">
-                                <div class="day-activity"><div class="day-act-num">1</div><span>Отплытие к <span class="act-loc">Shuaab Mahmoud</span></span></div>
-                                <div class="day-activity"><div class="day-act-num">2</div><span><b>1-е погружение</b> — <span class="act-loc">Small Crack</span> · открытая вода · Discover Scuba</span></div>
-                                <div class="day-activity"><div class="day-act-num">3</div><span><b>2-е погружение</b> — <span class="act-loc">Small Crack</span> · открытая вода · Discover Scuba</span></div>
-                                <div class="day-activity"><div class="day-act-num">4</div><span>Отплытие к <span class="act-loc">Gubal Island</span></span></div>
-                                <div class="day-activity"><div class="day-act-num">5</div><span>Закат — <b>костёр на острове</b> · ночёвка у Gubal Island</span></div>
+                    </div>
+                    <!-- Day 3 -->
+                    <div class="v1-panel">
+                        <div class="v1-panel-left">
+                            <div class="v1-day-title">Коралловые рифы</div>
+                            <div class="v1-day-date">17 августа · Понедельник · Shuaab Mahmoud · Gubal Island</div>
+                            <div class="v1-chips"><span class="chip">Открытая вода</span><span class="chip dark">🔥 Костёр</span></div>
+                            <div class="v1-activities">
+                                <div class="v1-act"><div class="v1-act-dot"></div><span>Отплытие к <span class="loc">Shuaab Mahmoud</span></span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span><b>1-е погружение</b> — <span class="loc">Small Crack</span> · открытая вода · Discover Scuba</span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span><b>2-е погружение</b> — <span class="loc">Small Crack</span> · открытая вода · Discover Scuba</span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span>Отплытие к <span class="loc">Gubal Island</span></span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span>Закат — <b>костёр на острове</b> · ночёвка у Gubal Island</span></div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="day-card">
-                        <div class="day-header" onclick="toggleDayCard(this)">
-                            <div class="day-row-num">04</div>
-                            <div class="day-row-date">18/08 · Вторник</div>
-                            <div class="day-row-title">Открытая вода</div>
-                            <div class="day-row-badges"><span class="day-row-badge">Last OW Dive</span><span class="day-row-badge dark">Плавание с дельфинами</span></div>
-                            <div class="day-row-chevron">›</div>
+                        <div class="v1-panel-right">
+                            <img class="v1-photo" src="dive-safari-content/program/3д.jpg" alt="День 3">
+                            <div class="v1-photo-overlay"></div>
                         </div>
-                        <div class="day-body">
-                            <div class="day-activities-inner">
-                                <div class="day-activity"><div class="day-act-num">1</div><span><b>1-е погружение</b> — <span class="act-loc">Bluff Point</span> · последний Discover Scuba в открытой воде</span></div>
-                                <div class="day-activity"><div class="day-act-num">2</div><span><b>2-е погружение</b> — <span class="act-loc">Shuaab Aly</span> · Last OW Dive · Discover Scuba</span></div>
-                                <div class="day-activity"><div class="day-act-num">3</div><span><b>3-е погружение</b> — <span class="act-loc">Shuaab Aly</span> · встреча новых дайверов на борту</span></div>
-                                <div class="day-activity"><div class="day-act-num">4</div><span>Закат — <b>плавание с дельфинами</b> · ночёвка у Shuaab Aly</span></div>
+                    </div>
+                    <!-- Day 4 -->
+                    <div class="v1-panel">
+                        <div class="v1-panel-left">
+                            <div class="v1-day-title">Открытая вода</div>
+                            <div class="v1-day-date">18 августа · Вторник · Bluff Point · Shuaab Aly</div>
+                            <div class="v1-chips"><span class="chip">Last OW Dive</span><span class="chip dark">🐬 Дельфины</span></div>
+                            <div class="v1-activities">
+                                <div class="v1-act"><div class="v1-act-dot"></div><span><b>1-е погружение</b> — <span class="loc">Bluff Point</span> · последний Discover Scuba</span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span><b>2-е погружение</b> — <span class="loc">Shuaab Aly</span> · Last OW Dive · Discover Scuba</span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span><b>3-е погружение</b> — Shuaab Aly · встреча новых дайверов на борту</span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span>Закат — <b>плавание с дельфинами 🐬</b></span></div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="day-card">
-                        <div class="day-header" onclick="toggleDayCard(this)">
-                            <div class="day-row-num">05</div>
-                            <div class="day-row-date">19/08 · Среда</div>
-                            <div class="day-row-title">Затонувшие корабли</div>
-                            <div class="day-row-badges"><span class="day-row-badge wreck">Kingston Wreck</span><span class="day-row-badge night">Ночной дайв</span></div>
-                            <div class="day-row-chevron">›</div>
+                        <div class="v1-panel-right">
+                            <img class="v1-photo" src="dive-safari-content/program/4д.JPG" alt="День 4">
+                            <div class="v1-photo-overlay"></div>
                         </div>
-                        <div class="day-body">
-                            <div class="day-activities-inner">
-                                <div class="day-activity"><div class="day-act-num">1</div><span><b>1-е погружение</b> — <span class="act-loc">Kingston Wreck</span><span class="act-inline-tag">рэк</span> · погружение к затонувшему судну</span></div>
-                                <div class="day-activity"><div class="day-act-num">2</div><span><b>2-е погружение</b> — <span class="act-loc">Ras Fanar</span> · красота рифа и дрейф</span></div>
-                                <div class="day-activity"><div class="day-act-num">3</div><span><b>3-е погружение</b> — <span class="act-loc">Jackfish Alley</span> · тысячи ставрид в живых вихрях</span></div>
-                                <div class="day-activity"><div class="day-act-num">4</div><span><b>Ночное погружение</b><span class="act-inline-tag night">ночной дайв</span> — <span class="act-loc">Temple Reef</span></span></div>
-                                <div class="day-activity"><div class="day-act-num">5</div><span>Ночёвка у Temple Reef (напротив Farsha Cafe)</span></div>
+                    </div>
+                    <!-- Day 5 -->
+                    <div class="v1-panel">
+                        <div class="v1-panel-left">
+                            <div class="v1-day-title">Затонувшие корабли</div>
+                            <div class="v1-day-date">19 августа · Среда · Kingston Wreck · Temple Reef</div>
+                            <div class="v1-chips"><span class="chip wreck">Kingston Wreck</span><span class="chip night">🌙 Ночной дайв</span></div>
+                            <div class="v1-activities">
+                                <div class="v1-act"><div class="v1-act-dot"></div><span><b>1-е погружение</b> — <span class="loc">Kingston Wreck</span> · затонувшее судно</span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span><b>2-е погружение</b> — <span class="loc">Ras Fanar</span> · красота рифа и дрейф</span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span><b>3-е погружение</b> — <span class="loc">Jackfish Alley</span> · тысячи ставрид</span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span><b>Ночное погружение 🌙</b> — <span class="loc">Temple Reef</span></span></div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="day-card">
-                        <div class="day-header" onclick="toggleDayCard(this)">
-                            <div class="day-row-num">06</div>
-                            <div class="day-row-date">20/08 · Четверг</div>
-                            <div class="day-row-title">Острова Тиран</div>
-                            <div class="day-row-badges"><span class="day-row-badge">Tiran</span><span class="day-row-badge">Zodiac drift</span></div>
-                            <div class="day-row-chevron">›</div>
+                        <div class="v1-panel-right">
+                            <img class="v1-photo" src="dive-safari-content/program/5д.jpg" alt="День 5">
+                            <div class="v1-photo-overlay"></div>
                         </div>
-                        <div class="day-body">
-                            <div class="day-activities-inner">
-                                <div class="day-activity"><div class="day-act-num">1</div><span><b>1-е погружение</b> — <span class="act-loc">Ras Umm El Sid</span> · Zodiac drift dive</span></div>
-                                <div class="day-activity"><div class="day-act-num">2</div><span>Отплытие к острову <span class="act-loc">Tiran</span></span></div>
-                                <div class="day-activity"><div class="day-act-num">3</div><span><b>2-е погружение</b> — <span class="act-loc">Gordon Reef</span> (Север) · Zodiac drift dive</span></div>
-                                <div class="day-activity"><div class="day-act-num">4</div><span><b>3-е погружение</b> — <span class="act-loc">Gordon Reef</span> (Юг) · встреча с удивительными животными</span></div>
-                                <div class="day-activity"><div class="day-act-num">5</div><span>Водные развлечения · закат · ночёвка у Gordon Reef</span></div>
+                    </div>
+                    <!-- Day 6 -->
+                    <div class="v1-panel">
+                        <div class="v1-panel-left">
+                            <div class="v1-day-title">Острова Тиран</div>
+                            <div class="v1-day-date">20 августа · Четверг · Tiran · Gordon Reef</div>
+                            <div class="v1-chips"><span class="chip">Tiran</span><span class="chip">Zodiac drift</span></div>
+                            <div class="v1-activities">
+                                <div class="v1-act"><div class="v1-act-dot"></div><span><b>1-е погружение</b> — <span class="loc">Ras Umm El Sid</span> · Zodiac drift dive</span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span>Отплытие к острову <span class="loc">Tiran</span></span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span><b>2-е погружение</b> — <span class="loc">Gordon Reef</span> (Север) · Zodiac drift</span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span><b>3-е погружение</b> — <span class="loc">Gordon Reef</span> (Юг)</span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span>Водные развлечения · закат · ночёвка у Gordon Reef</span></div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="day-card">
-                        <div class="day-header" onclick="toggleDayCard(this)">
-                            <div class="day-row-num">07</div>
-                            <div class="day-row-date">21/08 · Пятница</div>
-                            <div class="day-row-title">Последняя ночь на борту</div>
-                            <div class="day-row-badges"><span class="day-row-badge">Jackson Reef</span><span class="day-row-badge dark">Прощальная вечеринка</span></div>
-                            <div class="day-row-chevron">›</div>
+                        <div class="v1-panel-right">
+                            <img class="v1-photo" src="dive-safari-content/program/6д.PNG" alt="День 6">
+                            <div class="v1-photo-overlay"></div>
                         </div>
-                        <div class="day-body">
-                            <div class="day-activities-inner">
-                                <div class="day-activity"><div class="day-act-num">1</div><span><b>1-е погружение</b> — <span class="act-loc">Thomas Reef</span> · дрейф-дайвинг на Zodiac</span></div>
-                                <div class="day-activity"><div class="day-act-num">2</div><span><b>2-е погружение</b> — <span class="act-loc">Jackson Reef</span> · лучшие кораллы маршрута · рифовые акулы</span></div>
-                                <div class="day-activity"><div class="day-act-num">3</div><span>Отплытие к <span class="act-loc">Electric Point</span> · водные развлечения · параплан</span></div>
-                                <div class="day-activity"><div class="day-act-num">4</div><span><b>Прощальная вечеринка</b> для группы на борту</span></div>
+                    </div>
+                    <!-- Day 7 -->
+                    <div class="v1-panel">
+                        <div class="v1-panel-left">
+                            <div class="v1-day-title">Последняя ночь на борту</div>
+                            <div class="v1-day-date">21 августа · Пятница · Thomas Reef · Jackson Reef</div>
+                            <div class="v1-chips"><span class="chip">Thomas Reef</span><span class="chip">Jackson Reef ★</span><span class="chip dark">🎉 Вечеринка</span></div>
+                            <div class="v1-activities">
+                                <div class="v1-act"><div class="v1-act-dot"></div><span><b>1-е погружение</b> — <span class="loc">Thomas Reef</span> · дрейф на Zodiac</span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span><b>2-е погружение</b> — <span class="loc">Jackson Reef ★</span> · рифовые акулы · лучшие кораллы</span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span>Водные развлечения у Electric Point · параплан</span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span>🎉 <b>Прощальная вечеринка</b> для группы</span></div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="day-card">
-                        <div class="day-header" onclick="toggleDayCard(this)">
-                            <div class="day-row-num">08</div>
-                            <div class="day-row-date">22/08 · Суббота</div>
-                            <div class="day-row-title">Отправление домой</div>
-                            <div class="day-row-badges"><span class="day-row-badge dark">Финальный день</span></div>
-                            <div class="day-row-chevron">›</div>
+                        <div class="v1-panel-right">
+                            <img class="v1-photo" src="dive-safari-content/program/7д.JPG" alt="День 7">
+                            <div class="v1-photo-overlay"></div>
                         </div>
-                        <div class="day-body">
-                            <div class="day-activities-inner">
-                                <div class="day-activity"><div class="day-act-num">1</div><span>Отплытие в порт Шарм-эль-Шейха</span></div>
-                                <div class="day-activity"><div class="day-act-num">2</div><span>Выселение с борта — <b>до 12:00</b></span></div>
+                    </div>
+                    <!-- Day 8 -->
+                    <div class="v1-panel">
+                        <div class="v1-panel-left">
+                            <div class="v1-day-title">Отправление домой</div>
+                            <div class="v1-day-date">22 августа · Суббота · Шарм-эль-Шейх</div>
+                            <div class="v1-chips"><span class="chip dark">Финальный день</span></div>
+                            <div class="v1-activities">
+                                <div class="v1-act"><div class="v1-act-dot"></div><span>Отплытие в порт Шарм-эль-Шейха</span></div>
+                                <div class="v1-act"><div class="v1-act-dot"></div><span>Выселение с борта — <b>до 12:00</b></span></div>
                             </div>
                         </div>
+                        <div class="v1-panel-right">
+                            <img class="v1-photo" src="dive-safari-content/program/8д.jpeg" alt="День 8">
+                            <div class="v1-photo-overlay"></div>
+                        </div>
                     </div>
-
                 </div>
                 <p class="program-foot-note">Программа зависит от погоды и состояния моря. SS Thistlegorm — по уровню подготовки группы.</p>
 
@@ -2280,7 +2489,7 @@
         </section>
 
         <!-- ГАЛЕРЕЯ Section -->
-        <section id="memories" class="section-padding section-white">
+        <section id="memories" class="section-padding section-mint">
             <div class="container">
                 <div class="memories-heading">
                     <span class="label text-center">КАК ЭТО БЫЛО</span>
@@ -2640,7 +2849,7 @@
                             <i class="fas fa-chevron-down icon"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>При отмене за 60+ дней до начала — 80% возврат. За 30-60 дней — 50%. Менее 30 дней — предоплата не возвращается (возможен перенос или поиск замены).</p>
+                            <p>При отмене за 60+ дней до начала — 80% возврат. За 30-60 дней — 50%. Менее 30 дней — предоплата не возвращается.</p>
                         </div>
                     </div>
                 </div>
@@ -2657,6 +2866,7 @@
                     <input type="hidden" name="subject" value="Новая заявка — KDM Dive Safari">
                     <input type="hidden" name="from_name" value="KDM Dive Safari">
                     <input type="hidden" name="redirect" value="false">
+                    <input type="checkbox" name="botcheck" style="display:none">
                     <input type="hidden" id="ctaContactType" name="contact_type" value="Telegram">
                     <input type="text" name="name" placeholder="Ваше имя" required>
                     <div style="display:flex;gap:0.5rem">
@@ -2698,8 +2908,12 @@
                 </ul>
             </nav>
             <div class="footer-socials">
-                <a href="https://t.me/productkris" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
-                <a href="https://wa.me/79851830077" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://t.me/productkris" target="_blank" aria-label="Telegram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.7 8.01c-.12.56-.46.7-.93.43l-2.57-1.89-1.24 1.19c-.14.14-.25.25-.5.25l.18-2.52 4.6-4.16c.2-.18-.04-.27-.31-.1L7.4 15.12 4.88 14.3c-.55-.17-.56-.55.12-.82l9.96-3.84c.46-.17.86.1.68.82v-.01z"/></svg>
+                </a>
+                <a href="https://wa.me/79851830077" target="_blank" aria-label="WhatsApp">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.43 1.27 4.88L2 22l5.25-1.25A9.94 9.94 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm4.93 13.5c-.2.56-1.18 1.09-1.62 1.15-.42.06-.96.09-1.54-.1-.36-.11-.82-.27-1.41-.52-2.47-1.07-4.09-3.55-4.22-3.72-.12-.17-.99-1.32-.99-2.52s.63-1.79.85-2.03c.22-.25.48-.31.64-.31h.45c.15 0 .35-.05.54.42l.77 1.86c.06.15.1.32.01.5l-.29.5-.3.36c-.1.1-.21.22-.09.43.12.2.55.91 1.18 1.47.81.72 1.5.94 1.71 1.05.21.1.33.09.45-.05l.6-.71c.14-.18.28-.15.47-.09l1.71.81c.2.1.34.15.38.24.05.09.05.51-.15 1.06z"/></svg>
+                </a>
             </div>
             <p class="footer-copyright">© 2026 Dive Safari · Шарм-эль-Шейх</p>
         </div>
@@ -2718,6 +2932,7 @@
                 <input type="hidden" name="subject" value="Новая заявка — KDM Dive Safari">
                 <input type="hidden" name="from_name" value="KDM Dive Safari">
                 <input type="hidden" name="redirect" value="false">
+                <input type="checkbox" name="botcheck" style="display:none">
                 <input type="hidden" id="contactTypeField" name="contact_type" value="Telegram">
 
                 <div class="modal-field">
@@ -2750,15 +2965,55 @@
 
     <!-- Floating Socials Button -->
     <div class="floating-socials">
-        <button id="social-toggle-btn" class="social-toggle-btn" aria-label="Связаться"><i class="fas fa-comment-dots"></i></button>
+        <button id="social-toggle-btn" class="social-toggle-btn" aria-label="Связаться">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-3 7h-2.5v1.5H17V12h-2.5v4h-2V8H17v1z" opacity="0"/><path d="M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm4.5 5.5l-1.5 7.5c-.1.5-.4.6-.8.4l-2.2-1.6-1.05 1.01c-.12.12-.22.22-.44.22l.15-2.27 3.97-3.58c.17-.15-.04-.23-.27-.08L7.9 14.4l-2.17-.68c-.47-.15-.48-.47.1-.7l8.5-3.27c.39-.14.73.1.67.73-.01-.01-.01-.01 0 0z"/></svg>
+        </button>
         <div id="social-links" class="social-links-container">
-            <a href="https://t.me/productkris" target="_blank" class="social-link" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
-            <a href="https://wa.me/79851830077" target="_blank" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://t.me/productkris" target="_blank" class="social-link" aria-label="Telegram">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.7 8.01c-.12.56-.46.7-.93.43l-2.57-1.89-1.24 1.19c-.14.14-.25.25-.5.25l.18-2.52 4.6-4.16c.2-.18-.04-.27-.31-.1L7.4 15.12 4.88 14.3c-.55-.17-.56-.55.12-.82l9.96-3.84c.46-.17.86.1.68.82v-.01z"/></svg>
+            </a>
+            <a href="https://wa.me/79851830077" target="_blank" class="social-link" aria-label="WhatsApp">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.43 1.27 4.88L2 22l5.25-1.25A9.94 9.94 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm4.93 13.5c-.2.56-1.18 1.09-1.62 1.15-.42.06-.96.09-1.54-.1-.36-.11-.82-.27-1.41-.52-2.47-1.07-4.09-3.55-4.22-3.72-.12-.17-.99-1.32-.99-2.52s.63-1.79.85-2.03c.22-.25.48-.31.64-.31h.45c.15 0 .35-.05.54.42l.77 1.86c.06.15.1.32.01.5l-.29.5-.3.36c-.1.1-.21.22-.09.43.12.2.55.91 1.18 1.47.81.72 1.5.94 1.71 1.05.21.1.33.09.45-.05l.6-.71c.14-.18.28-.15.47-.09l1.71.81c.2.1.34.15.38.24.05.09.05.51-.15 1.06z"/></svg>
+            </a>
         </div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // ── Burger menu ────────────────────────────────
+            (function() {
+                const btn = document.getElementById('burgerBtn');
+                const nav = document.getElementById('mobileNav');
+                if (!btn || !nav) return;
+
+                function openMenu() {
+                    btn.classList.add('open');
+                    nav.classList.add('open');
+                    btn.setAttribute('aria-expanded', 'true');
+                    nav.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                }
+                function closeMenu() {
+                    btn.classList.remove('open');
+                    nav.classList.remove('open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    nav.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                }
+
+                btn.addEventListener('click', function() {
+                    btn.classList.contains('open') ? closeMenu() : openMenu();
+                });
+
+                nav.querySelectorAll('.mobile-nav-link, .mobile-nav-cta a').forEach(function(link) {
+                    link.addEventListener('click', closeMenu);
+                });
+
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') closeMenu();
+                });
+            })();
+
             // --- Header Scroll Shadow ---
             const header = document.getElementById('main-header');
             const headerHeight = header.offsetHeight;
@@ -3029,7 +3284,7 @@
                         border-radius: 40px;
                         box-shadow: 0 4px 24px rgba(0,0,0,0.4);
                         backdrop-filter: blur(8px);
-                        font-family: Inter, sans-serif;
+                        font-family: var(--font-inter);
                     }
                     #editToolbar button {
                         border: none;
@@ -3264,9 +3519,10 @@
             });
             // ─────────────────────────────────────────────
 
-            // ── Day accordion ─────────────────────────────
-            function toggleDayCard(header) {
-                header.closest('.day-card').classList.toggle('open');
+            // ── Program tabs ───────────────────────────────
+            function v1select(idx) {
+                document.querySelectorAll('.v1-tab').forEach((t,i) => t.classList.toggle('active', i===idx));
+                document.querySelectorAll('.v1-panel').forEach((p,i) => p.classList.toggle('active', i===idx));
             }
 
             // ── Booking Modal ──────────────────────────────
