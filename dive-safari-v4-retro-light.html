@@ -1144,7 +1144,7 @@
         .extras-chevron { color: var(--color-primary-teal); transition: transform 0.3s; }
         .extras-wrap.open .extras-chevron { transform: rotate(90deg); }
         .extras-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
-        .extras-wrap.open .extras-body { max-height: 400px; }
+        .extras-wrap.open .extras-body { max-height: 800px; }
         .extras-grid {
             display: grid; grid-template-columns: repeat(2, 1fr);
             gap: 0.6rem; padding: 0.4rem 0 1.4rem;
@@ -1155,6 +1155,7 @@
         }
         .extra-name { flex: 1; }
         .extra-price { font-weight: 600; color: var(--color-primary-teal); white-space: nowrap; }
+        .extra-period { font-weight: 400; color: var(--color-secondary-text); font-size: 0.78em; }
         /* Cabin lightbox */
         .cabin-lb {
             position: fixed; inset: 0; background: rgba(0,0,0,0.88);
@@ -1227,7 +1228,7 @@
         .faq-answer {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.4s ease-out, padding-top 0.4s ease-out;
+            transition: max-height 0.45s ease, padding-top 0.3s ease;
             padding-top: 0;
             font-size: 1rem;
             color: var(--color-secondary-text);
@@ -1238,7 +1239,7 @@
             transform: rotate(180deg);
         }
         .faq-item.open .faq-answer {
-            max-height: 200px; /* Adjust as needed for content, or calculate dynamically */
+            max-height: 1000px;
             padding-top: 1rem;
         }
 
@@ -1383,6 +1384,21 @@
             font-weight: 300;
             color: var(--color-secondary-text);
             line-height: 1.8;
+        }
+        .featured-video-wrap {
+            display: flex;
+            justify-content: center;
+            margin-top: 2.5rem;
+        }
+        .featured-video {
+            width: 100%;
+            max-width: 360px;
+            aspect-ratio: 9 / 16;
+            object-fit: cover;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .featured-video { max-width: 280px; }
         }
         .reels-strip {
             display: flex;
@@ -2065,7 +2081,6 @@
             <div class="container">
                 <span class="label text-center">Программа · 15–22 августа 2026</span>
                 <h2 class="h2-playfair text-center">Маршрут по лучшим точкам</h2>
-                <p style="font-size:1rem;color:var(--color-secondary-text);font-weight:300;max-width:520px;margin:0.7rem auto 0;text-align:center;">8 дней на борту яхты среди кораллов Красного моря — три заповедника, затонувшие корабли и 11 уникальных рифов.</p>
 
                 <!-- Stats -->
                 <div class="stats-row">
@@ -2263,12 +2278,61 @@
             </div>
         </section>
 
+        <!-- ГАЛЕРЕЯ Section -->
+        <section id="memories" class="section-padding section-white">
+            <div class="container">
+                <div class="memories-heading">
+                    <span class="label text-center">КАК ЭТО БЫЛО</span>
+                    <h2 class="h2-playfair text-center">Как это было в прошлый раз</h2>
+                </div>
+                <div class="reels-strip" id="reelsStrip">
+                    <div class="reel-card" data-type="video" id="reelVideo1">
+                        <video src="dive-safari-content/gallery/video-1.mp4" muted loop playsinline></video>
+                        <div class="reel-overlay"></div>
+                    </div>
+                    <div class="reel-card" data-type="photo">
+                        <img src="dive-safari-content/gallery/IMG_0699.jpg" alt="">
+                        <div class="reel-overlay"></div>
+                    </div>
+                    <div class="reel-card" data-type="photo">
+                        <img src="dive-safari-content/gallery/IMG_0700.jpg" alt="">
+                        <div class="reel-overlay"></div>
+                    </div>
+                    <div class="reel-card" data-type="photo">
+                        <img src="dive-safari-content/gallery/IMG_0702.jpg" alt="">
+                        <div class="reel-overlay"></div>
+                    </div>
+                    <div class="reel-card" data-type="photo">
+                        <img src="dive-safari-content/gallery/IMG_5134.jpg" alt="">
+                        <div class="reel-overlay"></div>
+                    </div>
+                    <div class="reel-card" data-type="photo">
+                        <img src="dive-safari-content/gallery/IMG_5141.jpg" alt="">
+                        <div class="reel-overlay"></div>
+                    </div>
+                    <div class="reel-card" data-type="photo">
+                        <img src="dive-safari-content/gallery/IMG_9677.JPG" alt="">
+                        <div class="reel-overlay"></div>
+                    </div>
+                    <div class="reel-card" data-type="photo">
+                        <img src="dive-safari-content/gallery/IMG_9692.JPG" alt="">
+                        <div class="reel-overlay"></div>
+                    </div>
+                    <div class="reel-card" data-type="photo">
+                        <img src="dive-safari-content/gallery/IMG_9821.jpg" alt="">
+                        <div class="reel-overlay"></div>
+                    </div>
+                </div>
+                <p class="reels-hint">← прокрути →</p>
+            </div>
+        </section>
+
         <!-- КОМУ ПОДОЙДЁТ Section -->
         <section id="who-is-it-for" class="section-padding section-white">
             <div class="container">
                 <span class="label text-center">КОМУ ПОДОЙДЁТ</span>
                 <h2 class="h2-playfair text-center">Для всех уровней опыта</h2>
-                <p class="section-subtitle">Это дайв-сафари подойдёт каждому</p>
+                <p class="section-subtitle">Даже одни или с близкими и родными. Даже если у вас разный уровень подготовки — каждому будет интересно и комфортно.</p>
                 <div class="audience-grid">
                     <div class="audience-card fade-in-up">
                         <div class="card-icon">
@@ -2310,70 +2374,6 @@
             </div>
         </section>
 
-        <!-- ГАЛЕРЕЯ Section -->
-        <section id="memories" class="section-padding section-white">
-            <div class="container">
-                <div class="memories-heading">
-                    <span class="label text-center">С НАМИ</span>
-                    <h2 class="h2-playfair text-center">Присоединяйтесь к нам</h2>
-                    <p>Даже одни или с близкими и родными. Даже если у вас разный уровень подготовки — каждому будет интересно и комфортно.</p>
-                </div>
-                <div class="reels-strip" id="reelsStrip">
-                    <div class="reel-card" data-type="video">
-                        <video src="dive-safari-content/copy_03A9C68F-6BA3-488D-B802-0EE9C01AC48B.MOV" muted loop playsinline></video>
-                        <div class="reel-overlay"></div>
-                        <span class="reel-badge video-badge">▶ видео</span>
-                        <div class="reel-play"></div>
-                        <div class="reel-caption">На борту — жизнь в открытом море</div>
-                    </div>
-                    <div class="reel-card" data-type="photo">
-                        <img src="dive-safari-content/Pics/знакомстваналодке.jpg" alt="">
-                        <div class="reel-overlay"></div>
-                        <span class="reel-badge">фото</span>
-                        <div class="reel-caption">Новые знакомства и общение</div>
-                    </div>
-                    <div class="reel-card" data-type="photo">
-                        <img src="dive-safari-content/Pics/pastsafariKarusel/IMG_0699.PNG" alt="">
-                        <div class="reel-overlay"></div>
-                        <span class="reel-badge">фото</span>
-                        <div class="reel-caption">Манты и черепахи под водой</div>
-                    </div>
-                    <div class="reel-card" data-type="video">
-                        <video src="dive-safari-content/boatPicsVds/VID-20260418-WA0044.mp4" muted loop playsinline></video>
-                        <div class="reel-overlay"></div>
-                        <span class="reel-badge video-badge">▶ видео</span>
-                        <div class="reel-play"></div>
-                        <div class="reel-caption">Reef Voyager — ваш дом на 8 дней</div>
-                    </div>
-                    <div class="reel-card wide" data-type="photo">
-                        <img src="dive-safari-content/Pics/pastsafariKarusel/IMG_0700.PNG" alt="">
-                        <div class="reel-overlay"></div>
-                        <span class="reel-badge">фото</span>
-                        <div class="reel-caption">Закаты и вино на палубе</div>
-                    </div>
-                    <div class="reel-card" data-type="photo">
-                        <img src="dive-safari-content/Pics/снорклингэмоции.jpg" alt="">
-                        <div class="reel-overlay"></div>
-                        <span class="reel-badge">фото</span>
-                        <div class="reel-caption">Снорклинг и эмоции</div>
-                    </div>
-                    <div class="reel-card" data-type="photo">
-                        <img src="dive-safari-content/Pics/pastsafariKarusel/IMG_0702.PNG" alt="">
-                        <div class="reel-overlay"></div>
-                        <span class="reel-badge">фото</span>
-                        <div class="reel-caption">Фото и воспоминания</div>
-                    </div>
-                    <div class="reel-card" data-type="photo">
-                        <img src="dive-safari-content/Pics/jump.jpg" alt="">
-                        <div class="reel-overlay"></div>
-                        <span class="reel-badge">фото</span>
-                        <div class="reel-caption">Прыжок в море!</div>
-                    </div>
-                </div>
-                <p class="reels-hint">← прокрути →</p>
-            </div>
-        </section>
-
         <!-- КАКАЯ ЛОДКА Section -->
         <section id="boat" class="section-padding section-mint">
             <div class="container">
@@ -2411,14 +2411,9 @@
                     <div class="cabin-card fade-in-up">
                         <div class="cabin-photo" data-cabin="lower">
                             <div class="cabin-slider" id="slider-lower">
-                                <img src="dive-safari-content/cabins/lower/photo-1.jpg" alt="Нижняя палуба">
-                                <img src="dive-safari-content/cabins/lower/photo-2.jpg" alt="Нижняя палуба">
-                                <img src="dive-safari-content/cabins/lower/photo-3.jpg" alt="Нижняя палуба">
+                                <img src="dive-safari-content/cabins/lower/lowerdeck.jpg" alt="Нижняя палуба">
                             </div>
                             <div class="cabin-photo-overlay"><span class="cabin-photo-hint">Смотреть фото</span></div>
-                            <span class="cabin-photo-count" id="count-lower">1 / 3</span>
-                            <button class="csp-btn csp-prev" onclick="event.stopPropagation();cabinSlide('lower',-1)">‹</button>
-                            <button class="csp-btn csp-next" onclick="event.stopPropagation();cabinSlide('lower',1)">›</button>
                         </div>
                         <div class="cabin-body">
                             <span class="cabin-badge">−10% до 1 июня</span>
@@ -2437,14 +2432,9 @@
                     <div class="cabin-card fade-in-up">
                         <div class="cabin-photo" data-cabin="upper">
                             <div class="cabin-slider" id="slider-upper">
-                                <img src="dive-safari-content/cabins/upper/photo-1.jpg" alt="Верхняя палуба">
-                                <img src="dive-safari-content/cabins/upper/photo-2.jpg" alt="Верхняя палуба">
-                                <img src="dive-safari-content/cabins/upper/photo-3.jpg" alt="Верхняя палуба">
+                                <img src="dive-safari-content/cabins/upper/upperdeck.jpg" alt="Верхняя палуба">
                             </div>
                             <div class="cabin-photo-overlay"><span class="cabin-photo-hint">Смотреть фото</span></div>
-                            <span class="cabin-photo-count" id="count-upper">1 / 3</span>
-                            <button class="csp-btn csp-prev" onclick="event.stopPropagation();cabinSlide('upper',-1)">‹</button>
-                            <button class="csp-btn csp-next" onclick="event.stopPropagation();cabinSlide('upper',1)">›</button>
                         </div>
                         <div class="cabin-body">
                             <span class="cabin-badge">−10% до 1 июня</span>
@@ -2463,14 +2453,9 @@
                     <div class="cabin-card fade-in-up">
                         <div class="cabin-photo" data-cabin="king">
                             <div class="cabin-slider" id="slider-king">
-                                <img src="dive-safari-content/cabins/king/photo-1.jpg" alt="King bed">
-                                <img src="dive-safari-content/cabins/king/photo-2.jpg" alt="King bed">
-                                <img src="dive-safari-content/cabins/king/photo-3.jpg" alt="King bed">
+                                <img src="dive-safari-content/cabins/king/king.PNG" alt="King bed">
                             </div>
                             <div class="cabin-photo-overlay"><span class="cabin-photo-hint">Смотреть фото</span></div>
-                            <span class="cabin-photo-count" id="count-king">1 / 3</span>
-                            <button class="csp-btn csp-prev" onclick="event.stopPropagation();cabinSlide('king',-1)">‹</button>
-                            <button class="csp-btn csp-next" onclick="event.stopPropagation();cabinSlide('king',1)">›</button>
                         </div>
                         <div class="cabin-body">
                             <span class="cabin-badge">−10% до 1 июня</span>
@@ -2512,28 +2497,36 @@
                     <div class="extras-body">
                         <div class="extras-grid">
                             <div class="extra-item">
-                                <span class="extra-name">Аренда регулятора + ВБК</span>
-                                <span class="extra-price">от 80 €</span>
+                                <span class="extra-name">Найтрокс 12L / 15L</span>
+                                <span class="extra-price">80 € / 110 € <span class="extra-period">/ нед.</span></span>
                             </div>
                             <div class="extra-item">
-                                <span class="extra-name">Аренда фонарика</span>
-                                <span class="extra-price">20 €</span>
+                                <span class="extra-name">Комплект снаряжения (сертификат)</span>
+                                <span class="extra-price">150 € <span class="extra-period">/ нед.</span></span>
                             </div>
                             <div class="extra-item">
-                                <span class="extra-name">Нитрокс (обогащённый воздух)</span>
-                                <span class="extra-price">60 €</span>
+                                <span class="extra-name">Баллон 15L</span>
+                                <span class="extra-price">56 € <span class="extra-period">/ нед.</span></span>
                             </div>
                             <div class="extra-item">
-                                <span class="extra-name">Страховка для дайверов</span>
-                                <span class="extra-price">35 €</span>
+                                <span class="extra-name">Дайв-компьютер</span>
+                                <span class="extra-price">70 € <span class="extra-period">/ нед.</span></span>
                             </div>
                             <div class="extra-item">
-                                <span class="extra-name">Трансфер из отеля</span>
-                                <span class="extra-price">25 €</span>
+                                <span class="extra-name">Фонари</span>
+                                <span class="extra-price">8 € <span class="extra-period">/ день</span></span>
                             </div>
                             <div class="extra-item">
-                                <span class="extra-name">Подводная фотосъёмка</span>
-                                <span class="extra-price">по запросу</span>
+                                <span class="extra-name">Курс PADI OWDC</span>
+                                <span class="extra-price">360 € <span class="extra-period">/ чел.</span></span>
+                            </div>
+                            <div class="extra-item">
+                                <span class="extra-name">Курс PADI AOWDC</span>
+                                <span class="extra-price">340 € <span class="extra-period">/ чел.</span></span>
+                            </div>
+                            <div class="extra-item">
+                                <span class="extra-name">Курс PADI Specialties (EAN, deep, wreck)</span>
+                                <span class="extra-price">220 € <span class="extra-period">/ чел.</span></span>
                             </div>
                         </div>
                     </div>
@@ -2637,7 +2630,7 @@
                             <i class="fas fa-chevron-down icon"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>Предоплата составляет 30% от стоимости тура. Оставшуюся сумму необходимо внести за 30 дней до начала сафари.</p>
+                            <p>Предоплата составляет 50% от стоимости тура. Оставшуюся сумму необходимо внести за 30 дней до начала сафари.</p>
                         </div>
                     </div>
                     <div class="faq-item fade-in-up">
@@ -2896,21 +2889,10 @@
                 const answer = item.querySelector('.faq-answer');
 
                 question.addEventListener('click', () => {
-                    // Close other open items
                     faqItems.forEach(otherItem => {
-                        if (otherItem !== item && otherItem.classList.contains('open')) {
-                            otherItem.classList.remove('open');
-                            otherItem.querySelector('.faq-answer').style.maxHeight = '0';
-                        }
+                        if (otherItem !== item) otherItem.classList.remove('open');
                     });
-
-                    // Toggle current item
                     item.classList.toggle('open');
-                    if (item.classList.contains('open')) {
-                        answer.style.maxHeight = answer.scrollHeight + 'px'; // Set max-height to content height
-                    } else {
-                        answer.style.maxHeight = '0';
-                    }
                 });
             });
 
@@ -2955,11 +2937,35 @@
         });
 
             // ── Reels strip ─────────────────────────────────
-            document.querySelectorAll('.reel-card').forEach(card => {
+            // video-1: autoplay при попадании в экран
+            (function() {
+                const card1 = document.getElementById('reelVideo1');
+                if (!card1) return;
+                const vid1 = card1.querySelector('video');
+                const io = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(e) {
+                        if (e.isIntersecting) vid1.play();
+                        else { vid1.pause(); vid1.currentTime = 0; }
+                    });
+                }, { threshold: 0.4 });
+                io.observe(card1);
+            })();
+            // video-2, video-3: по клику
+            document.querySelectorAll('.reel-clickplay').forEach(function(card) {
                 const video = card.querySelector('video');
+                const playBtn = card.querySelector('.reel-play');
                 if (!video) return;
-                card.addEventListener('mouseenter', () => video.play());
-                card.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+                if (playBtn) playBtn.style.opacity = '1';
+                card.style.cursor = 'pointer';
+                card.addEventListener('click', function() {
+                    if (video.paused) {
+                        video.play();
+                        if (playBtn) playBtn.style.opacity = '0';
+                    } else {
+                        video.pause();
+                        if (playBtn) playBtn.style.opacity = '1';
+                    }
+                });
             });
             (function() {
                 const strip = document.getElementById('reelsStrip');
@@ -3181,24 +3187,18 @@
             // ── Cabin gallery lightbox ────────────────────
             const CABIN_GALLERIES = {
                 lower: [
-                    { src: 'dive-safari-content/cabins/lower/photo-1.jpg', cap: 'Нижняя палуба' },
-                    { src: 'dive-safari-content/cabins/lower/photo-2.jpg', cap: 'Нижняя палуба' },
-                    { src: 'dive-safari-content/cabins/lower/photo-3.jpg', cap: 'Нижняя палуба' },
+                    { src: 'dive-safari-content/cabins/lower/lowerdeck.jpg', cap: 'Нижняя палуба' },
                 ],
                 upper: [
-                    { src: 'dive-safari-content/cabins/upper/photo-1.jpg', cap: 'Верхняя палуба' },
-                    { src: 'dive-safari-content/cabins/upper/photo-2.jpg', cap: 'Верхняя палуба' },
-                    { src: 'dive-safari-content/cabins/upper/photo-3.jpg', cap: 'Верхняя палуба' },
+                    { src: 'dive-safari-content/cabins/upper/upperdeck.jpg', cap: 'Верхняя палуба' },
                 ],
                 king: [
-                    { src: 'dive-safari-content/cabins/king/photo-1.jpg', cap: 'King bed каюта' },
-                    { src: 'dive-safari-content/cabins/king/photo-2.jpg', cap: 'King bed каюта' },
-                    { src: 'dive-safari-content/cabins/king/photo-3.jpg', cap: 'King bed каюта' },
+                    { src: 'dive-safari-content/cabins/king/king.PNG', cap: 'King bed каюта' },
                 ],
             };
             // ── Cabin card slider ──────────────────────────
             const cabinSliderIdx = { lower: 0, upper: 0, king: 0 };
-            const CABIN_TOTAL = { lower: 3, upper: 3, king: 3 };
+            const CABIN_TOTAL = { lower: 1, upper: 1, king: 1 };
 
             function cabinSlide(key, dir) {
                 const total = CABIN_TOTAL[key];

@@ -24,3 +24,8 @@ dive-safari-package/
 dive-safari-package.zip
 *.pptx
 *.pdf
+
+# Large original video files (use converted mp4 versions)
+dive-safari-content/**/*.MOV
+dive-safari-content/**/*.mov
+dive-safari-content/**/*.HEIC
