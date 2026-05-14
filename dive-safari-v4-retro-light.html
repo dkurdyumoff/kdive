@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dive Safari · Красное море</title>
+    <meta name="description" content="Dive Safari по Красному морю — 8 дней на яхте с дайвингом, снорклингом и коралловыми рифами. Малые группы до 8 человек.">
+    <!-- Open Graph — превью при шаринге ссылки -->
+    <meta property="og:title" content="Dive Safari · Красное море">
+    <meta property="og:description" content="Dive Safari по Красному морю — 8 дней на яхте с дайвингом, снорклингом и коралловыми рифами. Малые группы до 8 человек.">
+    <meta property="og:image" content="https://kdive.ru/dive-safari-content/hero/poster.jpg">
+    <meta property="og:url" content="https://kdive.ru">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <!-- Twitter / Telegram -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dive Safari · Красное море">
+    <meta name="twitter:description" content="Dive Safari по Красному морю — 8 дней на яхте с дайвингом, снорклингом и коралловыми рифами. Малые группы до 8 человек.">
+    <meta name="twitter:image" content="https://kdive.ru/dive-safari-content/hero/poster.jpg">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="favicon.ico">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons -->
@@ -1003,17 +1019,29 @@
             overflow: hidden;
             cursor: pointer;
         }
-        .cabin-photo img {
-            width: 100%; height: 100%;
+        /* Slider wrapper */
+        .cabin-slider {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.35s ease;
+            will-change: transform;
+        }
+        .cabin-slider img {
+            min-width: 100%;
+            height: 100%;
             object-fit: cover;
+            flex-shrink: 0;
+            pointer-events: none;
             transition: transform 0.4s ease;
         }
-        .cabin-card:hover .cabin-photo img { transform: scale(1.04); }
+        .cabin-card:hover .cabin-slider img { transform: scale(1.04); }
         .cabin-photo-overlay {
             position: absolute; inset: 0;
             background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 50%);
             display: flex; align-items: flex-end; padding: 12px;
             opacity: 0; transition: opacity 0.25s;
+            pointer-events: none;
         }
         .cabin-card:hover .cabin-photo-overlay { opacity: 1; }
         .cabin-photo-hint {
@@ -1026,6 +1054,27 @@
             font-size: 0.65rem; font-weight: 700;
             padding: 3px 9px; border-radius: 20px;
             backdrop-filter: blur(4px);
+            pointer-events: none;
+            z-index: 3;
+        }
+        /* Desktop slide arrows */
+        .csp-btn {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            background: rgba(0,0,0,0.28); backdrop-filter: blur(6px);
+            border: 1px solid rgba(255,255,255,0.18); color: white;
+            font-size: 1.3rem; width: 34px; height: 34px; border-radius: 50%;
+            cursor: pointer; display: flex; align-items: center; justify-content: center;
+            opacity: 0; transition: opacity 0.2s, background 0.2s;
+            z-index: 4; line-height: 1;
+        }
+        .cabin-card:hover .csp-btn { opacity: 1; }
+        .csp-btn:hover { background: rgba(0,0,0,0.55); }
+        .csp-prev { left: 10px; }
+        .csp-next { right: 10px; }
+        @media (max-width: 768px) {
+            .csp-btn { display: none; }
+            .cabin-photo-overlay { display: none; }
+            .cabin-photo { cursor: default; }
         }
         .cabin-body {
             padding: 1.4rem 1.4rem 1.6rem;
@@ -2360,10 +2409,16 @@
                 <div class="cabin-grid">
                     <!-- Нижняя палуба -->
                     <div class="cabin-card fade-in-up">
-                        <div class="cabin-photo" onclick="openCabinGallery('lower', 0)">
-                            <img src="dive-safari-content/cabins/lower/photo-1.jpg" alt="Нижняя палуба">
+                        <div class="cabin-photo" data-cabin="lower">
+                            <div class="cabin-slider" id="slider-lower">
+                                <img src="dive-safari-content/cabins/lower/photo-1.jpg" alt="Нижняя палуба">
+                                <img src="dive-safari-content/cabins/lower/photo-2.jpg" alt="Нижняя палуба">
+                                <img src="dive-safari-content/cabins/lower/photo-3.jpg" alt="Нижняя палуба">
+                            </div>
                             <div class="cabin-photo-overlay"><span class="cabin-photo-hint">Смотреть фото</span></div>
-                            <span class="cabin-photo-count">1 / 3</span>
+                            <span class="cabin-photo-count" id="count-lower">1 / 3</span>
+                            <button class="csp-btn csp-prev" onclick="event.stopPropagation();cabinSlide('lower',-1)">‹</button>
+                            <button class="csp-btn csp-next" onclick="event.stopPropagation();cabinSlide('lower',1)">›</button>
                         </div>
                         <div class="cabin-body">
                             <span class="cabin-badge">−10% до 1 июня</span>
@@ -2380,10 +2435,16 @@
 
                     <!-- Верхняя палуба -->
                     <div class="cabin-card fade-in-up">
-                        <div class="cabin-photo" onclick="openCabinGallery('upper', 0)">
-                            <img src="dive-safari-content/cabins/upper/photo-1.jpg" alt="Верхняя палуба">
+                        <div class="cabin-photo" data-cabin="upper">
+                            <div class="cabin-slider" id="slider-upper">
+                                <img src="dive-safari-content/cabins/upper/photo-1.jpg" alt="Верхняя палуба">
+                                <img src="dive-safari-content/cabins/upper/photo-2.jpg" alt="Верхняя палуба">
+                                <img src="dive-safari-content/cabins/upper/photo-3.jpg" alt="Верхняя палуба">
+                            </div>
                             <div class="cabin-photo-overlay"><span class="cabin-photo-hint">Смотреть фото</span></div>
-                            <span class="cabin-photo-count">1 / 3</span>
+                            <span class="cabin-photo-count" id="count-upper">1 / 3</span>
+                            <button class="csp-btn csp-prev" onclick="event.stopPropagation();cabinSlide('upper',-1)">‹</button>
+                            <button class="csp-btn csp-next" onclick="event.stopPropagation();cabinSlide('upper',1)">›</button>
                         </div>
                         <div class="cabin-body">
                             <span class="cabin-badge">−10% до 1 июня</span>
@@ -2400,10 +2461,16 @@
 
                     <!-- King bed -->
                     <div class="cabin-card fade-in-up">
-                        <div class="cabin-photo" onclick="openCabinGallery('king', 0)">
-                            <img src="dive-safari-content/cabins/king/photo-1.jpg" alt="King bed">
+                        <div class="cabin-photo" data-cabin="king">
+                            <div class="cabin-slider" id="slider-king">
+                                <img src="dive-safari-content/cabins/king/photo-1.jpg" alt="King bed">
+                                <img src="dive-safari-content/cabins/king/photo-2.jpg" alt="King bed">
+                                <img src="dive-safari-content/cabins/king/photo-3.jpg" alt="King bed">
+                            </div>
                             <div class="cabin-photo-overlay"><span class="cabin-photo-hint">Смотреть фото</span></div>
-                            <span class="cabin-photo-count">1 / 3</span>
+                            <span class="cabin-photo-count" id="count-king">1 / 3</span>
+                            <button class="csp-btn csp-prev" onclick="event.stopPropagation();cabinSlide('king',-1)">‹</button>
+                            <button class="csp-btn csp-next" onclick="event.stopPropagation();cabinSlide('king',1)">›</button>
                         </div>
                         <div class="cabin-body">
                             <span class="cabin-badge">−10% до 1 июня</span>
@@ -3129,6 +3196,43 @@
                     { src: 'dive-safari-content/cabins/king/photo-3.jpg', cap: 'King bed каюта' },
                 ],
             };
+            // ── Cabin card slider ──────────────────────────
+            const cabinSliderIdx = { lower: 0, upper: 0, king: 0 };
+            const CABIN_TOTAL = { lower: 3, upper: 3, king: 3 };
+
+            function cabinSlide(key, dir) {
+                const total = CABIN_TOTAL[key];
+                cabinSliderIdx[key] = (cabinSliderIdx[key] + dir + total) % total;
+                const slider = document.getElementById('slider-' + key);
+                slider.style.transform = 'translateX(-' + (cabinSliderIdx[key] * 100) + '%)';
+                document.getElementById('count-' + key).textContent =
+                    (cabinSliderIdx[key] + 1) + ' / ' + total;
+            }
+
+            // Touch swipe + desktop click-to-lightbox
+            document.querySelectorAll('.cabin-photo').forEach(function(el) {
+                var touchStartX = 0, touchMoved = false;
+                el.addEventListener('touchstart', function(e) {
+                    touchStartX = e.touches[0].clientX;
+                    touchMoved = false;
+                }, { passive: true });
+                el.addEventListener('touchmove', function() {
+                    touchMoved = true;
+                }, { passive: true });
+                el.addEventListener('touchend', function(e) {
+                    var dx = e.changedTouches[0].clientX - touchStartX;
+                    if (Math.abs(dx) > 40) {
+                        cabinSlide(el.dataset.cabin, dx < 0 ? 1 : -1);
+                    }
+                });
+                el.addEventListener('click', function(e) {
+                    if (window.innerWidth > 768) {
+                        openCabinGallery(el.dataset.cabin, cabinSliderIdx[el.dataset.cabin]);
+                    }
+                });
+            });
+            // ──────────────────────────────────────────────
+
             let cabinLbGallery = [], cabinLbIdx = 0;
             function openCabinGallery(key, idx) {
                 cabinLbGallery = CABIN_GALLERIES[key];
