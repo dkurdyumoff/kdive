@@ -1737,6 +1737,20 @@
             transition: opacity 0.35s ease 0.26s;
         }
         .mobile-nav-overlay.open .mobile-nav-divider { opacity: 1; }
+        .mobile-nav-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.6);
+            font-size: 1.6rem;
+            cursor: pointer;
+            line-height: 1;
+            padding: 8px;
+            transition: color 0.2s;
+        }
+        .mobile-nav-close:hover { color: #fff; }
         .mobile-nav-cta {
             opacity: 0;
             transform: translateY(12px);
@@ -2087,6 +2101,7 @@
 
     <!-- Mobile nav overlay -->
     <div class="mobile-nav-overlay" id="mobileNav" aria-hidden="true">
+        <button class="mobile-nav-close" id="mobileNavClose" aria-label="Закрыть меню">✕</button>
         <nav class="mobile-nav-links">
             <a href="#about-us"    class="mobile-nav-link">О нас</a>
             <a href="#what-awaits" class="mobile-nav-link">Что ждёт</a>
@@ -3004,6 +3019,8 @@
                 btn.addEventListener('click', function() {
                     btn.classList.contains('open') ? closeMenu() : openMenu();
                 });
+
+                document.getElementById('mobileNavClose').addEventListener('click', closeMenu);
 
                 nav.querySelectorAll('.mobile-nav-link, .mobile-nav-cta a').forEach(function(link) {
                     link.addEventListener('click', closeMenu);
