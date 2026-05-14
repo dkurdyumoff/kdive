@@ -1818,10 +1818,18 @@
     <main>
         <!-- Hero Section -->
         <section id="hero">
-            <video class="hero-video" autoplay muted loop playsinline>
-                <source src="dive-safari-content/1blockmobile.MOV" type="video/mp4" media="(max-width: 768px)">
-                <source src="dive-safari-content/16510923049603.mp4" type="video/mp4">
+            <video class="hero-video" id="heroVideo" autoplay muted loop playsinline>
+                <source id="heroVideoSrc" src="" type="video/mp4">
             </video>
+            <script>
+                (function() {
+                    var src = window.innerWidth <= 1024
+                        ? 'dive-safari-content/1blockmobile.MOV'
+                        : 'dive-safari-content/16510923049603.mp4';
+                    document.getElementById('heroVideoSrc').src = src;
+                    document.getElementById('heroVideo').load();
+                })();
+            </script>
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h1 class="h1-playfair">Дайв-сафари на лодке<br>в Красном море</h1>
