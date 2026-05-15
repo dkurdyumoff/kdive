@@ -1,6 +1,9 @@
 # Secrets
 .env
 api-proxy/.env
+kdive/tg-search.py
+kdive/*.session
+kdive/tg-channels-*.csv
 
 # System
 .DS_Store

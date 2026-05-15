@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - 'dive-safari-v4-retro-light.html'
+      - 'en.html'
       - 'dive-safari-content/**'
       - 'CNAME'
 
