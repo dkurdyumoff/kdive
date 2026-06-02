@@ -9,6 +9,7 @@ on:
       - 'en.html'
       - 'dive-safari-content/**'
       - 'CNAME'
+      - 'favicon.svg'
       - 'safari-north-wrecks.html'
       - 'safari-north-wrecks-en.html'
       - 'safari-south-sharks.html'
