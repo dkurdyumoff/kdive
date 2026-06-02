@@ -1196,6 +1196,7 @@
             font-size: 1.6rem; font-weight: 700; color: var(--color-primary-teal);
         }
         .cabin-cur { font-size: 0.9rem; font-weight: 600; color: var(--color-primary-teal); }
+        .cabin-per { font-size: 0.75rem; font-weight: 400; color: var(--color-secondary-text); margin-left: 4px; align-self: flex-end; padding-bottom: 2px; }
         .cabin-desc {
             font-size: 0.85rem; color: var(--color-secondary-text);
             line-height: 1.6; flex: 1;
@@ -1854,6 +1855,7 @@
             }
             .burger-btn {
                 display: flex;
+                margin-left: auto;
             }
             .header-logo {
                 font-size: 1rem;
@@ -2098,7 +2100,7 @@
 </head>
 <body>
     <!-- Announcement Bar -->
-    <div id="announce-bar">
+    <div id="announce-bar" class="hidden">
         <span class="ab-tag">−10%</span>
         <span class="ab-text">Early bird until <span class="ab-highlight">June 1</span> — discount on all cabins</span>
         <a class="ab-cta" href="#prices">Choose cabin →</a>
@@ -2106,10 +2108,10 @@
     </div>
 
     <!-- Scroll Progress Bar -->
-    <div id="scroll-progress"></div>
+    <div id="scroll-progress" class="bar-hidden"></div>
 
     <!-- Header -->
-    <header id="main-header" class="main-header">
+    <header id="main-header" class="main-header bar-hidden">
         <div class="container header-content">
             <a href="#" class="header-logo">
                 <svg width="160" height="52" viewBox="0 0 160 52" xmlns="http://www.w3.org/2000/svg">
@@ -2130,9 +2132,9 @@
                 </ul>
             </nav>
             <div class="lang-switch">
-                <a href="/" class="lang-link">RU</a>
+                <a href="./dive-safari-v4-retro-light.html" class="lang-link" data-lang="ru">RU</a>
                 <span class="lang-sep">|</span>
-                <span class="lang-active">EN</span>
+                <span class="lang-active" data-lang="en">EN</span>
             </div>
             <div class="header-cta">
                 <a href="#final-cta" class="btn btn-primary">Book now</a>
@@ -2160,9 +2162,9 @@
         <div class="mobile-nav-cta">
             <a href="#final-cta" class="btn btn-primary">Book now</a>
             <div class="lang-switch" style="justify-content:center;margin-top:16px;">
-                <a href="/" class="lang-link">RU</a>
+                <a href="./dive-safari-v4-retro-light.html" class="lang-link" data-lang="ru">RU</a>
                 <span class="lang-sep">|</span>
-                <span class="lang-active">EN</span>
+                <span class="lang-active" data-lang="en">EN</span>
             </div>
         </div>
     </div>
@@ -2695,12 +2697,13 @@
                             <div class="cabin-photo-overlay"><span class="cabin-photo-hint">View photos</span></div>
                         </div>
                         <div class="cabin-body">
-                            <span class="cabin-badge">−10% until June 1</span>
+                            <span class="cabin-badge" data-kdive-badge="redSeaNorth2026">−10% until June 1</span>
                             <div class="cabin-name">Lower deck</div>
                             <div class="cabin-price-row">
                                 <span class="cabin-old">1 190 €</span>
                                 <span class="cabin-price">1 071</span>
                                 <span class="cabin-cur">€</span>
+                                <span class="cabin-per">/ per person</span>
                             </div>
                             <p class="cabin-desc">Cosy cabin with a porthole. Bunk or twin beds — perfect for solo travellers.</p>
                             <a href="#final-cta" class="btn btn-secondary">Book now</a>
@@ -2716,12 +2719,13 @@
                             <div class="cabin-photo-overlay"><span class="cabin-photo-hint">View photos</span></div>
                         </div>
                         <div class="cabin-body">
-                            <span class="cabin-badge">−10% until June 1</span>
+                            <span class="cabin-badge" data-kdive-badge="redSeaNorth2026">−10% until June 1</span>
                             <div class="cabin-name">Upper deck</div>
                             <div class="cabin-price-row">
                                 <span class="cabin-old">1 340 €</span>
                                 <span class="cabin-price">1 206</span>
                                 <span class="cabin-cur">€</span>
+                                <span class="cabin-per">/ per person</span>
                             </div>
                             <p class="cabin-desc">Spacious cabin with a large window on the upper deck. Best sea views, more light and air.</p>
                             <a href="#final-cta" class="btn btn-secondary">Book now</a>
@@ -2737,12 +2741,13 @@
                             <div class="cabin-photo-overlay"><span class="cabin-photo-hint">View photos</span></div>
                         </div>
                         <div class="cabin-body">
-                            <span class="cabin-badge">−10% until June 1</span>
+                            <span class="cabin-badge" data-kdive-badge="redSeaNorth2026">−10% until June 1</span>
                             <div class="cabin-name">King bed cabin</div>
                             <div class="cabin-price-row">
                                 <span class="cabin-old">1 490 €</span>
                                 <span class="cabin-price">1 341</span>
                                 <span class="cabin-cur">€</span>
+                                <span class="cabin-per">/ per person</span>
                             </div>
                             <p class="cabin-desc">Exclusive cabin with a large double bed and panoramic windows. Perfect for couples.</p>
                             <a href="#final-cta" class="btn btn-secondary">Book now</a>
@@ -2968,13 +2973,8 @@
                     <input type="hidden" name="from_name" value="KDM Dive Safari">
                     <input type="hidden" name="redirect" value="false">
                     <input type="checkbox" name="botcheck" style="display:none">
-                    <input type="hidden" id="ctaContactType" name="contact_type" value="Telegram">
                     <input type="text" name="name" placeholder="Your name" required>
-                    <div style="display:flex;gap:0.5rem">
-                        <button type="button" class="ct-btn active" data-form="cta" data-type="telegram" style="flex:1;padding:12px 16px;border:1.5px solid #fff;background:rgba(255,255,255,0.25);color:#fff;border-radius:4px;cursor:pointer;font-family:var(--font-inter);font-size:0.85rem;transition:all 0.2s">✈ Telegram</button>
-                        <button type="button" class="ct-btn" data-form="cta" data-type="phone" style="flex:1;padding:12px 16px;border:1.5px solid rgba(255,255,255,0.5);background:transparent;color:rgba(255,255,255,0.7);border-radius:4px;cursor:pointer;font-family:var(--font-inter);font-size:0.85rem;transition:all 0.2s">📞 Phone</button>
-                    </div>
-                    <input type="text" id="ctaContactInput" name="contact" placeholder="@username or link" required>
+                    <input type="text" id="ctaContactInput" name="contact" placeholder="Telegram @username or phone number" required>
                     <textarea name="message" placeholder="Your question or request (optional)" rows="3" style="width:100%;resize:vertical;padding:0.75rem 1rem;border:1.5px solid rgba(255,255,255,0.35);border-radius:4px;font-family:var(--font-inter);font-size:0.95rem;font-weight:300;color:#fff;background:#fff;outline:none;transition:border-color 0.2s;color:var(--color-main-text)" onfocus="this.style.borderColor='rgba(255,255,255,0.8)'" onblur="this.style.borderColor='rgba(255,255,255,0.35)'"></textarea>
                     <button type="submit" class="btn" style="background:#fff;color:var(--color-primary-teal);font-size:1rem;padding:1rem 2rem;margin-top:0.5rem">Send request</button>
                     <p id="ctaFormNote" class="cta-contact-info" style="margin-top:0">We speak Russian & English · Reply within a few hours</p>
@@ -3025,8 +3025,6 @@
                 <input type="hidden" name="from_name" value="KDM Dive Safari">
                 <input type="hidden" name="redirect" value="false">
                 <input type="checkbox" name="botcheck" style="display:none">
-                <input type="hidden" id="contactTypeField" name="contact_type" value="Telegram">
-
                 <div class="modal-field">
                     <label>Your name</label>
                     <input type="text" name="name" placeholder="John Smith" required>
@@ -3034,11 +3032,7 @@
 
                 <div class="modal-field">
                     <label>How to reach you</label>
-                    <div class="contact-toggle">
-                        <button type="button" class="ct-btn active" data-type="telegram">✈ Telegram</button>
-                        <button type="button" class="ct-btn" data-type="phone">📞 Phone</button>
-                    </div>
-                    <input type="text" id="contactValueInput" name="contact" placeholder="@username or link" required>
+                    <input type="text" id="contactValueInput" name="contact" placeholder="Telegram @username or phone number" required>
                 </div>
 
                 <div class="modal-field">
@@ -3653,25 +3647,6 @@
                 modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
                 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-                // Contact type toggle — modal only
-                const modalCtBtns = document.querySelectorAll('#bookingModal .ct-btn');
-                const contactInput = document.getElementById('contactValueInput');
-                const contactTypeField = document.getElementById('contactTypeField');
-                modalCtBtns.forEach(btn => {
-                    btn.addEventListener('click', () => {
-                        modalCtBtns.forEach(b => b.classList.remove('active'));
-                        btn.classList.add('active');
-                        if (btn.dataset.type === 'telegram') {
-                            contactInput.type = 'text';
-                            contactInput.placeholder = '@username or link';
-                            contactTypeField.value = 'Telegram';
-                        } else {
-                            contactInput.type = 'tel';
-                            contactInput.placeholder = '+7 999 000 00 00';
-                            contactTypeField.value = 'Phone';
-                        }
-                    });
-                });
 
                 // Form submit via Web3Forms
                 form.addEventListener('submit', async e => {
@@ -3705,31 +3680,6 @@
                 const form = document.getElementById('ctaForm');
                 if (!form) return;
 
-                // Contact toggle
-                const ctaBtns = form.querySelectorAll('.ct-btn');
-                const ctaInput = document.getElementById('ctaContactInput');
-                const ctaTypeField = document.getElementById('ctaContactType');
-                ctaBtns.forEach(btn => {
-                    btn.addEventListener('click', () => {
-                        ctaBtns.forEach(b => {
-                            b.style.background = 'transparent';
-                            b.style.color = 'rgba(255,255,255,0.7)';
-                            b.style.borderColor = 'rgba(255,255,255,0.5)';
-                            b.classList.remove('active');
-                        });
-                        btn.classList.add('active');
-                        btn.style.background = 'rgba(255,255,255,0.25)';
-                        btn.style.color = '#fff';
-                        btn.style.borderColor = '#fff';
-                        if (btn.dataset.type === 'telegram') {
-                            ctaInput.placeholder = '@username or link';
-                            ctaTypeField.value = 'Telegram';
-                        } else {
-                            ctaInput.placeholder = '+7 999 000 00 00';
-                            ctaTypeField.value = 'Phone';
-                        }
-                    });
-                });
 
                 // Submit
                 form.addEventListener('submit', async e => {
@@ -3781,6 +3731,21 @@
             }
             document.getElementById('abClose').addEventListener('click', closeAnnouncementBar);
             if (sessionStorage.getItem('ab_closed')) closeAnnouncementBar();
+    </script>
+    <!-- Language persistence -->
+    <script>
+    (function(){
+        var saved=localStorage.getItem('kdive-lang');
+        var current=document.documentElement.lang||'ru';
+        if(saved&&saved!==current){
+            var alt=document.querySelector('.lang-link[data-lang="'+saved+'"],.lang-switch a[data-lang="'+saved+'"]');
+            if(alt&&alt.href)window.location.replace(alt.href);
+        }
+        document.addEventListener('click',function(e){
+            var a=e.target.closest('a[data-lang]');
+            if(a)localStorage.setItem('kdive-lang',a.dataset.lang);
+        });
+    })();
     </script>
 </body>
 </html>

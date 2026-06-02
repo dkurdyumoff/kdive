@@ -309,8 +309,8 @@
 
         .header-content {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            gap: 2rem;
         }
 
         .header-logo {
@@ -320,6 +320,10 @@
             line-height: 1;
         }
 
+        .main-nav {
+            margin-left: auto;
+            margin-right: auto;
+        }
         .main-nav ul {
             list-style: none;
             display: flex;
@@ -1195,6 +1199,7 @@
             font-size: 1.6rem; font-weight: 700; color: var(--color-primary-teal);
         }
         .cabin-cur { font-size: 0.9rem; font-weight: 600; color: var(--color-primary-teal); }
+        .cabin-per { font-size: 0.75rem; font-weight: 400; color: var(--color-secondary-text); margin-left: 4px; align-self: flex-end; padding-bottom: 2px; }
         .cabin-desc {
             font-size: 0.85rem; color: var(--color-secondary-text);
             line-height: 1.6; flex: 1;
@@ -1302,8 +1307,8 @@
         }
         .faq-question {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            gap: 2rem;
             cursor: pointer;
             padding: 0.5rem 0;
             font-family: var(--font-inter);
@@ -1818,6 +1823,19 @@
             }
         }
 
+
+        /* ── RESPONSIVE HEADER: nav collapses at 1024px ── */
+        @media (max-width: 1024px) {
+            .main-nav { display: none; }
+            .header-cta { display: none !important; opacity: 0 !important; pointer-events: none !important; }
+            .burger-btn { display: flex; margin-left: auto; }
+            .nav-padi-badge { display: none; }
+            .header-content .lang-switch { display: none; }
+        }
+        @media (max-width: 640px) {
+            .header-logo svg { width: 150px; }
+        }
+
         @media (max-width: 768px) {
             :root {
                 --padding-section: 80px 0;
@@ -1842,18 +1860,6 @@
                 padding: 12px 24px;
             }
 
-            .main-nav {
-                display: none;
-            }
-            .header-cta {
-                display: none;
-            }
-            .header-content .lang-switch {
-                display: none;
-            }
-            .burger-btn {
-                display: flex;
-            }
             .header-logo {
                 font-size: 1rem;
             }
@@ -2097,7 +2103,7 @@
 </head>
 <body>
     <!-- Announcement Bar -->
-    <div id="announce-bar">
+    <div id="announce-bar" class="hidden">
         <span class="ab-tag">−10%</span>
         <span class="ab-text">Ранняя бронь до <span class="ab-highlight">1 июня</span> — скидка на все каюты</span>
         <a class="ab-cta" href="#prices">Выбрать каюту →</a>
@@ -2105,19 +2111,23 @@
     </div>
 
     <!-- Scroll Progress Bar -->
-    <div id="scroll-progress"></div>
+    <div id="scroll-progress" class="bar-hidden"></div>
 
     <!-- Header -->
-    <header id="main-header" class="main-header">
+    <header id="main-header" class="main-header bar-hidden">
         <div class="container header-content">
-            <a href="#" class="header-logo">
-                <svg width="160" height="52" viewBox="0 0 160 52" xmlns="http://www.w3.org/2000/svg">
-                    <text x="56" y="22" font-family="'Playfair Display'" font-style="italic" font-size="11" fill="#2A2A2A" text-anchor="end" letter-spacing="2">KDM</text>
-                    <text x="62" y="22" font-family="'Dela Gothic One'" font-size="15" fill="#3B9EA3" text-anchor="start" letter-spacing="2">DIVE</text>
-                    <path d="M10 30 Q30 24 50 30 Q70 36 90 30 Q110 24 130 30 Q150 36 158 30" stroke="#3B9EA3" stroke-width="1" fill="none" opacity="0.6"/>
-                    <text x="84" y="46" font-family="'Playfair Display'" font-style="italic" font-size="11" fill="#2A2A2A" text-anchor="middle" letter-spacing="4">safari</text>
+            <div style="display:flex;align-items:center;">
+<a href="kdive-main.html" class="header-logo">
+                <svg width="190" height="52" viewBox="0 0 200 58" xmlns="http://www.w3.org/2000/svg">
+                    <text x="93" y="25" font-family="'Dela Gothic One'" font-size="18" fill="#2A2A2A" text-anchor="end">K</text>
+                    <circle cx="100" cy="19" r="2.2" fill="#3B9EA3"/>
+                    <text x="107" y="25" font-family="'Dela Gothic One'" font-size="18" fill="#3B9EA3" text-anchor="start" letter-spacing="2">DIVE</text>
+                    <path d="M12 34 Q38 28 62 34 Q86 40 110 34 Q134 28 158 34 Q176 40 188 34" stroke="#3B9EA3" stroke-width="1" fill="none" opacity="0.55"/>
+                    <text x="100" y="51" font-family="'Playfair Display'" font-style="italic" font-size="12" fill="#2A2A2A" text-anchor="middle" letter-spacing="5">safari</text>
                 </svg>
             </a>
+            <img src="dive-safari-content/padi-logo.jpg" alt="PADI" class="nav-padi-badge" style="height:28px;width:auto;opacity:0.55;margin-left:14px;border-left:1px solid rgba(0,0,0,0.1);padding-left:14px;">
+            </div>
             <nav class="main-nav">
                 <ul>
                     <li><a href="#about-us">О нас</a></li>
@@ -2128,11 +2138,6 @@
                     <li><a href="#faq">FAQ</a></li>
                 </ul>
             </nav>
-            <div class="lang-switch">
-                <span class="lang-active">RU</span>
-                <span class="lang-sep">|</span>
-                <a href="./en.html" class="lang-link">EN</a>
-            </div>
             <div class="header-cta">
                 <a href="#final-cta" class="btn btn-primary">Забронировать</a>
             </div>
@@ -2141,6 +2146,11 @@
                 <span class="burger-line"></span>
                 <span class="burger-line"></span>
             </button>
+            <div class="lang-switch">
+                <span class="lang-active" data-lang="ru">RU</span>
+                <span class="lang-sep">|</span>
+                <a href="./en.html" class="lang-link" data-lang="en">EN</a>
+            </div>
         </div>
     </header>
 
@@ -2159,9 +2169,9 @@
         <div class="mobile-nav-cta">
             <a href="#final-cta" class="btn btn-primary">Забронировать</a>
             <div class="lang-switch" style="justify-content:center;margin-top:16px;">
-                <span class="lang-active">RU</span>
+                <span class="lang-active" data-lang="ru">RU</span>
                 <span class="lang-sep">|</span>
-                <a href="./en.html" class="lang-link">EN</a>
+                <a href="./en.html" class="lang-link" data-lang="en">EN</a>
             </div>
         </div>
     </div>
@@ -2694,12 +2704,13 @@
                             <div class="cabin-photo-overlay"><span class="cabin-photo-hint">Смотреть фото</span></div>
                         </div>
                         <div class="cabin-body">
-                            <span class="cabin-badge">−10% до 1 июня</span>
+                            <span class="cabin-badge" data-kdive-badge="redSeaNorth2026">−10% до 1 июня</span>
                             <div class="cabin-name">Нижняя палуба</div>
                             <div class="cabin-price-row">
-                                <span class="cabin-old">1 190 €</span>
-                                <span class="cabin-price">1 071</span>
+                                <span class="cabin-old" data-kdive-cabin-original="redSeaNorth2026:lower">1 190 €</span>
+                                <span class="cabin-price" data-kdive-cabin-price="redSeaNorth2026:lower">1 071</span>
                                 <span class="cabin-cur">€</span>
+                                <span class="cabin-per">/ чел.</span>
                             </div>
                             <p class="cabin-desc">Комфортная каюта с иллюминатором. Двухъярусная или раздельные кровати — идеально для путешественников соло.</p>
                             <a href="#final-cta" class="btn btn-secondary">Забронировать</a>
@@ -2715,12 +2726,13 @@
                             <div class="cabin-photo-overlay"><span class="cabin-photo-hint">Смотреть фото</span></div>
                         </div>
                         <div class="cabin-body">
-                            <span class="cabin-badge">−10% до 1 июня</span>
+                            <span class="cabin-badge" data-kdive-badge="redSeaNorth2026">−10% до 1 июня</span>
                             <div class="cabin-name">Верхняя палуба</div>
                             <div class="cabin-price-row">
-                                <span class="cabin-old">1 340 €</span>
-                                <span class="cabin-price">1 206</span>
+                                <span class="cabin-old" data-kdive-cabin-original="redSeaNorth2026:upper">1 340 €</span>
+                                <span class="cabin-price" data-kdive-cabin-price="redSeaNorth2026:upper">1 206</span>
                                 <span class="cabin-cur">€</span>
+                                <span class="cabin-per">/ чел.</span>
                             </div>
                             <p class="cabin-desc">Просторная каюта с большим окном на верхней палубе. Лучший вид на море, больше света и воздуха.</p>
                             <a href="#final-cta" class="btn btn-secondary">Забронировать</a>
@@ -2736,12 +2748,13 @@
                             <div class="cabin-photo-overlay"><span class="cabin-photo-hint">Смотреть фото</span></div>
                         </div>
                         <div class="cabin-body">
-                            <span class="cabin-badge">−10% до 1 июня</span>
+                            <span class="cabin-badge" data-kdive-badge="redSeaNorth2026">−10% до 1 июня</span>
                             <div class="cabin-name">King bed каюта</div>
                             <div class="cabin-price-row">
-                                <span class="cabin-old">1 490 €</span>
-                                <span class="cabin-price">1 341</span>
+                                <span class="cabin-old" data-kdive-cabin-original="redSeaNorth2026:king">1 490 €</span>
+                                <span class="cabin-price" data-kdive-cabin-price="redSeaNorth2026:king">1 341</span>
                                 <span class="cabin-cur">€</span>
+                                <span class="cabin-per">/ чел.</span>
                             </div>
                             <p class="cabin-desc">Эксклюзивная каюта с большой двуспальной кроватью и панорамными окнами. Идеально для пар.</p>
                             <a href="#final-cta" class="btn btn-secondary">Забронировать</a>
@@ -2960,20 +2973,15 @@
         <section id="final-cta" class="section-cta-gradient section-padding">
             <div class="container">
                 <h2 class="h2-playfair">Твоё место ждёт</h2>
-                <p class="cta-subtitle">Шарм-эль-Шейх · 15–22 августа 2026 · Осталось мест: <span id="available-slots">6</span></p>
+                <p class="cta-subtitle">Шарм-эль-Шейх · 15–22 августа 2026 · Осталось мест: <span id="available-slots" data-kdive-spots-num="redSeaNorth2026">6</span></p>
                 <form class="cta-form fade-in-up" id="ctaForm" style="margin-top:2rem">
                     <input type="hidden" name="access_key" value="8665f979-b39a-4035-9708-001e15215adc">
                     <input type="hidden" name="subject" value="Новая заявка — KDM Dive Safari">
                     <input type="hidden" name="from_name" value="KDM Dive Safari">
                     <input type="hidden" name="redirect" value="false">
                     <input type="checkbox" name="botcheck" style="display:none">
-                    <input type="hidden" id="ctaContactType" name="contact_type" value="Telegram">
                     <input type="text" name="name" placeholder="Ваше имя" required>
-                    <div style="display:flex;gap:0.5rem">
-                        <button type="button" class="ct-btn active" data-form="cta" data-type="telegram" style="flex:1;padding:12px 16px;border:1.5px solid #fff;background:rgba(255,255,255,0.25);color:#fff;border-radius:4px;cursor:pointer;font-family:var(--font-inter);font-size:0.85rem;transition:all 0.2s">✈ Telegram</button>
-                        <button type="button" class="ct-btn" data-form="cta" data-type="phone" style="flex:1;padding:12px 16px;border:1.5px solid rgba(255,255,255,0.5);background:transparent;color:rgba(255,255,255,0.7);border-radius:4px;cursor:pointer;font-family:var(--font-inter);font-size:0.85rem;transition:all 0.2s">📞 Телефон</button>
-                    </div>
-                    <input type="text" id="ctaContactInput" name="contact" placeholder="@username или ссылка" required>
+                    <input type="text" id="ctaContactInput" name="contact" placeholder="Telegram @username или номер телефона" required>
                     <textarea name="message" placeholder="Ваш запрос / вопрос (необязательно)" rows="3" style="width:100%;resize:vertical;padding:0.75rem 1rem;border:1.5px solid rgba(255,255,255,0.35);border-radius:4px;font-family:var(--font-inter);font-size:0.95rem;font-weight:300;color:#fff;background:#fff;outline:none;transition:border-color 0.2s;color:var(--color-main-text)" onfocus="this.style.borderColor='rgba(255,255,255,0.8)'" onblur="this.style.borderColor='rgba(255,255,255,0.35)'"></textarea>
                     <button type="submit" class="btn" style="background:#fff;color:var(--color-primary-teal);font-size:1rem;padding:1rem 2rem;margin-top:0.5rem">Отправить заявку</button>
                     <p id="ctaFormNote" class="cta-contact-info" style="margin-top:0">Говорим по-русски · Ответим в течение нескольких часов</p>
@@ -2991,11 +2999,12 @@
     <footer>
         <div class="container footer-content">
             <a href="#" class="footer-logo">
-                <svg width="180" height="58" viewBox="0 0 180 58" xmlns="http://www.w3.org/2000/svg">
-                    <text x="64" y="24" font-family="'Playfair Display'" font-style="italic" font-size="13" fill="#2A2A2A" text-anchor="end" letter-spacing="2">KDM</text>
-                    <text x="70" y="24" font-family="'Dela Gothic One'" font-size="18" fill="#3B9EA3" text-anchor="start" letter-spacing="2">DIVE</text>
-                    <path d="M14 34 Q36 27 58 34 Q80 41 102 34 Q124 27 146 34 Q162 39 170 34" stroke="#3B9EA3" stroke-width="1.2" fill="none" opacity="0.6"/>
-                    <text x="92" y="52" font-family="'Playfair Display'" font-style="italic" font-size="13" fill="#2A2A2A" text-anchor="middle" letter-spacing="5">safari</text>
+                <svg width="190" height="58" viewBox="0 0 200 58" xmlns="http://www.w3.org/2000/svg">
+                    <text x="93" y="25" font-family="'Dela Gothic One'" font-size="18" fill="#2A2A2A" text-anchor="end">K</text>
+                    <circle cx="100" cy="19" r="2.2" fill="#3B9EA3"/>
+                    <text x="107" y="25" font-family="'Dela Gothic One'" font-size="18" fill="#3B9EA3" text-anchor="start" letter-spacing="2">DIVE</text>
+                    <path d="M12 34 Q38 28 62 34 Q86 40 110 34 Q134 28 158 34 Q176 40 188 34" stroke="#3B9EA3" stroke-width="1" fill="none" opacity="0.55"/>
+                    <text x="100" y="51" font-family="'Playfair Display'" font-style="italic" font-size="12" fill="#2A2A2A" text-anchor="middle" letter-spacing="5">safari</text>
                 </svg>
             </a>
             <div class="footer-socials">
@@ -3024,8 +3033,6 @@
                 <input type="hidden" name="from_name" value="KDM Dive Safari">
                 <input type="hidden" name="redirect" value="false">
                 <input type="checkbox" name="botcheck" style="display:none">
-                <input type="hidden" id="contactTypeField" name="contact_type" value="Telegram">
-
                 <div class="modal-field">
                     <label>Ваше имя</label>
                     <input type="text" name="name" placeholder="Иван Иванов" required>
@@ -3033,11 +3040,7 @@
 
                 <div class="modal-field">
                     <label>Как связаться</label>
-                    <div class="contact-toggle">
-                        <button type="button" class="ct-btn active" data-type="telegram">✈ Telegram</button>
-                        <button type="button" class="ct-btn" data-type="phone">📞 Телефон</button>
-                    </div>
-                    <input type="text" id="contactValueInput" name="contact" placeholder="@username или ссылка" required>
+                    <input type="text" id="contactValueInput" name="contact" placeholder="Telegram @username или номер телефона" required>
                 </div>
 
                 <div class="modal-field">
@@ -3652,25 +3655,6 @@
                 modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
                 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-                // Contact type toggle — modal only
-                const modalCtBtns = document.querySelectorAll('#bookingModal .ct-btn');
-                const contactInput = document.getElementById('contactValueInput');
-                const contactTypeField = document.getElementById('contactTypeField');
-                modalCtBtns.forEach(btn => {
-                    btn.addEventListener('click', () => {
-                        modalCtBtns.forEach(b => b.classList.remove('active'));
-                        btn.classList.add('active');
-                        if (btn.dataset.type === 'telegram') {
-                            contactInput.type = 'text';
-                            contactInput.placeholder = '@username или ссылка';
-                            contactTypeField.value = 'Telegram';
-                        } else {
-                            contactInput.type = 'tel';
-                            contactInput.placeholder = '+7 999 000 00 00';
-                            contactTypeField.value = 'Телефон';
-                        }
-                    });
-                });
 
                 // Form submit via Web3Forms
                 form.addEventListener('submit', async e => {
@@ -3704,31 +3688,6 @@
                 const form = document.getElementById('ctaForm');
                 if (!form) return;
 
-                // Contact toggle
-                const ctaBtns = form.querySelectorAll('.ct-btn');
-                const ctaInput = document.getElementById('ctaContactInput');
-                const ctaTypeField = document.getElementById('ctaContactType');
-                ctaBtns.forEach(btn => {
-                    btn.addEventListener('click', () => {
-                        ctaBtns.forEach(b => {
-                            b.style.background = 'transparent';
-                            b.style.color = 'rgba(255,255,255,0.7)';
-                            b.style.borderColor = 'rgba(255,255,255,0.5)';
-                            b.classList.remove('active');
-                        });
-                        btn.classList.add('active');
-                        btn.style.background = 'rgba(255,255,255,0.25)';
-                        btn.style.color = '#fff';
-                        btn.style.borderColor = '#fff';
-                        if (btn.dataset.type === 'telegram') {
-                            ctaInput.placeholder = '@username или ссылка';
-                            ctaTypeField.value = 'Telegram';
-                        } else {
-                            ctaInput.placeholder = '+7 999 000 00 00';
-                            ctaTypeField.value = 'Телефон';
-                        }
-                    });
-                });
 
                 // Submit
                 form.addEventListener('submit', async e => {
@@ -3780,6 +3739,22 @@
             }
             document.getElementById('abClose').addEventListener('click', closeAnnouncementBar);
             if (sessionStorage.getItem('ab_closed')) closeAnnouncementBar();
+    </script>
+    <script src="kdive-config.js"></script>
+    <!-- Language persistence -->
+    <script>
+    (function(){
+        var saved=localStorage.getItem('kdive-lang');
+        var current=document.documentElement.lang||'ru';
+        if(saved&&saved!==current){
+            var alt=document.querySelector('.lang-link[data-lang="'+saved+'"],.lang-switch a[data-lang="'+saved+'"]');
+            if(alt&&alt.href)window.location.replace(alt.href);
+        }
+        document.addEventListener('click',function(e){
+            var a=e.target.closest('a[data-lang]');
+            if(a)localStorage.setItem('kdive-lang',a.dataset.lang);
+        });
+    })();
     </script>
 </body>
 </html>
