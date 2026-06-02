@@ -13,6 +13,8 @@ on:
       - 'safari-north-wrecks-en.html'
       - 'safari-south-sharks.html'
       - 'safari-south-sharks-en.html'
+      - 'kdive-main.html'
+      - 'kdive-main-en.html'
 
 permissions:
   contents: read
@@ -34,7 +36,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Prepare site
-        run: cp dive-safari-v4-retro-light.html index.html
+        run: |
+          cp dive-safari-v4-retro-light.html index.html
+          mkdir -p main/en
+          cp kdive-main.html main/index.html
+          cp kdive-main-en.html main/en/index.html
 
       - name: Configure Pages
         uses: actions/configure-pages@v4
