@@ -9,6 +9,10 @@ on:
       - 'en.html'
       - 'dive-safari-content/**'
       - 'CNAME'
+      - 'safari-north-wrecks.html'
+      - 'safari-north-wrecks-en.html'
+      - 'safari-south-sharks.html'
+      - 'safari-south-sharks-en.html'
 
 permissions:
   contents: read

@@ -1,0 +1,3695 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharks Obsession · K-Dive Safari</title>
+    <meta name="description" content="Dive Safari по Красному морю — 8 дней на яхте с дайвингом, снорклингом и коралловыми рифами.">
+    <!-- Open Graph — превью при шаринге ссылки -->
+    <meta property="og:title" content="Dive Safari · Красное море">
+    <meta property="og:description" content="Dive Safari по Красному морю — 8 дней на яхте с дайвингом, снорклингом и коралловыми рифами.">
+    <meta property="og:image" content="https://kdive.ru/dive-safari-content/hero-south/poster.jpg">
+    <meta property="og:url" content="https://kdive.ru">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <!-- Twitter / Telegram -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dive Safari · Красное море">
+    <meta name="twitter:description" content="Dive Safari по Красному морю — 8 дней на яхте с дайвингом, снорклингом и коралловыми рифами.">
+    <meta name="twitter:image" content="https://kdive.ru/dive-safari-content/hero-south/poster.jpg">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="favicon.ico">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* CSS Variables for easy theme management */
+        :root {
+            --color-white: #FFFFFF;
+            --color-mint: #EBF7F5;
+            --color-primary-teal: #00A896;
+            --color-dark-teal: #007a6e;
+            --color-light-teal: rgba(0,168,150,0.12);
+            --color-main-text: #2A2A2A;
+            --color-secondary-text: #6B6B6B;
+
+            --font-dela-gothic: 'Dela Gothic One', sans-serif;
+            --font-playfair: 'Playfair Display', serif;
+            --font-inter: 'Inter', sans-serif;
+
+            --padding-section: 100px 0;
+            --border-radius-card: 0px;
+            --border-radius-image: 0px;
+            --box-shadow-card: none;
+            --box-shadow-header: 0 1px 0 rgba(59,158,163,0.25);
+            --transition-speed: 0.3s ease-in-out;
+            --max-width-content: 1200px;
+        }
+
+        /* Base Styles & Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: var(--font-inter);
+            font-weight: 300;
+            color: var(--color-main-text);
+            line-height: 1.6;
+            background-color: var(--color-white);
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--color-primary-teal);
+            transition: color var(--transition-speed);
+        }
+
+        a:hover {
+            color: var(--color-dark-teal);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--max-width-content);
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        .section-padding {
+            padding: var(--padding-section);
+        }
+
+        .section-white {
+            background-color: var(--color-white);
+        }
+
+        .section-mint {
+            background-color: var(--color-mint);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-family: var(--font-inter);
+            font-weight: 300;
+            font-size: 1.05rem;
+            color: var(--color-secondary-text);
+            line-height: 1.8;
+            max-width: 680px;
+        }
+
+        .label {
+            font-family: var(--font-inter);
+            font-weight: 500;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-primary-teal);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .h1-playfair {
+            font-family: var(--font-dela-gothic);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 4rem;
+            line-height: 1.1;
+            text-transform: uppercase;
+            color: var(--color-white);
+        }
+
+        .h2-playfair {
+            font-family: var(--font-dela-gothic);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 2.8rem;
+            line-height: 1.2;
+            text-transform: uppercase;
+            color: var(--color-primary-teal);
+            margin-bottom: 2rem;
+        }
+
+        .h3-playfair {
+            font-family: var(--font-inter);
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1.5rem;
+            line-height: 1.3;
+            color: var(--color-main-text);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            border-radius: 0px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-family: var(--font-inter);
+            font-weight: 500;
+            font-size: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+            white-space: nowrap;
+        }
+
+        /* Coral override for CTA buttons — Coral & Aqua palette */
+        .btn-primary {
+            background-color: #FF7F50 !important;
+            border-color: #FF7F50 !important;
+        }
+        .btn-primary:hover {
+            background-color: #e06030 !important;
+            border-color: #e06030 !important;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary-teal);
+            color: var(--color-white);
+            border: 1.5px solid var(--color-primary-teal);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-dark-teal);
+            border-color: var(--color-dark-teal);
+            color: var(--color-white);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--color-primary-teal);
+            border: 1.5px solid var(--color-primary-teal);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--color-primary-teal);
+            border-color: var(--color-primary-teal);
+            color: var(--color-white);
+        }
+
+        .btn-white-outline {
+            background-color: transparent;
+            color: var(--color-white);
+            border: 1.5px solid var(--color-white);
+        }
+
+        .btn-white-outline:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            border-color: var(--color-white);
+        }
+
+        /* Header */
+        /* Announcement bar */
+        #announce-bar {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            z-index: 1100;
+            background: #2A2A2A;
+            color: white;
+            text-align: center;
+            padding: 0 48px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            font-family: var(--font-inter);
+            font-size: 0.82rem;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+            transition: height 0.3s ease, opacity 0.3s ease;
+        }
+        #announce-bar.hidden {
+            height: 0;
+            opacity: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        #announce-bar .ab-tag {
+            background: #c0392b;
+            color: white;
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 2px 9px;
+            border-radius: 20px;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            flex-shrink: 0;
+        }
+        #announce-bar .ab-text { opacity: 0.92; }
+        #announce-bar .ab-highlight {
+            color: #00A896;
+            font-weight: 600;
+        }
+        #announce-bar .ab-cta {
+            color: white;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            cursor: pointer;
+            opacity: 0.75;
+            font-size: 0.78rem;
+            flex-shrink: 0;
+        }
+        #announce-bar .ab-cta:hover { opacity: 1; }
+        #announce-bar .ab-close {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.5);
+            font-size: 1.1rem;
+            cursor: pointer;
+            line-height: 1;
+            padding: 4px 6px;
+            transition: color 0.15s;
+        }
+        #announce-bar .ab-close:hover { color: white; }
+        @media (max-width: 768px) {
+            #announce-bar {
+                padding: 0 36px 0 12px;
+                font-size: 0.76rem;
+                gap: 0.4rem;
+                justify-content: center;
+            }
+            #announce-bar .ab-tag { display: none; }
+            #announce-bar .ab-cta { display: none; }
+        }
+
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--color-mint);
+            padding: 1.2rem 0;
+            z-index: 1000;
+            transition: top 0.3s ease, border-color var(--transition-speed);
+            border-bottom: 1px solid transparent;
+        }
+        .main-header.bar-hidden { top: 0; }
+
+        .main-header.scrolled {
+            border-bottom-color: rgba(59,158,163,0.25);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            color: var(--color-primary-teal);
+            line-height: 1;
+        }
+
+        .main-nav {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .main-nav a {
+            font-family: var(--font-inter);
+            font-weight: 400;
+            font-size: 0.85rem;
+            color: var(--color-secondary-text);
+            position: relative;
+            padding-bottom: 2px;
+        }
+
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1.5px;
+            background-color: var(--color-primary-teal);
+            transition: width var(--transition-speed);
+        }
+
+        .main-nav a:hover::after,
+        .main-nav a.active::after {
+            width: 100%;
+        }
+
+        .header-cta {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .header-cta.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .header-cta .btn {
+            font-size: 0.85rem;
+            padding: 10px 24px;
+        }
+
+        .lang-switch {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-family: var(--font-inter);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            margin-right: 4px;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+            pointer-events: auto;
+        }
+        .lang-switch.ls-hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .lang-active {
+            color: var(--color-primary-teal);
+        }
+        .lang-sep {
+            color: rgba(42,42,42,0.25);
+            font-weight: 300;
+        }
+        .lang-link {
+            color: rgba(42,42,42,0.4);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .lang-link:hover { color: var(--color-primary-teal); }
+
+        /* Hero Section */
+        #hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
+            text-align: center;
+            overflow: hidden; /* For parallax */
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+        .hero-mobile-bg { display: none; }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(10,20,35,0.35) 0%, rgba(10,20,35,0.55) 100%);
+            z-index: -1;
+        }
+
+        .hero-content {
+            z-index: 1;
+            max-width: 800px;
+            padding: 80px 20px 0;
+        }
+
+        .hero-content .label {
+            color: var(--color-primary-teal);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content .h1-playfair {
+            margin-bottom: 1rem;
+        }
+
+        .hero-tagline {
+            font-family: var(--font-playfair);
+            font-style: italic;
+            font-weight: 400;
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-date {
+            font-family: var(--font-inter);
+            font-weight: 400;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-description {
+            font-family: var(--font-inter);
+            font-weight: 300;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+        }
+
+        .hero-cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .scroll-down-indicator {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            color: var(--color-white);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-down-indicator i {
+            font-size: 1.2rem;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        /* Section Layouts */
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .section-grid-content {
+            margin-bottom: 2rem;
+        }
+
+        .section-grid-content p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            color: var(--color-secondary-text);
+            font-weight: 300;
+        }
+
+        /* About Us Section */
+        #about-us .h2-playfair {
+            margin-bottom: 4rem;
+        }
+
+        #about-us .left-column {
+            font-family: var(--font-playfair);
+            font-style: italic;
+            font-weight: 400; /* As requested large Playfair italic, but not h2 weight */
+            font-size: 1.8rem;
+            line-height: 1.5;
+            color: var(--color-main-text);
+        }
+        #about-us .right-column p {
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+        #about-us .about-image-wrapper {
+            position: relative;
+        }
+        #about-us .about-image {
+            border-radius: var(--border-radius-image);
+            box-shadow: var(--box-shadow-card);
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        .blob-decoration {
+            position: absolute;
+            z-index: -1;
+            opacity: 0.1;
+        }
+        #about-us .blob-decoration-1 {
+            width: 300px;
+            height: 300px;
+            right: -100px;
+            bottom: -50px;
+        }
+        #about-us .blob-decoration-2 {
+            width: 400px;
+            height: 400px;
+            left: -150px;
+            top: -100px;
+            transform: rotate(30deg);
+        }
+
+        /* What Awaits Section */
+        #what-awaits .h2-playfair {
+            text-align: center;
+        }
+        .awaits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        .awaits-card {
+            background-color: var(--color-white);
+            border-radius: var(--border-radius-card);
+            box-shadow: var(--box-shadow-card);
+            overflow: hidden;
+            transition: transform var(--transition-speed);
+        }
+        .awaits-card:hover {
+            transform: translateY(-8px);
+        }
+        .awaits-card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--border-radius-card) var(--border-radius-card) 0 0;
+        }
+        .awaits-card-content {
+            padding: 24px;
+        }
+        .awaits-card-content .card-number {
+            font-family: var(--font-inter);
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--color-primary-teal);
+            margin-bottom: 0.5rem;
+        }
+        .awaits-card-content .card-title {
+            font-family: var(--font-inter);
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: var(--color-main-text);
+            margin-bottom: 0.8rem;
+        }
+        .awaits-card-content .card-description {
+            font-size: 0.95rem;
+            color: var(--color-secondary-text);
+            font-weight: 300;
+        }
+
+        /* What We Visit Section (Itinerary) */
+        #itinerary .h2-playfair {
+            text-align: center;
+        }
+        #itinerary { padding-bottom: 3rem; }
+        .program-mobile-cta { display: none; }
+        #memories { padding-top: 3rem; }
+        .itinerary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        .itinerary-item {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .itinerary-item img {
+            border-radius: var(--border-radius-card);
+            height: 260px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .itinerary-item .item-number {
+            font-family: var(--font-inter);
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--color-primary-teal);
+        }
+        .itinerary-item .item-title {
+            font-family: var(--font-inter);
+            font-weight: 600;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            color: var(--color-main-text);
+            margin-top: 0.5rem;
+        }
+        .itinerary-item .item-description {
+            font-size: 0.95rem;
+            color: var(--color-secondary-text);
+            font-weight: 300;
+        }
+        .itinerary-cta {
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        /* ── New itinerary block ── */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(59,158,163,0.15);
+            border-bottom: 1px solid rgba(59,158,163,0.15);
+        }
+        .stat-col {
+            padding: 2.8rem 2.4rem 2.8rem 0;
+            border-right: 1px solid rgba(59,158,163,0.15);
+            display: flex;
+            flex-direction: column;
+        }
+        .stat-col:first-child { padding-left: 0; }
+        .stat-col:last-child { border-right: none; padding-right: 0; padding-left: 2.4rem; }
+        .stat-col:nth-child(2) { padding-left: 2.4rem; }
+        .stat-big-num {
+            font-family: var(--font-dela-gothic);
+            font-size: clamp(3.8rem, 6vw, 5.5rem);
+            color: var(--color-primary-teal);
+            line-height: 1;
+            letter-spacing: -2px;
+            margin-bottom: 0.3rem;
+        }
+        .stat-col-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--color-main-text);
+            margin-bottom: 1rem;
+        }
+        .stat-col-desc {
+            font-size: 0.88rem;
+            color: var(--color-secondary-text);
+            line-height: 1.65;
+            font-weight: 300;
+            margin-bottom: 1.4rem;
+            flex: 1;
+        }
+        .stat-places { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+        .stat-place-tag {
+            font-size: 0.67rem;
+            font-weight: 500;
+            padding: 3px 10px;
+            border-radius: 20px;
+            background: var(--color-light-teal);
+            color: var(--color-primary-teal);
+        }
+        .stat-place-tag.wreck {
+            background: rgba(100,60,10,0.09);
+            color: #7a4800;
+        }
+        .program-divider {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin: 4rem 0 2.5rem;
+        }
+        .program-divider-line { flex: 1; height: 1px; background: rgba(59,158,163,0.15); }
+        .program-divider-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--color-secondary-text);
+            white-space: nowrap;
+        }
+        .days-list {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(59,158,163,0.15);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .day-card { border-bottom: 1px solid rgba(59,158,163,0.12); }
+        .day-card:last-child { border-bottom: none; }
+        .day-header {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            padding: 1.1rem 1.6rem;
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.15s;
+            position: relative;
+        }
+        .day-header:hover { background: rgba(59,158,163,0.03); }
+        .day-card.open .day-header {
+            background: rgba(59,158,163,0.04);
+            border-bottom: 1px solid rgba(59,158,163,0.10);
+        }
+        .day-card.open .day-header::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 3px;
+            background: var(--color-primary-teal);
+        }
+        .day-row-num {
+            font-family: var(--font-dela-gothic);
+            font-size: 0.78rem;
+            color: var(--color-primary-teal);
+            flex-shrink: 0;
+            width: 24px;
+        }
+        .day-row-date {
+            font-size: 0.72rem;
+            color: var(--color-secondary-text);
+            font-weight: 400;
+            flex-shrink: 0;
+            width: 130px;
+        }
+        .day-row-title {
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--color-main-text);
+            flex: 1;
+        }
+        .day-row-badges { display: flex; gap: 0.35rem; flex-shrink: 0; }
+        .day-row-badge {
+            font-size: 0.62rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 10px;
+            background: var(--color-light-teal);
+            color: var(--color-primary-teal);
+            white-space: nowrap;
+        }
+        .day-row-badge.dark { background: rgba(42,42,42,0.08); color: var(--color-secondary-text); }
+        .day-row-badge.wreck { background: rgba(100,60,10,0.09); color: #7a4800; }
+        .day-row-badge.night { background: rgba(20,20,60,0.08); color: #444; }
+        .day-row-chevron {
+            width: 18px; height: 18px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(59,158,163,0.3);
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.25s;
+            color: var(--color-primary-teal);
+            font-size: 0.7rem;
+        }
+        .day-card.open .day-row-chevron {
+            background: var(--color-primary-teal);
+            border-color: var(--color-primary-teal);
+            color: #fff;
+            transform: rotate(90deg);
+        }
+        .day-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+        .day-card.open .day-body { max-height: 500px; }
+        .day-activities-inner {
+            margin: 0 1.6rem 1.5rem;
+            padding: 1.3rem 1.6rem;
+            border-left: 3px solid var(--color-primary-teal);
+            background: rgba(59,158,163,0.02);
+            border-radius: 0 4px 4px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+        .day-activity {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.9rem;
+            font-size: 0.86rem;
+            color: var(--color-main-text);
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        .day-act-num {
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: var(--color-primary-teal);
+            flex-shrink: 0;
+            width: 14px;
+            padding-top: 0.25em;
+        }
+        .day-activity b { font-weight: 600; }
+        .day-activity .act-loc { color: var(--color-primary-teal); font-weight: 500; }
+        .act-inline-tag {
+            display: inline-block;
+            font-size: 0.6rem;
+            font-weight: 600;
+            padding: 1px 6px;
+            border-radius: 8px;
+            vertical-align: middle;
+            margin-left: 5px;
+            background: rgba(100,60,10,0.09);
+            color: #7a4800;
+        }
+        .act-inline-tag.night { background: rgba(20,20,60,0.08); color: #444; }
+        .program-foot-note {
+            margin-top: 1.2rem;
+            font-size: 0.77rem;
+            color: var(--color-secondary-text);
+            font-style: italic;
+        }
+
+        /* ── Tabs Program (Variant 1) ─── */
+        .chip { display: inline-block; font-size: 0.63rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; background: rgba(59,158,163,0.10); color: var(--color-primary-teal); }
+        .chip.dark { background: rgba(42,42,42,0.09); color: #555; }
+        .chip.wreck { background: rgba(100,60,10,0.09); color: #7a4800; }
+        .chip.night { background: rgba(20,20,60,0.09); color: #333; }
+
+        .v1-tabs {
+            display: flex; gap: 0;
+            border-bottom: 2px solid rgba(59,158,163,0.15);
+            overflow-x: auto; scrollbar-width: none;
+            margin-bottom: 2rem;
+        }
+        .v1-tabs::-webkit-scrollbar { display: none; }
+        .v1-tab {
+            display: flex; flex-direction: column; align-items: center; gap: 0.2rem;
+            padding: 0.8rem 1.2rem; cursor: pointer;
+            border-bottom: 2px solid transparent; margin-bottom: -2px;
+            flex-shrink: 0; transition: all 0.2s; min-width: 80px;
+        }
+        .v1-tab:hover { background: rgba(59,158,163,0.04); }
+        .v1-tab.active { border-bottom-color: var(--color-primary-teal); }
+        .v1-tab-num {
+            width: 28px; height: 28px; border-radius: 50%;
+            border: 2px solid rgba(59,158,163,0.3);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.68rem; font-weight: 700; color: var(--color-secondary-text);
+            transition: all 0.2s;
+        }
+        .v1-tab.active .v1-tab-num { background: var(--color-primary-teal); color: #fff; border-color: var(--color-primary-teal); }
+        .v1-tab-date { font-size: 0.65rem; color: var(--color-secondary-text); font-weight: 400; }
+        .v1-tab-label { font-size: 0.72rem; font-weight: 500; color: var(--color-main-text); text-align: center; line-height: 1.2; }
+        .v1-tab.active .v1-tab-label { color: var(--color-primary-teal); }
+
+        .v1-panels { position: relative; }
+        .v1-panel { display: none; }
+        .v1-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; animation: v1fadeIn 0.25s ease; }
+        @keyframes v1fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+        .v1-day-title { font-family: var(--font-playfair); font-style: italic; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.3rem; }
+        .v1-day-date { font-size: 0.78rem; color: var(--color-secondary-text); font-weight: 400; margin-bottom: 1rem; }
+        .v1-chips { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 1.4rem; }
+        .v1-activities { display: flex; flex-direction: column; gap: 0.7rem; }
+        .v1-act { display: flex; gap: 0.8rem; font-size: 0.88rem; line-height: 1.5; }
+        .v1-act-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--color-primary-teal); flex-shrink: 0; margin-top: 0.5em; }
+        .v1-act b { font-weight: 600; }
+        .v1-act .loc { color: var(--color-primary-teal); font-weight: 500; }
+
+        .v1-panel-right { position: relative; }
+        .v1-photo { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 4px; display: block; }
+        .v1-photo-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(42,42,42,0.5) 0%, transparent 50%); border-radius: 4px; pointer-events: none; }
+
+        @media (max-width: 860px) {
+            .stats-row { grid-template-columns: 1fr; }
+            .stat-col { padding: 2rem 0; border-right: none; border-bottom: 1px solid rgba(59,158,163,0.15); }
+            .stat-col:last-child { border-bottom: none; padding-left: 0; }
+            .stat-col:nth-child(2) { padding-left: 0; }
+            .day-row-date, .day-row-badges { display: none; }
+            .v1-panel.active { grid-template-columns: 1fr; gap: 1.2rem; }
+            .v1-panel-left { order: 1; }
+            .v1-panel-right { order: 2; }
+            .program-mobile-cta { display: flex; justify-content: center; margin-top: 2rem; }
+        }
+
+        /* Statistics Section */
+        #statistics {
+            text-align: center;
+        }
+        #statistics.section-padding {
+            padding: 40px 0;
+        }
+        .stats-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 0;
+        }
+        .stat-item {
+            text-align: center;
+            flex: 1;
+            min-width: 160px;
+        }
+        .stat-item .stat-number {
+            font-family: var(--font-dela-gothic);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 3rem;
+            color: var(--color-primary-teal);
+            margin-bottom: 0.2rem;
+            display: block;
+        }
+        .stat-item .stat-label {
+            font-family: var(--font-inter);
+            font-weight: 300;
+            font-size: 0.85rem;
+            color: var(--color-secondary-text);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Who Is It For Section */
+        #who-is-it-for .h2-playfair {
+            text-align: center;
+        }
+        #who-is-it-for .section-subtitle {
+            text-align: center;
+            margin: 0 auto 4rem;
+        }
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+        .audience-card {
+            background-color: var(--color-white);
+            border: 1px solid var(--color-light-teal);
+            border-radius: var(--border-radius-card);
+            padding: 28px;
+            text-align: center;
+            transition: box-shadow var(--transition-speed), border-color var(--transition-speed);
+        }
+        .audience-card:hover {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+            border-color: var(--color-primary-teal);
+        }
+        .audience-card .card-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--color-light-teal);
+            color: var(--color-primary-teal);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-inter);
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            overflow: hidden; /* For avatar image */
+        }
+        .audience-card .card-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .audience-card .h3-playfair {
+            margin-bottom: 0.5rem;
+            font-size: 1.6rem;
+        }
+        .audience-card .card-format {
+            font-family: var(--font-inter);
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--color-primary-teal);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .audience-card .card-description {
+            font-size: 0.95rem;
+            color: var(--color-secondary-text);
+            font-weight: 300;
+        }
+
+        /* Boat Section */
+        #boat .h2-playfair {
+            margin-bottom: 3rem;
+        }
+        .boat-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .boat-features h3 {
+            font-family: var(--font-inter);
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: var(--color-main-text);
+            margin-bottom: 1.5rem;
+        }
+        .boat-features p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--color-secondary-text);
+            font-weight: 300;
+            margin-bottom: 1.2rem;
+        }
+        .boat-features ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .boat-features ul li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--color-secondary-text);
+            font-weight: 300;
+        }
+        .boat-features ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background-color: var(--color-primary-teal);
+            border-radius: 50%;
+        }
+        .boat-video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+        }
+        .boat-video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: var(--border-radius-card);
+        }
+
+        /* Prices / Cabins Section */
+        .cabin-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        .cabin-card {
+            border: 1px solid rgba(59,158,163,0.18);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: box-shadow 0.25s;
+        }
+        .cabin-card:hover { box-shadow: 0 8px 32px rgba(59,158,163,0.12); }
+        .cabin-photo {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        /* Slider wrapper */
+        .cabin-slider {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.35s ease;
+            will-change: transform;
+        }
+        .cabin-slider img {
+            min-width: 100%;
+            height: 100%;
+            object-fit: cover;
+            flex-shrink: 0;
+            pointer-events: none;
+            transition: transform 0.4s ease;
+        }
+        .cabin-card:hover .cabin-slider img { transform: scale(1.04); }
+        .cabin-photo-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 50%);
+            display: flex; align-items: flex-end; padding: 12px;
+            opacity: 0; transition: opacity 0.25s;
+            pointer-events: none;
+        }
+        .cabin-card:hover .cabin-photo-overlay { opacity: 1; }
+        .cabin-photo-hint {
+            color: white; font-size: 0.72rem; font-weight: 600;
+            letter-spacing: 1px; text-transform: uppercase;
+        }
+        .cabin-photo-count {
+            position: absolute; top: 10px; right: 10px;
+            background: rgba(0,0,0,0.55); color: white;
+            font-size: 0.65rem; font-weight: 700;
+            padding: 3px 9px; border-radius: 20px;
+            backdrop-filter: blur(4px);
+            pointer-events: none;
+            z-index: 3;
+        }
+        /* Desktop slide arrows */
+        .csp-btn {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            background: rgba(0,0,0,0.28); backdrop-filter: blur(6px);
+            border: 1px solid rgba(255,255,255,0.18); color: white;
+            font-size: 1.3rem; width: 34px; height: 34px; border-radius: 50%;
+            cursor: pointer; display: flex; align-items: center; justify-content: center;
+            opacity: 0; transition: opacity 0.2s, background 0.2s;
+            z-index: 4; line-height: 1;
+        }
+        .cabin-card:hover .csp-btn { opacity: 1; }
+        .csp-btn:hover { background: rgba(0,0,0,0.55); }
+        .csp-prev { left: 10px; }
+        .csp-next { right: 10px; }
+        @media (max-width: 768px) {
+            .csp-btn { display: none; }
+            .cabin-photo-overlay { display: none; }
+            .cabin-photo { cursor: default; }
+        }
+        .cabin-body {
+            padding: 1.4rem 1.4rem 1.6rem;
+            display: flex; flex-direction: column; gap: 0.6rem; flex: 1;
+        }
+        .cabin-badge {
+            display: inline-block; background: #c0392b; color: white;
+            font-size: 0.62rem; font-weight: 700; padding: 2px 9px;
+            border-radius: 20px; letter-spacing: 0.8px; text-transform: uppercase;
+            align-self: flex-start;
+        }
+        .cabin-name {
+            font-family: var(--font-playfair); font-size: 1.15rem; font-weight: 700;
+        }
+        .cabin-price-row {
+            display: flex; align-items: baseline; gap: 0.5rem; margin-top: 0.2rem;
+        }
+        .cabin-old {
+            font-size: 0.85rem; color: var(--color-secondary-text);
+            text-decoration: line-through;
+        }
+        .cabin-price {
+            font-size: 1.6rem; font-weight: 700; color: var(--color-primary-teal);
+        }
+        .cabin-cur { font-size: 0.9rem; font-weight: 600; color: var(--color-primary-teal); }
+        .cabin-per { font-size: 0.75rem; font-weight: 400; color: var(--color-secondary-text); margin-left: 4px; align-self: flex-end; padding-bottom: 2px; }
+        .cabin-desc {
+            font-size: 0.85rem; color: var(--color-secondary-text);
+            line-height: 1.6; flex: 1;
+        }
+        .cabin-card .btn { margin-top: 1rem; text-align: center; }
+        .price-note {
+            text-align: center; font-size: 0.85rem;
+            color: var(--color-secondary-text); font-weight: 300; margin-top: 1.2rem;
+        }
+        /* Included block */
+        .price-included {
+            margin-top: 2rem;
+            padding: 1.6rem 2rem;
+            background: var(--color-mint);
+            border-left: 3px solid var(--color-primary-teal);
+        }
+        .price-included h4 {
+            font-size: 0.72rem; font-weight: 700; letter-spacing: 2px;
+            text-transform: uppercase; color: var(--color-primary-teal); margin-bottom: 1rem;
+        }
+        .price-included ul {
+            list-style: none; padding: 0; margin: 0;
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.4rem 2rem;
+        }
+        .price-included ul li {
+            font-size: 0.84rem; color: var(--color-main-text);
+            display: flex; align-items: flex-start; gap: 0.5rem;
+        }
+        .price-included ul li::before {
+            content: "✓"; color: var(--color-primary-teal);
+            font-weight: 700; flex-shrink: 0; margin-top: 1px;
+        }
+        /* Extras accordion */
+        .extras-wrap { margin-top: 1.5rem; border-top: 1px solid rgba(59,158,163,0.18); }
+        .extras-toggle {
+            width: 100%; display: flex; align-items: center; justify-content: space-between;
+            padding: 1.1rem 0; background: none; border: none; cursor: pointer;
+            font-family: var(--font-inter); font-size: 0.78rem; font-weight: 700;
+            letter-spacing: 1.5px; text-transform: uppercase; color: var(--color-main-text);
+        }
+        .extras-toggle:hover { color: var(--color-primary-teal); }
+        .extras-chevron { color: var(--color-primary-teal); transition: transform 0.3s; }
+        .extras-wrap.open .extras-chevron { transform: rotate(90deg); }
+        .extras-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+        .extras-wrap.open .extras-body { max-height: 800px; }
+        .extras-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr);
+            gap: 0.6rem; padding: 0.4rem 0 1.4rem;
+        }
+        .extra-item {
+            display: flex; align-items: center; gap: 0.7rem;
+            padding: 0.8rem 1rem; border: 1px solid rgba(59,158,163,0.18); font-size: 0.83rem;
+        }
+        .extra-name { flex: 1; }
+        .extra-price { font-weight: 600; color: var(--color-primary-teal); white-space: nowrap; }
+        .extra-period { font-weight: 400; color: var(--color-secondary-text); font-size: 0.78em; }
+        /* Cabin lightbox */
+        .cabin-lb {
+            position: fixed; inset: 0; background: rgba(0,0,0,0.88);
+            z-index: 9999; display: none; align-items: center; justify-content: center;
+        }
+        .cabin-lb.open { display: flex; }
+        .cabin-lb-box { position: relative; max-width: 860px; width: 90vw; }
+        .cabin-lb-img { width: 100%; max-height: 72vh; object-fit: contain; border-radius: 4px; display: block; }
+        .cabin-lb-caption { color: rgba(255,255,255,0.7); font-size: 0.82rem; text-align: center; margin-top: 10px; }
+        .cabin-lb-counter { color: rgba(255,255,255,0.4); font-size: 0.72rem; text-align: center; margin-top: 4px; }
+        .cabin-lb-close {
+            position: absolute; top: -40px; right: 0; background: none; border: none;
+            color: white; font-size: 1.8rem; cursor: pointer; opacity: 0.7;
+        }
+        .cabin-lb-close:hover { opacity: 1; }
+        .cabin-lb-prev, .cabin-lb-next {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            background: rgba(255,255,255,0.1); border: none; color: white;
+            font-size: 1.4rem; width: 44px; height: 44px; cursor: pointer;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            transition: background 0.2s;
+        }
+        .cabin-lb-prev:hover, .cabin-lb-next:hover { background: rgba(255,255,255,0.25); }
+        .cabin-lb-prev { left: -56px; }
+        .cabin-lb-next { right: -56px; }
+        @media (max-width: 768px) {
+            .cabin-grid { grid-template-columns: 1fr; }
+            .price-included ul { grid-template-columns: 1fr; }
+            .extras-grid { grid-template-columns: 1fr; }
+            .cabin-lb-prev { left: -36px; }
+            .cabin-lb-next { right: -36px; }
+        }
+
+        /* FAQ Section */
+        #faq .h2-playfair {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .faq-accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            border-bottom: 1px solid rgba(27,191,176,0.2);
+            padding: 1.5rem 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            cursor: pointer;
+            padding: 0.5rem 0;
+            font-family: var(--font-inter);
+            font-weight: 500;
+            font-size: 1.15rem;
+            color: var(--color-main-text);
+            transition: color var(--transition-speed);
+        }
+        .faq-question:hover {
+            color: var(--color-primary-teal);
+        }
+        .faq-question .icon {
+            font-size: 1.2rem;
+            color: var(--color-primary-teal);
+            transition: transform var(--transition-speed);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.45s ease, padding-top 0.3s ease;
+            padding-top: 0;
+            font-size: 1rem;
+            color: var(--color-secondary-text);
+            font-weight: 300;
+            line-height: 1.7;
+        }
+        .faq-item.open .faq-question .icon {
+            transform: rotate(180deg);
+        }
+        .faq-item.open .faq-answer {
+            max-height: 400px;
+            padding-top: 1rem;
+        }
+
+        /* Final CTA Section */
+        .section-cta-gradient {
+            background: linear-gradient(135deg, var(--color-primary-teal) 0%, var(--color-dark-teal) 100%);
+            color: var(--color-white);
+            text-align: center;
+        }
+        .section-cta-gradient .h2-playfair {
+            color: var(--color-white);
+            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+        }
+        .section-cta-gradient .cta-subtitle {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 3rem;
+        }
+        .cta-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .cta-form input[type="text"],
+        .cta-form input[type="email"] {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 4px;
+            border: none;
+            font-family: var(--font-inter);
+            font-size: 1rem;
+            color: var(--color-main-text);
+            background-color: rgba(255, 255, 255, 0.9);
+            outline: none;
+            transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+        }
+        .cta-form input[type="text"]::placeholder,
+        .cta-form input[type="email"]::placeholder {
+            color: var(--color-secondary-text);
+            opacity: 0.8;
+        }
+        .cta-form input[type="text"]:focus,
+        .cta-form input[type="email"]:focus {
+            background-color: var(--color-white);
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+        }
+        .cta-form .btn {
+            background-color: var(--color-white);
+            color: var(--color-primary-teal);
+            border: 1.5px solid var(--color-white);
+            margin-top: 1rem;
+        }
+        .cta-form .btn:hover {
+            background-color: var(--color-light-teal);
+            color: var(--color-dark-teal);
+            border-color: var(--color-light-teal);
+        }
+        .cta-contact-info {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-mint);
+            padding: 50px 0;
+            text-align: center;
+            border-top: 1px solid rgba(59,158,163,0.2);
+        }
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        .footer-logo {
+            display: inline-flex;
+            align-items: center;
+            color: var(--color-primary-teal);
+            line-height: 1;
+        }
+        .footer-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .footer-nav a {
+            font-family: var(--font-inter);
+            font-weight: 400;
+            font-size: 0.9rem;
+            color: var(--color-secondary-text);
+        }
+        .footer-socials {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 1.2rem;
+        }
+        .footer-socials a {
+            color: var(--color-primary-teal);
+            transition: color var(--transition-speed);
+        }
+        .footer-socials a:hover {
+            color: var(--color-dark-teal);
+        }
+        .footer-copyright {
+            font-size: 0.85rem;
+            color: var(--color-secondary-text);
+            margin-top: 1.5rem;
+        }
+
+        /* Scroll Progress Bar */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background-color: var(--color-primary-teal);
+            width: 0%;
+            z-index: 1001;
+            transition: top 0.3s ease;
+        }
+        #scroll-progress.bar-hidden {
+            top: 0;
+        }
+
+        /* Scroll to Top Button */
+        /* ── Reels Strip ──────────────────────────────── */
+        #memories { overflow: hidden; }
+        .memories-heading {
+            max-width: 640px;
+            margin: 0 auto 3rem;
+            text-align: center;
+        }
+        .featured-video-wrap {
+            display: flex;
+            justify-content: center;
+            margin-top: 2.5rem;
+        }
+        .featured-video {
+            width: 100%;
+            max-width: 360px;
+            aspect-ratio: 9 / 16;
+            object-fit: cover;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .featured-video { max-width: 280px; }
+        }
+        .reels-strip {
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+            padding-bottom: 1rem;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            cursor: grab;
+        }
+        .reels-strip:active { cursor: grabbing; }
+        .reels-strip::-webkit-scrollbar { height: 4px; }
+        .reels-strip::-webkit-scrollbar-thumb { background: rgba(59,158,163,0.4); border-radius: 2px; }
+        .reel-card {
+            flex-shrink: 0;
+            width: 220px;
+            height: 390px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            scroll-snap-align: start;
+            background: #1a2a2f;
+            cursor: pointer;
+        }
+        .reel-card.wide { width: 340px; }
+        .reel-card img,
+        .reel-card video {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .reel-card:hover img { transform: scale(1.05); }
+        .reel-card video { pointer-events: none; }
+        .reel-card:hover video { transform: scale(1.02); }
+        .reel-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        .reel-badge {
+            position: absolute;
+            top: 12px; left: 12px;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(4px);
+            color: white;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 3px 9px;
+            border-radius: 20px;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+        .reel-badge.video-badge { background: rgba(59,158,163,0.8); }
+        .reel-play {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 48px; height: 48px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .reel-card:hover .reel-play { opacity: 1; }
+        .reel-play::after {
+            content: '';
+            width: 0; height: 0;
+            border-top: 9px solid transparent;
+            border-bottom: 9px solid transparent;
+            border-left: 16px solid var(--color-primary-teal);
+            margin-left: 3px;
+        }
+        .reel-caption {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: 1.2rem 1rem 1rem;
+            color: white;
+            font-size: 0.82rem;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+        .reels-hint {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--color-secondary-text);
+            margin-top: 1rem;
+            font-weight: 300;
+            letter-spacing: 0.3px;
+        }
+        /* ─────────────────────────────────────────────── */
+
+        .scroll-to-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--color-primary-teal);
+            color: var(--color-white);
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity var(--transition-speed), visibility var(--transition-speed), transform var(--transition-speed);
+            z-index: 999;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .scroll-to-top-btn.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .scroll-to-top-btn:hover {
+            background-color: var(--color-dark-teal);
+            transform: translateY(-3px);
+        }
+
+        /* Floating Socials Button */
+        .floating-socials {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 10px;
+            align-items: flex-start;
+        }
+        .social-toggle-btn {
+            width: 50px;
+            height: 50px;
+            background-color: var(--color-primary-teal);
+            color: var(--color-white);
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: background-color var(--transition-speed), transform var(--transition-speed);
+        }
+        .social-toggle-btn:hover {
+            background-color: var(--color-dark-teal);
+            transform: translateY(-3px);
+        }
+        .social-links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            pointer-events: none;
+            transition: opacity var(--transition-speed), visibility var(--transition-speed), transform var(--transition-speed);
+        }
+        .social-links-container.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        .social-link {
+            width: 45px; /* Slightly smaller for links */
+            height: 45px;
+            background-color: var(--color-primary-teal);
+            color: var(--color-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: background-color var(--transition-speed);
+        }
+        .social-link:hover {
+            background-color: var(--color-dark-teal);
+        }
+
+        /* Fade-in-up Animation */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ── Burger button ──────────────────────────── */
+        .burger-btn {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            width: 36px;
+            height: 36px;
+            padding: 4px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            z-index: 3001;
+            position: relative;
+            flex-shrink: 0;
+        }
+        .burger-line {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--color-main-text);
+            border-radius: 2px;
+            transition: transform 0.3s ease, opacity 0.2s ease;
+        }
+        .burger-btn.open .burger-line:nth-child(1) { transform: translateY(7px) rotate(45deg); background: #fff; }
+        .burger-btn.open .burger-line:nth-child(2) { opacity: 0; }
+        .burger-btn.open .burger-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); background: #fff; }
+
+        /* ── Mobile nav overlay ─────────────────────── */
+        .mobile-nav-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(26, 26, 26, 0.97);
+            z-index: 3000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .mobile-nav-overlay.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.8rem;
+            margin-bottom: 2.5rem;
+        }
+        .mobile-nav-link {
+            font-family: var(--font-playfair);
+            font-style: italic;
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.35s ease, transform 0.35s ease, color 0.2s;
+        }
+        .mobile-nav-overlay.open .mobile-nav-link { opacity: 1; transform: none; }
+        .mobile-nav-overlay.open .mobile-nav-link:nth-child(1) { transition-delay: 0.04s; }
+        .mobile-nav-overlay.open .mobile-nav-link:nth-child(2) { transition-delay: 0.08s; }
+        .mobile-nav-overlay.open .mobile-nav-link:nth-child(3) { transition-delay: 0.12s; }
+        .mobile-nav-overlay.open .mobile-nav-link:nth-child(4) { transition-delay: 0.16s; }
+        .mobile-nav-overlay.open .mobile-nav-link:nth-child(5) { transition-delay: 0.20s; }
+        .mobile-nav-overlay.open .mobile-nav-link:nth-child(6) { transition-delay: 0.24s; }
+        .mobile-nav-link:hover { color: var(--color-primary-teal); }
+        .mobile-nav-divider {
+            width: 40px;
+            height: 1px;
+            background: rgba(59,158,163,0.4);
+            margin: 0.5rem 0 2rem;
+            opacity: 0;
+            transition: opacity 0.35s ease 0.26s;
+        }
+        .mobile-nav-overlay.open .mobile-nav-divider { opacity: 1; }
+        .mobile-nav-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.6);
+            font-size: 1.6rem;
+            cursor: pointer;
+            line-height: 1;
+            padding: 8px;
+            transition: color 0.2s;
+        }
+        .mobile-nav-close:hover { color: #fff; }
+        .mobile-nav-cta {
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity 0.35s ease 0.30s, transform 0.35s ease 0.30s;
+        }
+        .mobile-nav-overlay.open .mobile-nav-cta { opacity: 1; transform: none; }
+        .mobile-nav-cta .lang-active { color: var(--color-primary-teal); }
+        .mobile-nav-cta .lang-sep { color: rgba(255,255,255,0.25); }
+        .mobile-nav-cta .lang-link { color: rgba(255,255,255,0.45); }
+        .mobile-nav-cta .lang-link:hover { color: var(--color-primary-teal); }
+
+        /* Media Queries */
+        @media (max-width: 1024px) {
+            .section-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .section-grid > div:last-child {
+                order: -1; /* Image first on mobile for about us */
+            }
+            .boat-layout {
+                grid-template-columns: 1fr;
+            }
+            .boat-video-wrapper {
+                order: -1;
+            }
+            .awaits-grid, .itinerary-grid, .audience-grid, .price-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+            .hero-content .h1-playfair {
+                font-size: 3rem;
+            }
+        }
+
+
+        /* ── RESPONSIVE HEADER: nav collapses at 1024px ── */
+        @media (max-width: 1024px) {
+            .main-nav { display: none; }
+            .header-cta { display: none !important; opacity: 0 !important; pointer-events: none !important; }
+            .burger-btn { display: flex; margin-left: auto; }
+            .nav-padi-badge { display: none; }
+            .header-content .lang-switch { display: none; }
+        }
+        @media (max-width: 640px) {
+            .header-logo svg { width: 150px; }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --padding-section: 80px 0;
+            }
+            .container {
+                padding: 0 20px;
+            }
+            .hero-content .h1-playfair {
+                font-size: 2.2rem;
+                margin-bottom: 1rem;
+            }
+            .hero-date, .hero-description {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+            .hero-cta-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .btn {
+                width: 100%;
+                padding: 12px 24px;
+            }
+
+            .header-logo {
+                font-size: 1rem;
+            }
+
+            .h2-playfair {
+                font-size: 2.2rem;
+            }
+            #about-us .left-column {
+                font-size: 1.5rem;
+            }
+            #about-us .about-image {
+                height: 400px;
+            }
+            .stats-grid {
+                flex-direction: column;
+                gap: 4rem;
+            }
+            .stat-item .stat-number {
+                font-size: 3.5rem;
+            }
+            .stat-item .stat-label {
+                font-size: 1rem;
+            }
+
+            .faq-question {
+                font-size: 1rem;
+            }
+
+            .section-cta-gradient .h2-playfair {
+                font-size: 2.5rem;
+            }
+            .section-cta-gradient .cta-subtitle {
+                font-size: 1rem;
+            }
+            .cta-form {
+                gap: 0.8rem;
+            }
+            .cta-form .btn {
+                margin-top: 0.5rem;
+            }
+            .footer-nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .scroll-down-indicator, .scroll-to-top-btn, .floating-socials {
+                bottom: 20px;
+                right: 20px;
+                left: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content .h1-playfair {
+                font-size: 1.8rem;
+            }
+            .h2-playfair {
+                font-size: 1.8rem;
+            }
+            .label {
+                font-size: 0.75rem;
+                letter-spacing: 1px;
+            }
+            .price-card .price-value {
+                font-size: 2rem;
+            }
+        }
+
+        /* ── Booking Modal ───────────────────────────── */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(20, 30, 35, 0.65);
+            backdrop-filter: blur(6px);
+            z-index: 9000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+        }
+        .modal-overlay.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .modal-card {
+            background: var(--color-mint);
+            border-radius: 4px;
+            padding: 2.5rem;
+            width: 100%;
+            max-width: 460px;
+            position: relative;
+            transform: translateY(20px) scale(0.97);
+            transition: transform 0.25s ease;
+        }
+        .modal-overlay.open .modal-card {
+            transform: translateY(0) scale(1);
+        }
+        .modal-close {
+            position: absolute;
+            top: 1rem; right: 1.2rem;
+            background: none;
+            border: none;
+            font-size: 1.6rem;
+            line-height: 1;
+            color: var(--color-secondary-text);
+            cursor: pointer;
+            padding: 0;
+            transition: color 0.15s;
+        }
+        .modal-close:hover { color: var(--color-main-text); }
+        .modal-header { margin-bottom: 1.8rem; }
+        .modal-header h3 {
+            font-family: var(--font-dela-gothic);
+            font-size: 1.3rem;
+            color: var(--color-main-text);
+            letter-spacing: 1px;
+            margin-bottom: 0.3rem;
+        }
+        .modal-header p {
+            font-size: 0.82rem;
+            color: var(--color-secondary-text);
+            font-weight: 300;
+        }
+        .modal-field { margin-bottom: 1.1rem; }
+        .modal-field label {
+            display: block;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--color-main-text);
+            margin-bottom: 0.4rem;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+        }
+        .modal-field label .optional {
+            font-weight: 300;
+            text-transform: none;
+            color: var(--color-secondary-text);
+        }
+        .modal-field input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1.5px solid rgba(59,158,163,0.3);
+            border-radius: 2px;
+            background: white;
+            font-family: var(--font-inter);
+            font-size: 0.92rem;
+            color: var(--color-main-text);
+            transition: border-color 0.15s;
+            outline: none;
+        }
+        .modal-field input:focus { border-color: var(--color-primary-teal); }
+        .modal-field input::placeholder { color: #bbb; }
+        .contact-toggle {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.6rem;
+        }
+        .ct-btn {
+            flex: 1;
+            padding: 0.5rem;
+            border: 1.5px solid rgba(59,158,163,0.3);
+            border-radius: 2px;
+            background: white;
+            font-family: var(--font-inter);
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--color-secondary-text);
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .ct-btn.active {
+            background: var(--color-primary-teal);
+            border-color: var(--color-primary-teal);
+            color: white;
+        }
+        .modal-submit {
+            width: 100%;
+            margin-top: 1.4rem;
+            padding: 0.9rem;
+            font-size: 0.92rem;
+        }
+        .modal-note {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--color-secondary-text);
+            margin-top: 0.7rem;
+            font-weight: 300;
+        }
+        .modal-success {
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .modal-success .success-icon {
+            width: 56px; height: 56px;
+            background: var(--color-primary-teal);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.6rem;
+            color: white;
+            margin: 0 auto 1rem;
+        }
+        .modal-success h4 {
+            font-family: var(--font-dela-gothic);
+            font-size: 1.1rem;
+            color: var(--color-main-text);
+            margin-bottom: 0.4rem;
+        }
+        .modal-success p {
+            font-size: 0.88rem;
+            color: var(--color-secondary-text);
+            font-weight: 300;
+        }
+
+        /* Route Map */
+        .route-map-wrap {
+            position: relative;
+            width: 100%;
+            margin: 2.5rem 0 3rem;
+            overflow: hidden;
+        }
+        .route-map-wrap img.rm-bg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .route-map-wrap .rm-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(10, 25, 38, 0.42);
+        }
+        .route-map-wrap .rm-svg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div id="announce-bar" style="display:none;">
+        <span class="ab-tag">−10%</span>
+        <span class="ab-text">Ранняя бронь до <span class="ab-highlight">1 июня</span> — скидка на все каюты</span>
+        <a class="ab-cta" href="#prices">Выбрать каюту →</a>
+        <button class="ab-close" id="abClose" aria-label="Закрыть">×</button>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Header -->
+    <header id="main-header" class="main-header">
+        <div class="container header-content">
+            <div style="display:flex;align-items:center;">
+<a href="kdive-main.html" class="header-logo">
+                <svg width="190" height="52" viewBox="0 0 200 58" xmlns="http://www.w3.org/2000/svg">
+                    <text x="93" y="25" font-family="'Dela Gothic One'" font-size="18" fill="#2A2A2A" text-anchor="end">K</text>
+                    <circle cx="100" cy="19" r="2.2" fill="#00A896"/>
+                    <text x="107" y="25" font-family="'Dela Gothic One'" font-size="18" fill="#00A896" text-anchor="start" letter-spacing="2">DIVE</text>
+                    <path d="M12 34 Q38 28 62 34 Q86 40 110 34 Q134 28 158 34 Q176 40 188 34" stroke="#00A896" stroke-width="1" fill="none" opacity="0.55"/>
+                    <text x="118" y="51" font-family="'Playfair Display'" font-style="italic" font-size="12" fill="#2A2A2A" text-anchor="middle" letter-spacing="5">safari</text>
+                </svg>
+            </a>
+            <img src="dive-safari-content/padi-logo.jpg" alt="PADI" class="nav-padi-badge" style="height:28px;width:auto;opacity:0.55;margin-left:14px;border-left:1px solid rgba(0,0,0,0.1);padding-left:14px;">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about-us">О нас</a></li>
+                    <li><a href="#what-awaits">Что ждёт</a></li>
+                    <li><a href="#itinerary">Маршрут</a></li>
+                    <li><a href="#boat">Лодка</a></li>
+                    <li><a href="#prices">Цены</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="#final-cta" class="btn btn-primary">Забронировать</a>
+            </div>
+            <button class="burger-btn" id="burgerBtn" aria-label="Меню" aria-expanded="false">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+            <div class="lang-switch">
+                <span class="lang-active" data-lang="ru">RU</span>
+                <span class="lang-sep">|</span>
+                <a href="./safari-south-sharks-en.html" class="lang-link" data-lang="en">EN</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile nav overlay -->
+    <div class="mobile-nav-overlay" id="mobileNav" aria-hidden="true">
+        <button class="mobile-nav-close" id="mobileNavClose" aria-label="Закрыть меню">✕</button>
+        <nav class="mobile-nav-links">
+            <a href="#about-us"    class="mobile-nav-link">О нас</a>
+            <a href="#what-awaits" class="mobile-nav-link">Что ждёт</a>
+            <a href="#itinerary"   class="mobile-nav-link">Маршрут</a>
+            <a href="#boat"        class="mobile-nav-link">Лодка</a>
+            <a href="#prices"      class="mobile-nav-link">Цены</a>
+            <a href="#faq"         class="mobile-nav-link">FAQ</a>
+        </nav>
+        <div class="mobile-nav-divider"></div>
+        <div class="mobile-nav-cta">
+            <a href="#final-cta" class="btn btn-primary">Забронировать</a>
+            <div class="lang-switch" style="justify-content:center;margin-top:16px;">
+                <span class="lang-active">RU</span>
+                <span class="lang-sep">|</span>
+                <a href="./en.html" class="lang-link">EN</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <video class="hero-video" id="heroVideo" autoplay muted loop playsinline
+                   poster="dive-safari-content/hero-south/poster.jpg">
+                <source id="heroVideoSrc" src="" type="video/mp4">
+            </video>
+            <script>
+                (function() {
+                    var mobile = window.innerWidth <= 768;
+                    var vid = document.getElementById('heroVideo');
+                    vid.poster = mobile
+                        ? 'dive-safari-content/hero-south/mobile-poster.jpg'
+                        : 'dive-safari-content/hero-south/poster.jpg';
+                    document.getElementById('heroVideoSrc').src = mobile
+                        ? 'dive-safari-content/hero-south/mobile.mp4'
+                        : 'dive-safari-content/hero-south/desktop.mp4';
+                    vid.load();
+                })();
+            </script>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="h1-playfair">В поисках<br>акул</h1>
+                <p class="hero-tagline">Brothers Islands · Daedalus · Elphinstone</p>
+                <p class="hero-date" style="color:#00A896;font-weight:600;">ХУРГАДА · 17–24 ОКТЯБРЯ 2026</p>
+                <div class="hero-cta-buttons">
+                    <a href="#final-cta" class="btn btn-primary">Забронировать место</a>
+                    <a href="#itinerary" class="btn btn-white-outline">Узнать программу</a>
+                </div>
+            </div>
+            <a href="#about-us" class="scroll-down-indicator">
+                Прокрути вниз <i class="fas fa-arrow-down"></i>
+            </a>
+        </section>
+
+
+        <!-- О НАС Section -->
+        <section id="about-us" class="section-padding section-white">
+            <div class="container">
+                <span class="label">О НАС</span>
+                <h2 class="h2-playfair text-center">Крис, Дима и Му</h2>
+                <div class="section-grid">
+                    <div class="section-grid-content">
+                        <p>Мы — команда, которая организует уникальные дайвинг-сафари в Красном море. Мы сами инструкторы, дайверы и просто влюблены в морскую стихию. Наши инструкторы — PADI-профессионалы из известного Blue Sea Dive Club.</p>
+                        <p>Мы верим, что дайвинг-сафари — это не просто погружения, это полное погружение в атмосферу приключений, новых открытий и незабываемых впечатлений. Мы позаботимся обо всех деталях, чтобы вы могли полностью расслабиться и наслаждаться каждым моментом.</p>
+                        <p>Для нас это не просто бизнес, это проект для души. Мы вкладываем частичку себя в каждый тур, чтобы он стал для вас чем-то особенным и запоминающимся на всю жизнь.</p>
+                    </div>
+                    <div class="about-image-wrapper">
+                        <video autoplay muted loop playsinline class="about-image" style="object-fit:cover;">
+                            <source src="dive-safari-content/copy_03A9C68F-6BA3-488D-B802-0EE9C01AC48B.MOV" type="video/mp4">
+                        </video>
+                        <div class="blob-decoration blob-decoration-1">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#00A896" d="M47.7,-30.5C59.9,-15.7,66.1,6.5,59.3,27.3C52.5,48.1,32.7,67.6,9.8,69.5C-13.1,71.4,-35.9,55.8,-49.5,35.7C-63.1,15.7,-67.5,-8.8,-59.6,-28.9C-51.7,-49,-31.4,-64.7,-9.8,-63.3C11.8,-61.9,32.1,-43.5,47.7,-30.5Z" transform="translate(100 100)" opacity="0.1" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CSS для акул — хранится здесь, используется в #itinerary -->
+        <style>
+            .sharks-row {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                gap: 1rem;
+            }
+            .sk-card {
+                background: var(--color-white);
+                border: 1px solid var(--color-light-teal);
+                overflow: hidden;
+                transition: box-shadow var(--transition-speed), border-color var(--transition-speed);
+            }
+            .sk-card:hover {
+                box-shadow: 0 6px 24px rgba(0,0,0,0.07);
+                border-color: var(--color-primary-teal);
+            }
+            .sk-photo-placeholder {
+                width: 100%;
+                height: 130px;
+                background: linear-gradient(160deg, #003d38, #005a52);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2.4rem;
+                color: rgba(255,255,255,0.4);
+            }
+            .sk-photo {
+                width: 100%; height: 130px;
+                object-fit: cover; display: block;
+            }
+            .sk-body { padding: 0.9rem; }
+            .sk-chance { font-size: 0.6rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--color-primary-teal); margin-bottom: 0.35rem; display: block; }
+            .sk-name { font-family: var(--font-dela-gothic); font-size: 0.75rem; color: var(--color-main-text); line-height: 1.3; margin-bottom: 0.25rem; }
+            .sk-latin { font-family: var(--font-playfair); font-style: italic; font-size: 0.7rem; color: var(--color-secondary-text); margin-bottom: 0.5rem; display: block; }
+            .sk-desc { font-size: 0.75rem; color: var(--color-secondary-text); line-height: 1.55; font-weight: 300; margin-bottom: 0.6rem; }
+            .sk-tags { display: flex; flex-wrap: wrap; gap: 0.25rem; }
+            .sk-tag { font-size: 0.6rem; font-weight: 600; padding: 2px 7px; border-radius: 20px; background: var(--color-light-teal); color: var(--color-primary-teal); }
+            @media (max-width: 1024px) { .sharks-row { grid-template-columns: repeat(3, 1fr); } }
+            @media (max-width: 600px)  { .sharks-row { grid-template-columns: repeat(2, 1fr); } }
+        </style>
+
+        <!-- МАРШРУТ Section -->
+        <section id="itinerary" class="section-padding section-mint">
+            <div class="container">
+                <span class="label text-center">Программа · 17–24 октября 2026</span>
+                <h2 class="h2-playfair text-center">Маршрут по лучшим точкам</h2>
+
+                <!-- Stats -->
+                <div class="stats-row">
+                    <div class="stat-col">
+                        <div class="stat-big-num">3</div>
+                        <div class="stat-col-label">Легендарных атолла</div>
+                        <p class="stat-col-desc">Brothers Islands, Daedalus Reef и Elphinstone — три самых удалённых и богатых точки Южного Красного моря. Куда обычный дайвер не доберётся с берега.</p>
+                    </div>
+                    <div class="stat-col">
+                        <div class="stat-big-num">5+</div>
+                        <div class="stat-col-label">Видов акул</div>
+                        <p class="stat-col-desc">Океанические белоплавниковые, молот-рыбы, серые рифовые, шёлковые и лиса-акулы — это место, где акулы встречаются гарантированно.</p>
+                    </div>
+                    <div class="stat-col">
+                        <div class="stat-big-num">21+</div>
+                        <div class="stat-col-label">Погружений за тур</div>
+                        <p class="stat-col-desc">3–4 погружения в день в открытом океане. Вертикальные стены уходят на 500 м вниз, пелагические виды на каждом дайве — настоящий blue water дайвинг.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- АКУЛЫ Section -->
+        <section class="section-padding section-white">
+            <div class="container">
+                <span class="label text-center">КОГО ВСТРЕТИТЕ</span>
+                <h2 class="h2-playfair text-center">Каких акул вы увидите</h2>
+
+                <div class="sharks-row" style="margin-top:1.5rem;">
+                    <div class="sk-card fade-in-up">
+                        <img class="sk-photo" src="dive-safari-content/sharks/oceanic white tip.jpg" alt="Океаническая белоплавниковая акула">
+                        <div class="sk-body">
+                            <div class="sk-name">Океаническая белоплавниковая</div>
+                            <span class="sk-latin">Carcharhinus longimanus</span>
+                            <p class="sk-desc">Символ маршрута. Инквизитивная, подходит близко. Встреча практически гарантирована на Brothers.</p>
+                        </div>
+                    </div>
+                    <div class="sk-card fade-in-up">
+                        <img class="sk-photo" src="dive-safari-content/sharks/hammerhead.jpg" alt="Большая молот-рыба">
+                        <div class="sk-body">
+                            <div class="sk-name">Большая молот-рыба</div>
+                            <span class="sk-latin">Sphyrna mokarran</span>
+                            <p class="sk-desc">Самая узнаваемая акула. Глубина 25–40 м, активна ранним утром на Daedalus и Brothers.</p>
+                        </div>
+                    </div>
+                    <div class="sk-card fade-in-up">
+                        <img class="sk-photo" src="dive-safari-content/sharks/foxshark.jpg" alt="Лиса-акула трэшер">
+                        <div class="sk-body">
+                            <div class="sk-name">Лиса-акула (трэшер)</div>
+                            <span class="sk-latin">Alopias vulpinus</span>
+                            <p class="sk-desc">Редкая — хвост длиной с тело. Elphinstone на рассвете, 20–30 м от поверхности.</p>
+                        </div>
+                    </div>
+                    <div class="sk-card fade-in-up">
+                        <img class="sk-photo" src="dive-safari-content/sharks/greyriffshark.jpg" alt="Серая рифовая акула">
+                        <div class="sk-body">
+                            <div class="sk-name">Серая рифовая акула</div>
+                            <span class="sk-latin">Carcharhinus amblyrhynchos</span>
+                            <p class="sk-desc">Постоянный житель рифов. Держится стаями вдоль стен — самый частый попутчик.</p>
+                        </div>
+                    </div>
+                    <div class="sk-card fade-in-up">
+                        <img class="sk-photo" src="dive-safari-content/sharks/silkshark.jpg" alt="Шёлковая акула">
+                        <div class="sk-body">
+                            <div class="sk-name">Шёлковая акула</div>
+                            <span class="sk-latin">Carcharhinus falciformis</span>
+                            <p class="sk-desc">Пелагическая. Грациозные движения в синей воде вокруг Daedalus, глубина.</p>
+                        </div>
+                    </div>
+                    <div class="sk-card fade-in-up">
+                        <img class="sk-photo" src="dive-safari-content/sharks/manta.png" alt="Скат-манта">
+                        <div class="sk-body">
+                            <div class="sk-name">Скат-манта</div>
+                            <span class="sk-latin">Mobula alfredi</span>
+                            <p class="sk-desc">Размах до 3 м — медленно парит над стеной. Незабываемая встреча на Elphinstone.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ПРОГРАММА Section -->
+        <section class="section-padding section-mint">
+            <div class="container">
+                <span class="label text-center">ДЕНЬ ЗА ДНЁМ</span>
+                <h2 class="h2-playfair text-center">Программа тура</h2>
+
+                <!-- Days tabs -->
+
+                                <div class="days-list" style="margin-top:0;">
+
+                  <div class="day-card">
+                    <div class="day-header" onclick="this.parentElement.classList.toggle('open')">
+                      <span class="day-row-num">01</span>
+                      <span class="day-row-date">17 октября</span>
+                      <span class="day-row-title">Прибытие и посадка</span>
+                      <div class="day-row-badges"><span class="day-row-badge dark">Хургада Марина</span></div>
+                      <div class="day-row-chevron">›</div>
+                    </div>
+                    <div class="day-body"><div class="day-activities-inner">
+                      <div class="day-activity"><span class="day-act-num">1</span><div>Прибытие в <span class="act-loc">Хургада Марина</span></div></div>
+                      <div class="day-activity"><span class="day-act-num">2</span><div>Посадка на яхту · <b>check-in</b> · размещение в каютах</div></div>
+                      <div class="day-activity"><span class="day-act-num">3</span><div>Инструктаж по безопасности · настройка снаряжения</div></div>
+                      <div class="day-activity"><span class="day-act-num">4</span><div>Ужин на борту</div></div>
+                      <div class="day-activity"><span class="day-act-num">→</span><div>Ночёвка в марине</div></div>
+                    </div></div>
+                  </div>
+
+                  <div class="day-card">
+                    <div class="day-header" onclick="this.parentElement.classList.toggle('open')">
+                      <span class="day-row-num">02</span>
+                      <span class="day-row-date">18 октября</span>
+                      <span class="day-row-title">Check Dive · Переход к Brothers</span>
+                      <div class="day-row-badges"><span class="day-row-badge">Check Dive</span><span class="day-row-badge night">🌙 Night Dive</span></div>
+                      <div class="day-row-chevron">›</div>
+                    </div>
+                    <div class="day-body"><div class="day-activities-inner">
+                      <div class="day-activity"><span class="day-act-num">1</span><div><b>Check Dive</b> — <span class="act-loc">Abu Ramada</span> или <span class="act-loc">Soma Bay</span></div></div>
+                      <div class="day-activity"><span class="day-act-num">2</span><div><b>2-е погружение</b> — <span class="act-loc">Abu Ramada</span> или <span class="act-loc">Safaga Sites</span></div></div>
+                      <div class="day-activity"><span class="day-act-num">N</span><div><b>Ночное погружение 🌙</b> — Abu Ramada или Safaga</div></div>
+                      <div class="day-activity"><span class="day-act-num">→</span><div>Ночной переход к <span class="act-loc">Brothers Islands</span></div></div>
+                    </div></div>
+                  </div>
+
+                  <div class="day-card">
+                    <div class="day-header" onclick="this.parentElement.classList.toggle('open')">
+                      <span class="day-row-num">03</span>
+                      <span class="day-row-date">19 октября</span>
+                      <span class="day-row-title">Brothers Islands</span>
+                      <div class="day-row-badges"><span class="day-row-badge">🦈 Oceanic Whitetip</span><span class="day-row-badge">Big &amp; Little Brother</span></div>
+                      <div class="day-row-chevron">›</div>
+                    </div>
+                    <div class="day-body"><div class="day-activities-inner">
+                      <div class="day-activity"><span class="day-act-num">1</span><div><b>1-е погружение</b> — <span class="act-loc">Big Brother</span> · North Plateau</div></div>
+                      <div class="day-activity"><span class="day-act-num">2</span><div><b>2-е погружение</b> — <span class="act-loc">Big Brother</span> · West Wall</div></div>
+                      <div class="day-activity"><span class="day-act-num">3</span><div><b>3-е погружение</b> — <span class="act-loc">Little Brother</span> · North Reef</div></div>
+                      <div class="day-activity"><span class="day-act-num">→</span><div>Ночной переход к <span class="act-loc">Daedalus Reef</span></div></div>
+                    </div></div>
+                  </div>
+
+                  <div class="day-card">
+                    <div class="day-header" onclick="this.parentElement.classList.toggle('open')">
+                      <span class="day-row-num">04</span>
+                      <span class="day-row-date">20 октября</span>
+                      <span class="day-row-title">Daedalus Reef</span>
+                      <div class="day-row-badges"><span class="day-row-badge">🔨 Hammerhead Point</span></div>
+                      <div class="day-row-chevron">›</div>
+                    </div>
+                    <div class="day-body"><div class="day-activities-inner">
+                      <div class="day-activity"><span class="day-act-num">1</span><div><b>1-е погружение</b> — <span class="act-loc">North Plateau</span> · <b>Hammerhead Point</b></div></div>
+                      <div class="day-activity"><span class="day-act-num">2</span><div><b>2-е погружение</b> — <span class="act-loc">East Wall</span></div></div>
+                      <div class="day-activity"><span class="day-act-num">3</span><div><b>3-е погружение</b> — <span class="act-loc">South Plateau</span></div></div>
+                      <div class="day-activity"><span class="day-act-num">→</span><div>Ночёвка у <span class="act-loc">Daedalus Reef</span></div></div>
+                    </div></div>
+                  </div>
+
+                  <div class="day-card">
+                    <div class="day-header" onclick="this.parentElement.classList.toggle('open')">
+                      <span class="day-row-num">05</span>
+                      <span class="day-row-date">21 октября</span>
+                      <span class="day-row-title">Daedalus Reef</span>
+                      <div class="day-row-badges"><span class="day-row-badge">🔨 Hammerhead</span><span class="day-row-badge">Lighthouse Reef</span></div>
+                      <div class="day-row-chevron">›</div>
+                    </div>
+                    <div class="day-body"><div class="day-activities-inner">
+                      <div class="day-activity"><span class="day-act-num">1</span><div><b>1-е погружение</b> — <span class="act-loc">North-East Reef</span></div></div>
+                      <div class="day-activity"><span class="day-act-num">2</span><div><b>2-е погружение</b> — <span class="act-loc">South-East Reef</span></div></div>
+                      <div class="day-activity"><span class="day-act-num">3</span><div><b>3-е погружение</b> — <span class="act-loc">Lighthouse Reef</span></div></div>
+                      <div class="day-activity"><span class="day-act-num">→</span><div>Ночной переход к <span class="act-loc">Elphinstone Reef</span></div></div>
+                    </div></div>
+                  </div>
+
+                  <div class="day-card">
+                    <div class="day-header" onclick="this.parentElement.classList.toggle('open')">
+                      <span class="day-row-num">06</span>
+                      <span class="day-row-date">22 октября</span>
+                      <span class="day-row-title">Elphinstone &amp; Abu Dabab</span>
+                      <div class="day-row-badges"><span class="day-row-badge">🌀 Thresher Shark</span><span class="day-row-badge night">🌙 Night Dive</span></div>
+                      <div class="day-row-chevron">›</div>
+                    </div>
+                    <div class="day-body"><div class="day-activities-inner">
+                      <div class="day-activity"><span class="day-act-num">1</span><div><b>1-е погружение</b> — <span class="act-loc">Elphinstone North Plateau</span></div></div>
+                      <div class="day-activity"><span class="day-act-num">2</span><div><b>2-е погружение</b> — <span class="act-loc">Elphinstone South Plateau</span></div></div>
+                      <div class="day-activity"><span class="day-act-num">3</span><div><b>3-е погружение</b> — <span class="act-loc">Abu Dabai Reef</span></div></div>
+                      <div class="day-activity"><span class="day-act-num">N</span><div><b>Ночное погружение 🌙</b> — Abu Dabab</div></div>
+                    </div></div>
+                  </div>
+
+                  <div class="day-card">
+                    <div class="day-header" onclick="this.parentElement.classList.toggle('open')">
+                      <span class="day-row-num">07</span>
+                      <span class="day-row-date">23 октября</span>
+                      <span class="day-row-title">Safaga &amp; Возврат в Хургаду</span>
+                      <div class="day-row-badges"><span class="day-row-badge">Safaga / Giftun</span><span class="day-row-badge dark">🎉 Прощальная</span></div>
+                      <div class="day-row-chevron">›</div>
+                    </div>
+                    <div class="day-body"><div class="day-activities-inner">
+                      <div class="day-activity"><span class="day-act-num">1</span><div><b>1-е погружение</b> — <span class="act-loc">Panorama Reef</span> / Safaga</div></div>
+                      <div class="day-activity"><span class="day-act-num">2</span><div><b>2-е погружение</b> — <span class="act-loc">Abu Kifan Reef</span> или <span class="act-loc">Giftun Island</span></div></div>
+                      <div class="day-activity"><span class="day-act-num">→</span><div>Переход в <span class="act-loc">Хургада Марина</span></div></div>
+                      <div class="day-activity"><span class="day-act-num">🎉</span><div>Прощальный ужин · запись в лог-бук</div></div>
+                    </div></div>
+                  </div>
+
+                  <div class="day-card">
+                    <div class="day-header" onclick="this.parentElement.classList.toggle('open')">
+                      <span class="day-row-num">08</span>
+                      <span class="day-row-date">24 октября</span>
+                      <span class="day-row-title">Отъезд</span>
+                      <div class="day-row-badges"><span class="day-row-badge dark">Финальный день</span></div>
+                      <div class="day-row-chevron">›</div>
+                    </div>
+                    <div class="day-body"><div class="day-activities-inner">
+                      <div class="day-activity"><span class="day-act-num">1</span><div>Завтрак на борту</div></div>
+                      <div class="day-activity"><span class="day-act-num">2</span><div><b>Check-out</b></div></div>
+                      <div class="day-activity"><span class="day-act-num">3</span><div>Трансфер в аэропорт / отель</div></div>
+                    </div></div>
+                  </div>
+
+                </div>
+                <p class="program-foot-note">Маршрут и точки погружений зависят от погоды и состояния моря. Itinerary may be subject to change — safety first.</p>
+                <div class="program-mobile-cta">
+                    <a href="#final-cta" class="btn btn-primary">Забронировать</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ГАЛЕРЕЯ Section -->
+        <section id="memories" class="section-padding section-white">
+            <div class="container">
+                <div class="memories-heading">
+                    <span class="label text-center">КАК ЭТО БЫЛО</span>
+                    <h2 class="h2-playfair text-center">Как это было в прошлый раз</h2>
+                </div>
+                <div class="reels-strip" id="reelsStrip">
+                    <div class="reel-card" data-type="video" id="reelVideo1">
+                        <video src="dive-safari-content/gallery/video-1.mp4" muted loop playsinline></video>
+                        <div class="reel-overlay"></div>
+                    </div>
+                    <div class="reel-card" data-type="photo">
+                        <img src="dive-safari-content/gallery/IMG_0699.jpg" alt="">
+                        <div class="reel-overlay"></div>
+                    </div>
+                    <div class="reel-card" data-type="photo">
+                        <img src="dive-safari-content/gallery/IMG_0700.jpg" alt="">
+                        <div class="reel-overlay"></div>
+                    </div>
+                    <div class="reel-card" data-type="photo">
+                        <img src="dive-safari-content/gallery/IMG_0702.jpg" alt="">
+                        <div class="reel-overlay"></div>
+                    </div>
+                    <div class="reel-card" data-type="photo">
+                        <img src="dive-safari-content/gallery/IMG_5134.jpg" alt="">
+                        <div class="reel-overlay"></div>
+                    </div>
+                    <div class="reel-card" data-type="photo">
+                        <img src="dive-safari-content/gallery/IMG_5141.jpg" alt="">
+                        <div class="reel-overlay"></div>
+                    </div>
+                    <div class="reel-card" data-type="photo">
+                        <img src="dive-safari-content/gallery/IMG_9677.JPG" alt="">
+                        <div class="reel-overlay"></div>
+                    </div>
+                    <div class="reel-card" data-type="photo">
+                        <img src="dive-safari-content/gallery/IMG_9692.JPG" alt="">
+                        <div class="reel-overlay"></div>
+                    </div>
+                    <div class="reel-card" data-type="photo">
+                        <img src="dive-safari-content/gallery/IMG_9821.jpg" alt="">
+                        <div class="reel-overlay"></div>
+                    </div>
+                </div>
+                <p class="reels-hint">← прокрути →</p>
+            </div>
+        </section>
+
+        <!-- КАКАЯ ЛОДКА Section -->
+        <section id="boat" class="section-padding section-mint">
+            <div class="container">
+                <span class="label text-center">КАКАЯ ЛОДКА</span>
+                <h2 class="h2-playfair text-center">Ваш дом на 8 дней</h2>
+                <div class="boat-layout">
+                    <div class="boat-features">
+                        <p>Наше дайвинг-сафари проходит на комфортабельной яхте, специально оборудованной для длительных морских путешествий. Каждая деталь продумана для вашего удобства и безопасности.</p>
+                        <ul>
+                            <li>Каюты с кондиционером и собственной ванной комнатой</li>
+                            <li>Полный пансион: 3 раза в день + снеки, напитки, фрукты</li>
+                            <li>Русскоязычная команда и дайв-гиды</li>
+                            <li>Профессиональная дайв-зона с просторной платформой</li>
+                            <li>Открытые палубы с шезлонгами для отдыха и загара</li>
+                        </ul>
+                    </div>
+                    <div class="boat-video-wrapper fade-in-up">
+                        <video controls muted playsinline poster="dive-safari-content/Pics/IMG-20260418-WA0032 (1).jpg"
+                            onerror="this.onerror=null; this.src=''; this.style.backgroundColor='#3B9EA3'; this.style.backgroundImage='linear-gradient(135deg,#3B9EA3,#2D7F84)';">
+                            <source src="dive-safari-content/boatPicsVds/VID-20260418-WA0044.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- КАЮТЫ Section -->
+        <section id="prices" class="section-padding section-white">
+            <div class="container">
+                <span class="label text-center">ЦЕНЫ</span>
+                <h2 class="h2-playfair text-center">Выбери свою каюту</h2>
+
+                <div class="cabin-grid">
+                    <!-- Нижняя палуба -->
+                    <div class="cabin-card fade-in-up">
+                        <div class="cabin-photo" data-cabin="lower">
+                            <div class="cabin-slider" id="slider-lower">
+                                <img src="dive-safari-content/cabins/lower/lowerdeck.jpg" alt="Нижняя палуба">
+                            </div>
+                            <div class="cabin-photo-overlay"><span class="cabin-photo-hint">Смотреть фото</span></div>
+                        </div>
+                        <div class="cabin-body">
+                            <span class="cabin-badge" style="display:none;" data-kdive-badge="redSeaSharks2026">−10% до 1 июня</span>
+                            <div class="cabin-name">Нижняя палуба</div>
+                            <div class="cabin-price-row">
+                                <span class="cabin-old" style="display:none;" data-kdive-cabin-original="redSeaSharks2026:lower">1 190 €</span>
+                                <span class="cabin-price" data-kdive-cabin-price="redSeaSharks2026:lower">1 071</span>
+                                <span class="cabin-cur">€</span>
+                                <span class="cabin-per">/ чел.</span>
+                            </div>
+                            <p class="cabin-desc">Комфортная каюта с иллюминатором. Двухъярусная или раздельные кровати — идеально для путешественников соло.</p>
+                            <a href="#final-cta" class="btn btn-secondary">Забронировать</a>
+                        </div>
+                    </div>
+
+                    <!-- Верхняя палуба -->
+                    <div class="cabin-card fade-in-up">
+                        <div class="cabin-photo" data-cabin="upper">
+                            <div class="cabin-slider" id="slider-upper">
+                                <img src="dive-safari-content/cabins/upper/upperdeck.jpg" alt="Верхняя палуба">
+                            </div>
+                            <div class="cabin-photo-overlay"><span class="cabin-photo-hint">Смотреть фото</span></div>
+                        </div>
+                        <div class="cabin-body">
+                            <span class="cabin-badge" style="display:none;" data-kdive-badge="redSeaSharks2026">−10% до 1 июня</span>
+                            <div class="cabin-name">Верхняя палуба</div>
+                            <div class="cabin-price-row">
+                                <span class="cabin-old" style="display:none;" data-kdive-cabin-original="redSeaSharks2026:upper">1 340 €</span>
+                                <span class="cabin-price" data-kdive-cabin-price="redSeaSharks2026:upper">1 206</span>
+                                <span class="cabin-cur">€</span>
+                                <span class="cabin-per">/ чел.</span>
+                            </div>
+                            <p class="cabin-desc">Просторная каюта с большим окном на верхней палубе. Лучший вид на море, больше света и воздуха.</p>
+                            <a href="#final-cta" class="btn btn-secondary">Забронировать</a>
+                        </div>
+                    </div>
+
+                    <!-- King bed -->
+                    <div class="cabin-card fade-in-up">
+                        <div class="cabin-photo" data-cabin="king">
+                            <div class="cabin-slider" id="slider-king">
+                                <img src="dive-safari-content/cabins/king/king.PNG" alt="King bed">
+                            </div>
+                            <div class="cabin-photo-overlay"><span class="cabin-photo-hint">Смотреть фото</span></div>
+                        </div>
+                        <div class="cabin-body">
+                            <span class="cabin-badge" style="display:none;" data-kdive-badge="redSeaSharks2026">−10% до 1 июня</span>
+                            <div class="cabin-name">King bed каюта</div>
+                            <div class="cabin-price-row">
+                                <span class="cabin-old" style="display:none;" data-kdive-cabin-original="redSeaSharks2026:king">1 490 €</span>
+                                <span class="cabin-price" data-kdive-cabin-price="redSeaSharks2026:king">1 341</span>
+                                <span class="cabin-cur">€</span>
+                                <span class="cabin-per">/ чел.</span>
+                            </div>
+                            <p class="cabin-desc">Эксклюзивная каюта с большой двуспальной кроватью и панорамными окнами. Идеально для пар.</p>
+                            <a href="#final-cta" class="btn btn-secondary">Забронировать</a>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="price-note">+ нацпарк 180 € + сервис 100 € · Депозит 50% при бронировании</p>
+
+                <div class="price-included">
+                    <h4>ЧТО ВХОДИТ В СТОИМОСТЬ</h4>
+                    <ul>
+                        <li>Трансфер на лодку и обратно</li>
+                        <li>Питание полный пансион 3 раза в день</li>
+                        <li>Напитки, снеки и фрукты</li>
+                        <li>3–4 дайва в день (для сертифицированных)</li>
+                        <li>2–4 дайва в день (для Discovery или обучающихся OWD)</li>
+                        <li>Оборудование для дайвинга (для Discovery и обучающихся OWD)</li>
+                        <li>Маска, трубка и ласты для снорклинга</li>
+                        <li>Русскоговорящие инструкторы</li>
+                        <li>Wi-Fi на борту</li>
+                    </ul>
+                </div>
+
+                <div class="extras-wrap" id="mainExtras">
+                    <button class="extras-toggle" onclick="document.getElementById('mainExtras').classList.toggle('open')">
+                        <span>Дополнительные услуги</span>
+                        <span class="extras-chevron">›</span>
+                    </button>
+                    <div class="extras-body">
+                        <div class="extras-grid">
+                            <div class="extra-item">
+                                <span class="extra-name">Найтрокс 12L / 15L</span>
+                                <span class="extra-price">80 € / 110 € <span class="extra-period">/ нед.</span></span>
+                            </div>
+                            <div class="extra-item">
+                                <span class="extra-name">Комплект снаряжения (сертификат)</span>
+                                <span class="extra-price">150 € <span class="extra-period">/ нед.</span></span>
+                            </div>
+                            <div class="extra-item">
+                                <span class="extra-name">Баллон 15L</span>
+                                <span class="extra-price">56 € <span class="extra-period">/ нед.</span></span>
+                            </div>
+                            <div class="extra-item">
+                                <span class="extra-name">Дайв-компьютер</span>
+                                <span class="extra-price">70 € <span class="extra-period">/ нед.</span></span>
+                            </div>
+                            <div class="extra-item">
+                                <span class="extra-name">Фонари</span>
+                                <span class="extra-price">8 € <span class="extra-period">/ день</span></span>
+                            </div>
+                            <div class="extra-item">
+                                <span class="extra-name">Курс PADI OWDC</span>
+                                <span class="extra-price">360 € <span class="extra-period">/ чел.</span></span>
+                            </div>
+                            <div class="extra-item">
+                                <span class="extra-name">Курс PADI AOWDC</span>
+                                <span class="extra-price">340 € <span class="extra-period">/ чел.</span></span>
+                            </div>
+                            <div class="extra-item">
+                                <span class="extra-name">Курс PADI Specialties (EAN, deep, wreck)</span>
+                                <span class="extra-price">220 € <span class="extra-period">/ чел.</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cabin lightbox -->
+        <div class="cabin-lb" id="cabinLb" onclick="if(event.target===this)closeCabinLb()">
+            <div class="cabin-lb-box">
+                <button class="cabin-lb-close" onclick="closeCabinLb()">×</button>
+                <button class="cabin-lb-prev" onclick="cabinLbNav(-1)">‹</button>
+                <img class="cabin-lb-img" id="cabinLbImg" src="" alt="">
+                <button class="cabin-lb-next" onclick="cabinLbNav(1)">›</button>
+                <div class="cabin-lb-caption" id="cabinLbCap"></div>
+                <div class="cabin-lb-counter" id="cabinLbCount"></div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section-padding section-mint">
+            <div class="container">
+                <span class="label text-center">FAQ</span>
+                <h2 class="h2-playfair text-center">Частые вопросы</h2>
+                <div class="faq-accordion">
+                    <div class="faq-item fade-in-up">
+                        <div class="faq-question">
+                            Какие курсы можно пройти?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Курсы PADI прямо в море:</p>
+                            <ul style="margin-top:0.5rem;padding-left:1.2rem;display:flex;flex-direction:column;gap:0.5rem;">
+                                <li><strong>PADI Open Water Diver</strong> — для новичков. Получите полноценный сертификат дайвера прямо во время сафари.</li>
+                                <li><strong>PADI Refresh Course</strong> — есть сертификат, но давно не ныряли? Обновите знания и навыки.</li>
+                                <li><strong>PADI Specialties</strong> (EAN · Deep · Wreck) — специализации для сертифицированных: найтрокс, глубокие и рэк-дайвы.</li>
+                                <li><strong>PADI Advanced OWD</strong> — следующий уровень: совершенствуйте навыки и получите Advanced сертификат.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <div class="faq-question">
+                            Кто инструкторы по дайвингу?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Наши инструкторы — это PADI-профессионалы с 20+ летним опытом. Мы сотрудничаем с известным дайв-клубом Blue Sea Dive Club (Шарм-эль-Шейх).</p>
+                        </div>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <div class="faq-question">
+                            Насколько это безопасно?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Дайвинг — это намного безопаснее, чем вы думаете. По статистике, обычное плавание является более опасным занятием, чем дайвинг. Современное оборудование, профессиональные инструкторы и строгие протоколы безопасности делают дайвинг одним из самых контролируемых видов активного отдыха.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <div class="faq-question">
+                            Можно ли поехать одному?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Да, большинство наших гостей едут соло. Дайв-сафари — отличный способ найти единомышленников, яхта быстро объединяет.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <div class="faq-question">
+                            Нужен ли опыт дайвинга?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Нет, не нужен. Для новичков предусмотрена программа Discovery Dive — пробные погружения с инструктором в безопасных условиях. Это отличный шанс попробовать дайвинг!</p>
+                        </div>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <div class="faq-question">
+                            Какой сертификат нужен?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Для самостоятельных погружений нужен сертификат Open Water Diver или выше. Если у вас нет сертификата, вы можете пройти курс Open Water на борту или просто наслаждаться снорклингом и Discovery Dive.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <div class="faq-question">
+                            Давно не нырял, что делать?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Не проблема! Для тех, кто давно не погружался, мы предлагаем Refresh-курс (краткое повторение теории и отработка навыков) прямо на месте с инструктором перед началом дайв-сафари.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <div class="faq-question">
+                            Что взять с собой?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Возьмите лёгкую летнюю одежду, купальники, солнцезащитный крем (reef safe), головной убор, солнцезащитные очки, личную аптечку, GoPro или другую камеру, таблетки от укачивания (на всякий случай).</p>
+                        </div>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <div class="faq-question">
+                            Можно ли арендовать снаряжение?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Да, всё необходимое дайвинг-снаряжение (маска, ласты, гидрокостюм, BCD, регулятор) доступно для аренды прямо на борту. Пожалуйста, сообщите нам о необходимости аренды заранее.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <div class="faq-question">
+                            Что если будет плохая погода?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Август — идеальный месяц для дайвинга в Красном море с минимальными рисками плохой погоды. В случае непредвиденных форс-мажорных обстоятельств, капитан изменит маршрут на альтернативные, более защищенные точки.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <div class="faq-question">
+                            Как забронировать место?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Оставьте заявку на сайте → мы свяжемся с вами для уточнения деталей → заключаем договор → вы вносите предоплату.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <div class="faq-question">
+                            Сколько предоплата и когда доплата?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Предоплата составляет 50% от стоимости тура. Оставшуюся сумму необходимо внести за 30 дней до начала сафари.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <div class="faq-question">
+                            Условия отмены и возврата?
+                            <i class="fas fa-chevron-down icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>При отмене за 60+ дней до начала — 80% возврат. За 30-60 дней — 50%. Менее 30 дней — предоплата не возвращается.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ФИНАЛЬНЫЙ CTA Section -->
+        <section id="final-cta" class="section-cta-gradient section-padding">
+            <div class="container">
+                <h2 class="h2-playfair">Твоё место ждёт</h2>
+                <p class="cta-subtitle">Шарм-эль-Шейх · 15–22 августа 2026 · Осталось мест: <span id="available-slots" data-kdive-spots-num="redSeaSharks2026">6</span></p>
+                <form class="cta-form fade-in-up" id="ctaForm" style="margin-top:2rem">
+                    <input type="hidden" name="access_key" value="8665f979-b39a-4035-9708-001e15215adc">
+                    <input type="hidden" name="subject" value="Новая заявка — KDM Dive Safari">
+                    <input type="hidden" name="from_name" value="KDM Dive Safari">
+                    <input type="hidden" name="redirect" value="false">
+                    <input type="checkbox" name="botcheck" style="display:none">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                    <input type="text" id="ctaContactInput" name="contact" placeholder="Telegram @username или номер телефона" required>
+                    <textarea name="message" placeholder="Ваш запрос / вопрос (необязательно)" rows="3" style="width:100%;resize:vertical;padding:0.75rem 1rem;border:1.5px solid rgba(255,255,255,0.35);border-radius:4px;font-family:var(--font-inter);font-size:0.95rem;font-weight:300;color:#fff;background:#fff;outline:none;transition:border-color 0.2s;color:var(--color-main-text)" onfocus="this.style.borderColor='rgba(255,255,255,0.8)'" onblur="this.style.borderColor='rgba(255,255,255,0.35)'"></textarea>
+                    <button type="submit" class="btn" style="background:#fff;color:var(--color-primary-teal);font-size:1rem;padding:1rem 2rem;margin-top:0.5rem">Отправить заявку</button>
+                    <p id="ctaFormNote" class="cta-contact-info" style="margin-top:0">Говорим по-русски · Ответим в течение нескольких часов</p>
+                </form>
+                <div id="ctaSuccess" style="display:none;margin-top:2rem;text-align:center">
+                    <div style="font-size:2.5rem;margin-bottom:0.5rem">✓</div>
+                    <h4 style="font-family:var(--font-playfair);font-size:1.4rem;color:#fff;margin-bottom:0.4rem">Заявка отправлена!</h4>
+                    <p style="color:rgba(255,255,255,0.8);font-size:0.9rem">Мы свяжемся с вами в ближайшее время</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <a href="#" class="footer-logo">
+                <svg width="190" height="58" viewBox="0 0 200 58" xmlns="http://www.w3.org/2000/svg">
+                    <text x="93" y="25" font-family="'Dela Gothic One'" font-size="18" fill="#2A2A2A" text-anchor="end">K</text>
+                    <circle cx="100" cy="19" r="2.2" fill="#00A896"/>
+                    <text x="107" y="25" font-family="'Dela Gothic One'" font-size="18" fill="#00A896" text-anchor="start" letter-spacing="2">DIVE</text>
+                    <path d="M12 34 Q38 28 62 34 Q86 40 110 34 Q134 28 158 34 Q176 40 188 34" stroke="#00A896" stroke-width="1" fill="none" opacity="0.55"/>
+                    <text x="118" y="51" font-family="'Playfair Display'" font-style="italic" font-size="12" fill="#2A2A2A" text-anchor="middle" letter-spacing="5">safari</text>
+                </svg>
+            </a>
+            <div class="footer-socials">
+                <a href="https://t.me/product_kris" target="_blank" aria-label="Telegram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.7 8.01c-.12.56-.46.7-.93.43l-2.57-1.89-1.24 1.19c-.14.14-.25.25-.5.25l.18-2.52 4.6-4.16c.2-.18-.04-.27-.31-.1L7.4 15.12 4.88 14.3c-.55-.17-.56-.55.12-.82l9.96-3.84c.46-.17.86.1.68.82v-.01z"/></svg>
+                </a>
+                <a href="https://wa.me/79851830077" target="_blank" aria-label="WhatsApp">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.43 1.27 4.88L2 22l5.25-1.25A9.94 9.94 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm4.93 13.5c-.2.56-1.18 1.09-1.62 1.15-.42.06-.96.09-1.54-.1-.36-.11-.82-.27-1.41-.52-2.47-1.07-4.09-3.55-4.22-3.72-.12-.17-.99-1.32-.99-2.52s.63-1.79.85-2.03c.22-.25.48-.31.64-.31h.45c.15 0 .35-.05.54.42l.77 1.86c.06.15.1.32.01.5l-.29.5-.3.36c-.1.1-.21.22-.09.43.12.2.55.91 1.18 1.47.81.72 1.5.94 1.71 1.05.21.1.33.09.45-.05l.6-.71c.14-.18.28-.15.47-.09l1.71.81c.2.1.34.15.38.24.05.09.05.51-.15 1.06z"/></svg>
+                </a>
+            </div>
+            <p class="footer-copyright">© 2026 Dive Safari · Шарм-эль-Шейх</p>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-card">
+            <button class="modal-close" id="modalClose">×</button>
+            <div class="modal-header">
+                <h3>Забронировать место</h3>
+                <p>Шарм-эль-Шейх · 15–22 августа 2026 · осталось 6 мест</p>
+            </div>
+            <form id="bookingForm">
+                <input type="hidden" name="access_key" value="8665f979-b39a-4035-9708-001e15215adc">
+                <input type="hidden" name="subject" value="Новая заявка — KDM Dive Safari">
+                <input type="hidden" name="from_name" value="KDM Dive Safari">
+                <input type="hidden" name="redirect" value="false">
+                <input type="checkbox" name="botcheck" style="display:none">
+                <div class="modal-field">
+                    <label>Ваше имя</label>
+                    <input type="text" name="name" placeholder="Иван Иванов" required>
+                </div>
+
+                <div class="modal-field">
+                    <label>Как связаться</label>
+                    <input type="text" id="contactValueInput" name="contact" placeholder="Telegram @username или номер телефона" required>
+                </div>
+
+                <div class="modal-field">
+                    <label>Ваш запрос / вопрос</label>
+                    <textarea name="message" placeholder="Напишите ваш вопрос или пожелание..." rows="3" style="width:100%;resize:vertical;padding:0.75rem 1rem;border:1px solid rgba(59,158,163,0.25);border-radius:4px;font-family:var(--font-inter);font-size:0.95rem;font-weight:300;color:var(--color-main-text);background:#fff;outline:none;transition:border-color 0.2s" onfocus="this.style.borderColor='var(--color-primary-teal)'" onblur="this.style.borderColor='rgba(59,158,163,0.25)'"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary modal-submit">Отправить заявку</button>
+                <p class="modal-note">Говорим по-русски · Ответим в течение нескольких часов</p>
+            </form>
+            <div id="modalSuccess" class="modal-success" style="display:none">
+                <div class="success-icon">✓</div>
+                <h4>Заявка отправлена!</h4>
+                <p>Мы свяжемся с вами в ближайшее время</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="scroll-to-top-btn" aria-label="Наверх"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Floating Socials Button -->
+    <div class="floating-socials">
+        <button id="social-toggle-btn" class="social-toggle-btn" aria-label="Связаться">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-3 7h-2.5v1.5H17V12h-2.5v4h-2V8H17v1z" opacity="0"/><path d="M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm4.5 5.5l-1.5 7.5c-.1.5-.4.6-.8.4l-2.2-1.6-1.05 1.01c-.12.12-.22.22-.44.22l.15-2.27 3.97-3.58c.17-.15-.04-.23-.27-.08L7.9 14.4l-2.17-.68c-.47-.15-.48-.47.1-.7l8.5-3.27c.39-.14.73.1.67.73-.01-.01-.01-.01 0 0z"/></svg>
+        </button>
+        <div id="social-links" class="social-links-container">
+            <a href="https://t.me/product_kris" target="_blank" class="social-link" aria-label="Telegram">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.7 8.01c-.12.56-.46.7-.93.43l-2.57-1.89-1.24 1.19c-.14.14-.25.25-.5.25l.18-2.52 4.6-4.16c.2-.18-.04-.27-.31-.1L7.4 15.12 4.88 14.3c-.55-.17-.56-.55.12-.82l9.96-3.84c.46-.17.86.1.68.82v-.01z"/></svg>
+            </a>
+            <a href="https://wa.me/79851830077" target="_blank" class="social-link" aria-label="WhatsApp">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.43 1.27 4.88L2 22l5.25-1.25A9.94 9.94 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm4.93 13.5c-.2.56-1.18 1.09-1.62 1.15-.42.06-.96.09-1.54-.1-.36-.11-.82-.27-1.41-.52-2.47-1.07-4.09-3.55-4.22-3.72-.12-.17-.99-1.32-.99-2.52s.63-1.79.85-2.03c.22-.25.48-.31.64-.31h.45c.15 0 .35-.05.54.42l.77 1.86c.06.15.1.32.01.5l-.29.5-.3.36c-.1.1-.21.22-.09.43.12.2.55.91 1.18 1.47.81.72 1.5.94 1.71 1.05.21.1.33.09.45-.05l.6-.71c.14-.18.28-.15.47-.09l1.71.81c.2.1.34.15.38.24.05.09.05.51-.15 1.06z"/></svg>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // ── Burger menu ────────────────────────────────
+            (function() {
+                const btn = document.getElementById('burgerBtn');
+                const nav = document.getElementById('mobileNav');
+                if (!btn || !nav) return;
+
+                function openMenu() {
+                    btn.classList.add('open');
+                    nav.classList.add('open');
+                    btn.setAttribute('aria-expanded', 'true');
+                    nav.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                }
+                function closeMenu() {
+                    btn.classList.remove('open');
+                    nav.classList.remove('open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    nav.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                }
+
+                btn.addEventListener('click', function() {
+                    btn.classList.contains('open') ? closeMenu() : openMenu();
+                });
+
+                document.getElementById('mobileNavClose').addEventListener('click', closeMenu);
+
+                nav.querySelectorAll('.mobile-nav-link, .mobile-nav-cta a').forEach(function(link) {
+                    link.addEventListener('click', closeMenu);
+                });
+
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') closeMenu();
+                });
+            })();
+
+            // --- Header Scroll Shadow ---
+            const header = document.getElementById('main-header');
+            const headerHeight = header.offsetHeight;
+            let lastScrollY = 0;
+            let ticking = false;
+
+            function updateHeaderShadow() {
+                const scrollY = window.scrollY;
+                if (scrollY > headerHeight / 2) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(updateHeaderShadow);
+                    ticking = true;
+                }
+            });
+
+            // --- Scroll Progress Bar ---
+            const scrollProgressBar = document.getElementById('scroll-progress');
+            function updateScrollProgress() {
+                const scrollY = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrollPercent = (scrollY / docHeight) * 100;
+                scrollProgressBar.style.width = scrollPercent + '%';
+            }
+            window.addEventListener('scroll', updateScrollProgress);
+            updateScrollProgress(); // Initialize on load
+
+            // --- IntersectionObserver for Fade-in-up Animation ---
+            const faders = document.querySelectorAll('.fade-in-up');
+            const appearOptions = {
+                threshold: 0.1, // Element is 10% in view
+                rootMargin: "0px 0px -50px 0px" // Start animating when 50px from bottom of viewport
+            };
+
+            const appearOnScroll = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+
+            // --- Counter Animation for Statistics ---
+            const statNumbers = document.querySelectorAll('.stat-number');
+
+            const easeOutQuart = t => 1 - Math.pow(1 - t, 4);
+
+            const countUp = (entry) => {
+                if (!entry.isIntersecting) return;
+                const target = entry.target;
+                const endValue = parseInt(target.dataset.target, 10);
+                const hasPlus = target.dataset.plus === 'true';
+                const duration = 1600;
+                let startTime = null;
+
+                // slide-in the parent stat-item
+                const item = target.closest('.stat-item');
+                if (item) {
+                    item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }
+
+                const animate = (currentTime) => {
+                    if (!startTime) startTime = currentTime;
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased = easeOutQuart(progress);
+                    target.textContent = Math.floor(eased * endValue) + (hasPlus && progress > 0.05 ? '+' : '');
+                    if (progress < 1) {
+                        requestAnimationFrame(animate);
+                    } else {
+                        target.textContent = endValue + (hasPlus ? '+' : '');
+                    }
+                };
+                requestAnimationFrame(animate);
+                countObserver.unobserve(target);
+            };
+
+            // set initial hidden state for slide-in
+            document.querySelectorAll('.stat-item').forEach((item, i) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(30px)';
+                item.style.transitionDelay = (i * 0.12) + 's';
+            });
+
+            const countObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => countUp(entry));
+            }, { threshold: 0.4 });
+
+            statNumbers.forEach(number => countObserver.observe(number));
+
+            // --- Boat video: autoplay on scroll, force muted ---
+            const boatVideo = document.querySelector('.boat-video-wrapper video');
+            if (boatVideo) {
+                boatVideo.muted = true;
+                boatVideo.addEventListener('volumechange', () => {
+                    if (!boatVideo.muted) boatVideo.muted = true;
+                });
+                const videoObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            boatVideo.play();
+                        } else {
+                            boatVideo.pause();
+                        }
+                    });
+                }, { threshold: 0.4 });
+                videoObserver.observe(boatVideo);
+            }
+
+            // --- FAQ Accordion ---
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+
+                question.addEventListener('click', () => {
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) otherItem.classList.remove('open');
+                    });
+                    item.classList.toggle('open');
+                });
+            });
+
+            // --- Parallax Hero Video ---
+            const heroVideo = document.querySelector('.hero-video');
+            if (heroVideo) {
+                window.addEventListener('scroll', () => {
+                    const scrollY = window.scrollY;
+                    heroVideo.style.transform = `translateY(${scrollY * 0.2}px)`;
+                });
+            }
+
+            // --- Scroll-to-Top Button ---
+            const scrollToTopBtn = document.getElementById('scroll-to-top');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 400) {
+                    scrollToTopBtn.classList.add('show');
+                } else {
+                    scrollToTopBtn.classList.remove('show');
+                }
+            });
+            scrollToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // --- Floating Socials Button ---
+            const socialToggleBtn = document.getElementById('social-toggle-btn');
+            const socialLinksContainer = document.getElementById('social-links');
+
+            socialToggleBtn.addEventListener('click', () => {
+                socialLinksContainer.classList.toggle('open');
+            });
+
+            // Close social links if clicking outside
+            document.addEventListener('click', (event) => {
+                if (!socialLinksContainer.contains(event.target) && !socialToggleBtn.contains(event.target)) {
+                    if (socialLinksContainer.classList.contains('open')) {
+                        socialLinksContainer.classList.remove('open');
+                    }
+                }
+            });
+        });
+
+            // ── Reels strip ─────────────────────────────────
+            // video-1: autoplay при попадании в экран
+            (function() {
+                const card1 = document.getElementById('reelVideo1');
+                if (!card1) return;
+                const vid1 = card1.querySelector('video');
+                const io = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(e) {
+                        if (e.isIntersecting) vid1.play();
+                        else { vid1.pause(); vid1.currentTime = 0; }
+                    });
+                }, { threshold: 0.4 });
+                io.observe(card1);
+            })();
+            // video-2, video-3: по клику
+            document.querySelectorAll('.reel-clickplay').forEach(function(card) {
+                const video = card.querySelector('video');
+                const playBtn = card.querySelector('.reel-play');
+                if (!video) return;
+                if (playBtn) playBtn.style.opacity = '1';
+                card.style.cursor = 'pointer';
+                card.addEventListener('click', function() {
+                    if (video.paused) {
+                        video.play();
+                        if (playBtn) playBtn.style.opacity = '0';
+                    } else {
+                        video.pause();
+                        if (playBtn) playBtn.style.opacity = '1';
+                    }
+                });
+            });
+            (function() {
+                const strip = document.getElementById('reelsStrip');
+                let isDown = false, startX, scrollLeft;
+                strip.addEventListener('mousedown', e => { isDown = true; startX = e.pageX - strip.offsetLeft; scrollLeft = strip.scrollLeft; });
+                strip.addEventListener('mouseleave', () => isDown = false);
+                strip.addEventListener('mouseup', () => isDown = false);
+                strip.addEventListener('mousemove', e => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    strip.scrollLeft = scrollLeft - (e.pageX - strip.offsetLeft - startX) * 1.5;
+                });
+            })();
+            // ────────────────────────────────────────────────
+
+            // ═══════════════════════════════════════════════
+            // INLINE EDITOR — disabled in production
+            // ═══════════════════════════════════════════════
+            if (window.location.hostname === 'localhost') (function() {
+                const STORAGE_KEY = 'kdive_edits_v1';
+                const EDITABLE_SEL = [
+                    'h1','h2','h3','h4',
+                    'p:not(script)',
+                    '.card-title','.card-description',
+                    '.item-title','.item-description',
+                    '.cabin-type','.price-value','.price-old','.price-note',
+                    '.stat-number','.stat-label',
+                    '.label','.section-subtitle',
+                    '.boat-features p', '.boat-features li',
+                    '.carousel-caption',
+                    '.card-format',
+                    '.faq-question','.faq-answer p',
+                    '.hero-tagline','.hero-location',
+                    '.btn'
+                ].join(',');
+
+                let editMode = false;
+
+                // Toolbar HTML
+                const toolbar = document.createElement('div');
+                toolbar.id = 'editToolbar';
+                toolbar.innerHTML = `
+                    <button id="etToggle" title="Включить/выключить редактирование">✏️ Редактировать</button>
+                    <button id="etSave" title="Сохранить изменения в файл" style="display:none">💾 Сохранить</button>
+                    <button id="etReset" title="Сбросить все правки" style="display:none">↺ Сбросить</button>
+                `;
+                document.body.appendChild(toolbar);
+
+                const style = document.createElement('style');
+                style.textContent = `
+                    #editToolbar {
+                        position: fixed;
+                        bottom: 24px;
+                        right: 24px;
+                        z-index: 99999;
+                        display: flex;
+                        gap: 8px;
+                        background: rgba(20,30,35,0.95);
+                        padding: 10px 14px;
+                        border-radius: 40px;
+                        box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+                        backdrop-filter: blur(8px);
+                        font-family: var(--font-inter);
+                    }
+                    #editToolbar button {
+                        border: none;
+                        cursor: pointer;
+                        font-size: 0.82rem;
+                        font-weight: 600;
+                        padding: 6px 16px;
+                        border-radius: 20px;
+                        transition: background 0.15s;
+                        letter-spacing: 0.3px;
+                    }
+                    #etToggle { background: #3B9EA3; color: white; }
+                    #etToggle.active { background: #27ae60; }
+                    #etSave { background: #2980b9; color: white; }
+                    #etReset { background: rgba(255,255,255,0.1); color: #ccc; }
+                    #etSave:hover { background: #1a6fa3; }
+                    #etReset:hover { background: rgba(255,80,80,0.3); color: #ff8080; }
+                    [contenteditable="true"] {
+                        outline: 2px dashed rgba(59,158,163,0.6) !important;
+                        outline-offset: 2px;
+                        border-radius: 2px;
+                        cursor: text;
+                        min-width: 4px;
+                    }
+                    [contenteditable="true"]:focus {
+                        outline: 2px solid #3B9EA3 !important;
+                        background: rgba(59,158,163,0.05);
+                    }
+                    body.edit-active { cursor: default; }
+                `;
+                document.head.appendChild(style);
+
+                // Load saved edits from localStorage
+                function loadSaved() {
+                    try {
+                        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+                        saved.forEach(({ sel, html }) => {
+                            const el = document.querySelector(sel);
+                            if (el) el.innerHTML = html;
+                        });
+                    } catch(e) {}
+                }
+
+                // Save current editable content
+                function saveToStorage() {
+                    const edits = [];
+                    document.querySelectorAll('[contenteditable="true"]').forEach((el, i) => {
+                        el.dataset.editIdx = i;
+                        const sel = buildSelector(el);
+                        if (sel) edits.push({ sel, html: el.innerHTML });
+                    });
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(edits));
+                }
+
+                function buildSelector(el) {
+                    if (el.id) return '#' + el.id;
+                    const tag = el.tagName.toLowerCase();
+                    const parent = el.parentElement;
+                    if (!parent) return tag;
+                    const siblings = [...parent.children].filter(c => c.tagName === el.tagName);
+                    const idx = siblings.indexOf(el);
+                    const parentSel = buildSelector(parent);
+                    return parentSel + ' > ' + tag + (siblings.length > 1 ? ':nth-of-type(' + (idx+1) + ')' : '');
+                }
+
+                function enableEdit() {
+                    document.querySelectorAll(EDITABLE_SEL).forEach(el => {
+                        if (!el.closest('#editToolbar') && !el.closest('script') && !el.closest('style')) {
+                            el.setAttribute('contenteditable', 'true');
+                            el.setAttribute('spellcheck', 'false');
+                        }
+                    });
+                    document.body.classList.add('edit-active');
+                    document.getElementById('etToggle').textContent = '✅ Готово';
+                    document.getElementById('etToggle').classList.add('active');
+                    document.getElementById('etSave').style.display = '';
+                    document.getElementById('etReset').style.display = '';
+                    editMode = true;
+                }
+
+                function disableEdit() {
+                    document.querySelectorAll('[contenteditable]').forEach(el => {
+                        el.removeAttribute('contenteditable');
+                        el.removeAttribute('spellcheck');
+                    });
+                    document.body.classList.remove('edit-active');
+                    document.getElementById('etToggle').textContent = '✏️ Редактировать';
+                    document.getElementById('etToggle').classList.remove('active');
+                    document.getElementById('etSave').style.display = 'none';
+                    document.getElementById('etReset').style.display = 'none';
+                    saveToStorage();
+                    editMode = false;
+                }
+
+                async function saveHTML() {
+                    const btn = document.getElementById('etSave');
+                    const clone = document.documentElement.cloneNode(true);
+                    clone.querySelector('#editToolbar')?.remove();
+                    clone.querySelectorAll('[contenteditable]').forEach(el => {
+                        el.removeAttribute('contenteditable');
+                        el.removeAttribute('spellcheck');
+                    });
+                    clone.querySelector('body').classList.remove('edit-active');
+                    const html = '<!DOCTYPE html>\n' + clone.outerHTML;
+                    btn.textContent = '⏳ Сохраняю...';
+                    btn.disabled = true;
+                    try {
+                        const r = await fetch('http://localhost:4567/save', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ html })
+                        });
+                        const data = await r.json();
+                        if (data.ok) {
+                            btn.textContent = '✅ Сохранено!';
+                            btn.style.background = '#27ae60';
+                            setTimeout(() => {
+                                btn.textContent = '💾 Сохранить';
+                                btn.style.background = '#2980b9';
+                                btn.disabled = false;
+                            }, 2000);
+                        } else {
+                            throw new Error(data.error);
+                        }
+                    } catch(e) {
+                        btn.textContent = '❌ Ошибка';
+                        btn.style.background = '#c0392b';
+                        setTimeout(() => {
+                            btn.textContent = '💾 Сохранить';
+                            btn.style.background = '#2980b9';
+                            btn.disabled = false;
+                        }, 3000);
+                    }
+                }
+
+                document.getElementById('etToggle').addEventListener('click', () => {
+                    editMode ? disableEdit() : enableEdit();
+                });
+                document.getElementById('etSave').addEventListener('click', saveHTML);
+                document.getElementById('etReset').addEventListener('click', () => {
+                    if (confirm('Сбросить все правки и вернуть оригинал?')) {
+                        localStorage.removeItem(STORAGE_KEY);
+                        location.reload();
+                    }
+                });
+
+                // Auto-save on any input
+                document.addEventListener('input', (e) => {
+                    if (e.target.contentEditable === 'true') saveToStorage();
+                });
+
+                // Load saved on startup
+                loadSaved();
+            })();
+
+            // ── Cabin gallery lightbox ────────────────────
+            const CABIN_GALLERIES = {
+                lower: [
+                    { src: 'dive-safari-content/cabins/lower/lowerdeck.jpg', cap: 'Нижняя палуба' },
+                ],
+                upper: [
+                    { src: 'dive-safari-content/cabins/upper/upperdeck.jpg', cap: 'Верхняя палуба' },
+                ],
+                king: [
+                    { src: 'dive-safari-content/cabins/king/king.PNG', cap: 'King bed каюта' },
+                ],
+            };
+            // ── Cabin card slider ──────────────────────────
+            const cabinSliderIdx = { lower: 0, upper: 0, king: 0 };
+            const CABIN_TOTAL = { lower: 1, upper: 1, king: 1 };
+
+            function cabinSlide(key, dir) {
+                const total = CABIN_TOTAL[key];
+                cabinSliderIdx[key] = (cabinSliderIdx[key] + dir + total) % total;
+                const slider = document.getElementById('slider-' + key);
+                slider.style.transform = 'translateX(-' + (cabinSliderIdx[key] * 100) + '%)';
+                document.getElementById('count-' + key).textContent =
+                    (cabinSliderIdx[key] + 1) + ' / ' + total;
+            }
+
+            // Touch swipe + desktop click-to-lightbox
+            document.querySelectorAll('.cabin-photo').forEach(function(el) {
+                var touchStartX = 0, touchMoved = false;
+                el.addEventListener('touchstart', function(e) {
+                    touchStartX = e.touches[0].clientX;
+                    touchMoved = false;
+                }, { passive: true });
+                el.addEventListener('touchmove', function() {
+                    touchMoved = true;
+                }, { passive: true });
+                el.addEventListener('touchend', function(e) {
+                    var dx = e.changedTouches[0].clientX - touchStartX;
+                    if (Math.abs(dx) > 40) {
+                        cabinSlide(el.dataset.cabin, dx < 0 ? 1 : -1);
+                    }
+                });
+                el.addEventListener('click', function(e) {
+                    if (window.innerWidth > 768) {
+                        openCabinGallery(el.dataset.cabin, cabinSliderIdx[el.dataset.cabin]);
+                    }
+                });
+            });
+            // ──────────────────────────────────────────────
+
+            let cabinLbGallery = [], cabinLbIdx = 0;
+            function openCabinGallery(key, idx) {
+                cabinLbGallery = CABIN_GALLERIES[key];
+                cabinLbIdx = idx;
+                renderCabinLb();
+                document.getElementById('cabinLb').classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+            function renderCabinLb() {
+                const item = cabinLbGallery[cabinLbIdx];
+                document.getElementById('cabinLbImg').src = item.src;
+                document.getElementById('cabinLbCap').textContent = item.cap;
+                document.getElementById('cabinLbCount').textContent = (cabinLbIdx + 1) + ' / ' + cabinLbGallery.length;
+            }
+            function cabinLbNav(dir) {
+                cabinLbIdx = (cabinLbIdx + dir + cabinLbGallery.length) % cabinLbGallery.length;
+                renderCabinLb();
+            }
+            function closeCabinLb() {
+                document.getElementById('cabinLb').classList.remove('open');
+                document.body.style.overflow = '';
+            }
+            document.addEventListener('keydown', e => {
+                if (!document.getElementById('cabinLb').classList.contains('open')) return;
+                if (e.key === 'ArrowLeft') cabinLbNav(-1);
+                if (e.key === 'ArrowRight') cabinLbNav(1);
+                if (e.key === 'Escape') closeCabinLb();
+            });
+            // ─────────────────────────────────────────────
+
+            // ── Program tabs ───────────────────────────────
+            function v1select(idx) {
+                document.querySelectorAll('.v1-tab').forEach((t,i) => t.classList.toggle('active', i===idx));
+                document.querySelectorAll('.v1-panel').forEach((p,i) => p.classList.toggle('active', i===idx));
+            }
+
+            // ── Booking Modal ──────────────────────────────
+            (function() {
+                const modal = document.getElementById('bookingModal');
+                const form  = document.getElementById('bookingForm');
+
+                function openModal() {
+                    modal.classList.add('open');
+                    modal.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                }
+                function closeModal() {
+                    modal.classList.remove('open');
+                    modal.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                }
+
+                // All "Забронировать" links → open modal
+                document.querySelectorAll('a[href="#final-cta"]').forEach(el => {
+                    el.addEventListener('click', e => { e.preventDefault(); openModal(); });
+                });
+                // Buttons with open-modal-btn class
+                document.querySelectorAll('.open-modal-btn').forEach(el => {
+                    el.addEventListener('click', openModal);
+                });
+
+                document.getElementById('modalClose').addEventListener('click', closeModal);
+                modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+                document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+
+                // Form submit via Web3Forms
+                form.addEventListener('submit', async e => {
+                    e.preventDefault();
+                    const submitBtn = form.querySelector('.modal-submit');
+                    submitBtn.textContent = 'Отправляю...';
+                    submitBtn.disabled = true;
+                    try {
+                        const data = new FormData(form);
+                        const res = await fetch('https://api.web3forms.com/submit', {
+                            method: 'POST',
+                            body: data
+                        });
+                        const json = await res.json();
+                        if (json.success) {
+                            form.style.display = 'none';
+                            document.getElementById('modalSuccess').style.display = 'block';
+                        } else {
+                            throw new Error(json.message);
+                        }
+                    } catch(err) {
+                        submitBtn.textContent = 'Ошибка — попробуйте ещё раз';
+                        submitBtn.style.background = '#c0392b';
+                        submitBtn.disabled = false;
+                    }
+                });
+            })();
+
+            // ── CTA Inline Form ────────────────────────────
+            (function() {
+                const form = document.getElementById('ctaForm');
+                if (!form) return;
+
+                // Contact toggle
+                const ctaBtns = form.querySelectorAll('.ct-btn');
+                const ctaInput = document.getElementById('ctaContactInput');
+                const ctaTypeField = document.getElementById('ctaContactType');
+                ctaBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        ctaBtns.forEach(b => {
+                            b.style.background = 'transparent';
+                            b.style.color = 'rgba(255,255,255,0.7)';
+                            b.style.borderColor = 'rgba(255,255,255,0.5)';
+                            b.classList.remove('active');
+                        });
+                        btn.classList.add('active');
+                        btn.style.background = 'rgba(255,255,255,0.25)';
+                        btn.style.color = '#fff';
+                        btn.style.borderColor = '#fff';
+                        if (btn.dataset.type === 'telegram') {
+                            ctaInput.placeholder = '@username или ссылка';
+                            ctaTypeField.value = 'Telegram';
+                        } else {
+                            ctaInput.placeholder = '+7 999 000 00 00';
+                            ctaTypeField.value = 'Телефон';
+                        }
+                    });
+                });
+
+                // Submit
+                form.addEventListener('submit', async e => {
+                    e.preventDefault();
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    submitBtn.textContent = 'Отправляю...';
+                    submitBtn.disabled = true;
+                    try {
+                        const data = new FormData(form);
+                        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+                        const json = await res.json();
+                        if (json.success) {
+                            form.style.display = 'none';
+                            document.getElementById('ctaSuccess').style.display = 'block';
+                        } else {
+                            throw new Error(json.message);
+                        }
+                    } catch(err) {
+                        submitBtn.textContent = 'Ошибка — попробуйте ещё раз';
+                        submitBtn.style.background = '#c0392b';
+                        submitBtn.style.color = '#fff';
+                        submitBtn.disabled = false;
+                    }
+                });
+            })();
+
+            // Show header CTA after hero scrolls away; hide lang-switch at same point
+            (function() {
+                const heroCta = document.querySelector('.header-cta');
+                const langSwitch = document.querySelector('.header-content .lang-switch');
+                const hero = document.getElementById('hero');
+                if (hero) {
+                    const obs = new IntersectionObserver((entries) => {
+                        entries.forEach(e => {
+                            if (heroCta) heroCta.classList.toggle('visible', !e.isIntersecting);
+                            if (langSwitch) langSwitch.classList.toggle('ls-hidden', !e.isIntersecting);
+                        });
+                    }, { threshold: 0.1 });
+                    obs.observe(hero);
+                }
+            })();
+
+            // Announcement bar close
+            function closeAnnouncementBar() {
+                document.getElementById('announce-bar').classList.add('hidden');
+                document.getElementById('main-header').classList.add('bar-hidden');
+                document.getElementById('scroll-progress').classList.add('bar-hidden');
+                sessionStorage.setItem('ab_closed', '1');
+            }
+            document.getElementById('abClose').addEventListener('click', closeAnnouncementBar);
+            if (sessionStorage.getItem('ab_closed')) closeAnnouncementBar();
+    </script>
+    <script src="kdive-config.js"></script>
+    <!-- Language persistence -->
+    <script>
+    (function(){
+        var saved=localStorage.getItem('kdive-lang');
+        var current=document.documentElement.lang||'ru';
+        if(saved&&saved!==current){
+            var alt=document.querySelector('.lang-link[data-lang="'+saved+'"],.lang-switch a[data-lang="'+saved+'"]');
+            if(alt&&alt.href)window.location.replace(alt.href);
+        }
+        document.addEventListener('click',function(e){
+            var a=e.target.closest('a[data-lang]');
+            if(a)localStorage.setItem('kdive-lang',a.dataset.lang);
+        });
+    })();
+    </script>
+</body>
+</html>
