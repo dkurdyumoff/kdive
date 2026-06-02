@@ -2,8 +2,12 @@
 .env
 api-proxy/.env
 kdive/tg-search.py
+kdive/tg-parse-users.py
+kdive/daily-sync.py
+kdive/daily-sync.log
 kdive/*.session
 kdive/tg-channels-*.csv
+tg-users-*.csv
 
 # System
 .DS_Store
