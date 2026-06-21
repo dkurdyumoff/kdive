@@ -320,6 +320,22 @@
             line-height: 1;
         }
 
+
+        .nav-club-logos {
+            display: flex; align-items: center; gap: 10px;
+            margin-left: 14px;
+            padding-left: 14px;
+            border-left: 1px solid rgba(0,0,0,0.1);
+        }
+        .nav-club-logo {
+            height: 50px; width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            opacity: 0.65;
+            transition: opacity 0.2s;
+        }
+        .nav-club-logo:hover { opacity: 1; }
+
         .main-nav {
             margin-left: auto;
             margin-right: auto;
@@ -1830,6 +1846,7 @@
             .header-cta { display: none !important; opacity: 0 !important; pointer-events: none !important; }
             .burger-btn { display: flex; margin-left: auto; }
             .nav-padi-badge { display: none; }
+            .nav-club-logos { display: none; }
             .header-content .lang-switch { display: none; }
         }
         @media (max-width: 640px) {
@@ -2118,15 +2135,16 @@
         <div class="container header-content">
             <div style="display:flex;align-items:center;">
 <a href="kdive-main.html" class="header-logo">
-                <svg width="190" height="52" viewBox="0 0 200 58" xmlns="http://www.w3.org/2000/svg">
-                    <text x="93" y="25" font-family="'Dela Gothic One'" font-size="18" fill="#2A2A2A" text-anchor="end">K</text>
-                    <circle cx="100" cy="19" r="2.2" fill="#3B9EA3"/>
-                    <text x="107" y="25" font-family="'Dela Gothic One'" font-size="18" fill="#3B9EA3" text-anchor="start" letter-spacing="2">DIVE</text>
-                    <path d="M12 34 Q38 28 62 34 Q86 40 110 34 Q134 28 158 34 Q176 40 188 34" stroke="#3B9EA3" stroke-width="1" fill="none" opacity="0.55"/>
-                    <text x="100" y="51" font-family="'Playfair Display'" font-style="italic" font-size="12" fill="#2A2A2A" text-anchor="middle" letter-spacing="5">safari</text>
+                <svg width="130" height="30" viewBox="0 0 130 30" xmlns="http://www.w3.org/2000/svg">
+                    <text x="32" y="22" font-family="'Dela Gothic One'" font-size="18" fill="#2A2A2A" text-anchor="end">K</text>
+                    <circle cx="38" cy="14" r="2.2" fill="#3B9EA3"/>
+                    <text x="44" y="22" font-family="'Dela Gothic One'" font-size="18" fill="#3B9EA3" text-anchor="start" letter-spacing="2">DIVE</text>
                 </svg>
             </a>
-            <img src="dive-safari-content/padi-logo.jpg" alt="PADI" class="nav-padi-badge" style="height:28px;width:auto;opacity:0.55;margin-left:14px;border-left:1px solid rgba(0,0,0,0.1);padding-left:14px;">
+            <div class="nav-club-logos">
+                <img src="dive-safari-content/bluesea-logo.jpeg" alt="Blue Sea Dive Club" class="nav-club-logo">
+                <img src="dive-safari-content/scuba-citizens-logo.jpeg" alt="Scuba Citizens" class="nav-club-logo">
+            </div>
             </div>
             <nav class="main-nav">
                 <ul>
