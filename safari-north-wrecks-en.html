@@ -320,6 +320,22 @@
             line-height: 1;
         }
 
+
+        .nav-club-logos {
+            display: flex; align-items: center; gap: 10px;
+            margin-left: 14px;
+            padding-left: 14px;
+            border-left: 1px solid rgba(0,0,0,0.1);
+        }
+        .nav-club-logo {
+            height: 50px; width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            opacity: 0.65;
+            transition: opacity 0.2s;
+        }
+        .nav-club-logo:hover { opacity: 1; }
+
         .main-nav {
             margin-left: auto;
             margin-right: auto;
@@ -1830,6 +1846,7 @@
             .header-cta { display: none !important; opacity: 0 !important; pointer-events: none !important; }
             .burger-btn { display: flex; margin-left: auto; }
             .nav-padi-badge { display: none; }
+            .nav-club-logos { display: none; }
             .header-content .lang-switch { display: none; }
         }
         @media (max-width: 640px) {
@@ -2117,16 +2134,17 @@
     <header id="main-header" class="main-header">
         <div class="container header-content">
             <div style="display:flex;align-items:center;">
-<a href="kdive-main.html" class="header-logo">
-                <svg width="190" height="52" viewBox="0 0 200 58" xmlns="http://www.w3.org/2000/svg">
-                    <text x="93" y="25" font-family="'Dela Gothic One'" font-size="18" fill="#2A2A2A" text-anchor="end">K</text>
-                    <circle cx="100" cy="19" r="2.2" fill="#E07A5F"/>
-                    <text x="107" y="25" font-family="'Dela Gothic One'" font-size="18" fill="#E07A5F" text-anchor="start" letter-spacing="2">DIVE</text>
-                    <path d="M12 34 Q38 28 62 34 Q86 40 110 34 Q134 28 158 34 Q176 40 188 34" stroke="#E07A5F" stroke-width="1" fill="none" opacity="0.55"/>
-                    <text x="118" y="51" font-family="'Playfair Display'" font-style="italic" font-size="12" fill="#2A2A2A" text-anchor="middle" letter-spacing="5">safari</text>
+<a href="kdive-main-en.html" class="header-logo">
+                <svg width="130" height="30" viewBox="0 0 130 30" xmlns="http://www.w3.org/2000/svg">
+                    <text x="32" y="22" font-family="'Dela Gothic One'" font-size="18" fill="#2A2A2A" text-anchor="end">K</text>
+                    <circle cx="38" cy="14" r="2.2" fill="#E07A5F"/>
+                    <text x="44" y="22" font-family="'Dela Gothic One'" font-size="18" fill="#E07A5F" text-anchor="start" letter-spacing="2">DIVE</text>
                 </svg>
             </a>
-            <img src="dive-safari-content/padi-logo.jpg" alt="PADI" class="nav-padi-badge" style="height:28px;width:auto;opacity:0.55;margin-left:14px;border-left:1px solid rgba(0,0,0,0.1);padding-left:14px;">
+            <div class="nav-club-logos">
+                <img src="dive-safari-content/bluesea-logo.jpeg" alt="Blue Sea Dive Club" class="nav-club-logo">
+                <img src="dive-safari-content/scuba-citizens-logo.jpeg" alt="Scuba Citizens" class="nav-club-logo">
+            </div>
             </div>
             <nav class="main-nav">
                 <ul>
@@ -2951,7 +2969,12 @@
                     <text x="118" y="51" font-family="'Playfair Display'" font-style="italic" font-size="12" fill="#2A2A2A" text-anchor="middle" letter-spacing="5">safari</text>
                 </svg>
             </a>
-            <div class="footer-socials">
+            <div style="display:flex;align-items:center;gap:12px;margin:8px 0 4px;">
+            <span style="font-size:0.62rem;color:rgba(0,0,0,0.3);letter-spacing:1.5px;font-weight:600;text-transform:uppercase;">Official Clubs</span>
+            <img src="dive-safari-content/bluesea-logo.jpeg" alt="Blue Sea Dive Club" style="height:32px;width:32px;object-fit:cover;border-radius:50%;opacity:0.6;">
+            <img src="dive-safari-content/scuba-citizens-logo.jpeg" alt="Scuba Citizens" style="height:32px;width:32px;object-fit:cover;border-radius:50%;opacity:0.6;">
+        </div>
+        <div class="footer-socials">
                 <a href="https://t.me/product_kris" target="_blank" aria-label="Telegram">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.7 8.01c-.12.56-.46.7-.93.43l-2.57-1.89-1.24 1.19c-.14.14-.25.25-.5.25l.18-2.52 4.6-4.16c.2-.18-.04-.27-.31-.1L7.4 15.12 4.88 14.3c-.55-.17-.56-.55.12-.82l9.96-3.84c.46-.17.86.1.68.82v-.01z"/></svg>
                 </a>
